@@ -14,8 +14,7 @@ Screencast do figma com as histórias:
 https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b
 
 Sprint:
-[https://github.com/Fcc2187/Projeto-FDS/assets/151794134/ccb79136-bb0b-494b-ac94-67074c9e82b6](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/ccb79136-bb0b-494b-ac94-67074c9e82b6)https://github.com/Fcc2187/Projeto-FDS/assets/151794134/ccb79136-bb0b-494b-ac94-67074c9e82b6
-<img width="1319" alt="Captura de Tela 2024-03-18 às 08 20 15" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/e7ba14a8-0e5a-4471-9733-8d1c7da70efd">
+<img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d0253052-1593-452e-87bb-eb2aadac7b60">
 
 
 
