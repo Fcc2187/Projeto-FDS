@@ -14,7 +14,7 @@ Screencast do figma com as histórias:
 https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b
 
 Sprint:
-Captura.de.Tela.2024-03-18.as.08.20.15.png
+Captura.de.Tela.2024-03-18.as.08.20.15.png (view on web)
 
 Backlog:
-Captura.de.Tela.2024-03-18.as.08.20.31.png 
+Captura.de.Tela.2024-03-18.as.08.20.31.png (view on web)
