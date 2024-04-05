@@ -41,10 +41,10 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-          cd SEUPROJETODJANGO/
+          cd itech_project/
           zip release.zip ./* -r
           cd ..
-          mv SEUPROJETODJANGO/release.zip .
+          mv itech_project/release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v3
