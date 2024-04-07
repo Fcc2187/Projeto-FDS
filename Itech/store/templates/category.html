@@ -5,8 +5,8 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">iTech Store</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">iTech: Seu Portal para a Excelência em Tecnologia!</p>
+                    <h1 class="display-4 fw-bolder">{{ category }}</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Pagina de categorias</p>
                 </div>
             </div>
         </header>
@@ -20,7 +20,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
-                            <div class="badge bg-white text-black position-absolute" style="top: 0.5rem; right: 0.5rem">Promoção imperdível</div>
+                            <div class="badge bg-white text-black position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
                             <img class="card-img-top" src="{{product.image.url}}" alt="..." />
                             <!-- Product details-->
@@ -31,14 +31,14 @@
                                     <!-- SALE -->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
-                                        &nbsp;&nbsp;Promoção!&nbsp;&nbsp;
+                                        &nbsp;&nbsp;Sale!&nbsp;&nbsp;
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
                                     <strike>
-                                        R${{ product.price }}
+                                        ${{ product.price }}
                                     </strike>
-                                    R${{ product.sale_price }}
+                                    ${{ product.sale_price }}
                                 </div>
                                 
                                 
@@ -60,14 +60,14 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">{{ product.name }}</h5>
                                     <!-- Product price-->
-                                    R${{ product.price }}
+                                    ${{ product.price }}
                                 </div>
                                 
                                 
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' product.id %}">Informações</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' product.id %}">View Product</a></div>
                             </div>
                         </div>
                     </div>
