@@ -31,21 +31,21 @@
                                     <!-- SALE -->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
-                                        &nbsp;&nbsp;Sale!&nbsp;&nbsp;
+                                        &nbsp;&nbsp;Promoção!&nbsp;&nbsp;
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
                                     <strike>
-                                        ${{ product.price }}
+                                        R${{ product.price }}
                                     </strike>
-                                    ${{ product.sale_price }}
+                                    R${{ product.sale_price }}
                                 </div>
                                 
                                 
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' product.id %}">View Product</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'product' product.id %}">Informações</a></div>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">{{ product.name }}</h5>
                                     <!-- Product price-->
-                                    ${{ product.price }}
+                                    R${{ product.price }}
                                 </div>
                                 
                                 

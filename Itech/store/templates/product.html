@@ -30,7 +30,20 @@
                   {% else %}
                       R${{ product.price }}
                   {% endif %}
-
+                    <br></br>
+                    <div class="row justify-content-center">
+                      <div class="col-md-2">Quantidade:</div>
+                      <div class="col-md-2">
+                        <select class="form_select" id="qty-cart">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div>
+                    </div>
+                    <br></br>
                       <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
                       <button type ="button" value = "{{ product.id }}" class ="btn btn-secondary"id ="add-cart">Adicionar ao carrinho</button>
                     </center>
@@ -57,7 +70,6 @@
                 success: function(json){
                     //console.log(json)
                     document.getElementById("cart_quantity").textContent = json.qty
-                    location.reload();
                 },
         
                 error: function(xhr, errmsg, err){
