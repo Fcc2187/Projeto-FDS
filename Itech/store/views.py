@@ -72,3 +72,6 @@ def register_user(request):
 def product(request,pk):
 	product = Product.objects.get(id=pk)
 	return render(request, 'product.html', {'product':product})
+
+def contact(request):
+    return render(request, 'contact_summary.html', {})
