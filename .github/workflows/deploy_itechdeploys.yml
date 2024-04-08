@@ -28,11 +28,11 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r itech_project/requirements.txt
+        run: pip install -r Projeto-FDS/requirements.txt
       
       - name: Cleaning testing files
         run: |
-          cd itech_project/
+          cd Projeto-FDS/
           rm db.sqlite3
           rm .env
           cd ..
@@ -41,10 +41,10 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-          cd itech_project/
+          cd Projeto-FDS/
           zip release.zip ./* -r
           cd ..
-          mv itech_project/release.zip .
+          mv Projeto-FDS/release.zip .
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v3
