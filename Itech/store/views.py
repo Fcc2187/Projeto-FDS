@@ -61,10 +61,10 @@ def register_user(request):
             password = form.cleaned_data['password1']
             user = authenticate(username = username1, password1 = password)
             login(request, user)
-            messages.success("You Have Been Registrated")
+            messages.success(request, ("Você foi registrado com sucesso!")) 
             return redirect('home')
         else:
-            messages.success("There Was An Error, Try Again")
+            messages.success(request, ("Ocorreu um erro, tente novamente."))
             return redirect('register')
     else:
         return render(request, 'register.html', {'form' : form})
