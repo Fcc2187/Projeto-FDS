@@ -29,6 +29,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 
 Quadro da Sprint refletindo a entrega 1:
-blob:https://web.whatsapp.com/68bdc9ff-d4e2-4790-84b7-620ded4494d7![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/094d6f43-fda1-46a1-878f-e8a5b3217744)
+blob:https://web.whatsapp.com/68bdc9ff-d4e2-4790-84b7-620ded4494d7![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/37de95d4-2ea1-4f29-9a72-64f4849df6d6)
 
 
