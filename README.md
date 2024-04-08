@@ -5,6 +5,7 @@ Rodrigo Torres Marques Rodrigues
 Miguel Chaves Becker
 Luiz Felipe Pessoa Arruda
 Bernardo Carneiro Heuer Guimarães
+João Cláudio Beltrão
 
 Link Jira: https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2
 
