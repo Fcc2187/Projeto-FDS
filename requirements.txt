@@ -1,0 +1,14 @@
+asgiref
+certifi
+charset-normalizer
+Django
+gunicorn
+idna
+packaging
+psycopg2-binary
+python-dotenv
+requests
+sqlparse
+tzdata
+urllib3
+whitenoise
