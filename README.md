@@ -26,3 +26,9 @@ https://github.com/Fcc2187/Projeto-FDS/assets/151794134/7b9f8064-d870-4b8c-ae89-
 Começamos a desenvolver o site do iTech iniciando pela página de suporte, responsável pelo contato para reclamações e assistência aos usuários em suas interações com a equipe de administração. Essa decisão foi tomada considerando a simplicidade da história na sprint . No entanto, enfrentamos alguns contratempos. O principal deles foi que a página inicial acabou sendo a de suporte. Tentamos corrigir esse problema e avançar com o cadastro de usuários, mas as URLs e os modelos de dados permaneceram vinculados ao arquivo "contact_us".
 Diante dessa situação, optamos por revisar, separar e realocar os componentes em um novo projeto, incorporando também as histórias relacionadas ao cadastro de produtos (incluindo imagens), carrinho de compras e filtro por categorias. Decidimos deixar a implementação da página de suporte para a terceira entrega. Como todas as etapas já estão devidamente mapeadas, a compilação dessa história já implementada será mais simplificada.
 O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.
+
+
+Quadro da Sprint refletindo a entrega 1:
+blob:https://web.whatsapp.com/68bdc9ff-d4e2-4790-84b7-620ded4494d7![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/094d6f43-fda1-46a1-878f-e8a5b3217744)
+
+
