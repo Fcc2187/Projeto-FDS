@@ -1,11 +1,11 @@
 # Projeto-FDS
-Felipe Cavalcanti Caminha
-José Braz de Oliveira Neto
-Rodrigo Torres Marques Rodrigues
-Miguel Chaves Becker
-Luiz Felipe Pessoa Arruda
-Bernardo Carneiro Heuer Guimarães
-João Cláudio Beltrão
+Felipe Cavalcanti Caminha//
+José Braz de Oliveira Neto//
+Rodrigo Torres Marques Rodrigues//
+Miguel Chaves Becker//
+Luiz Felipe Pessoa Arruda//
+Bernardo Carneiro Heuer Guimarães//
+João Cláudio Beltrão//
 
 Link Jira: https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2
 
@@ -32,7 +32,9 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br><br>
 Duplas:
 Miguel Becker e José Braz
+<br>
 Bernardo Heuer e Luiz Felipe Arruda
+<br>
 Rodrigo Torres e Felipe Caminha
 
 Screencast da entrega 2:
