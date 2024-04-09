@@ -29,6 +29,14 @@ Diante dessa situação, optamos por revisar, separar e realocar os componentes 
 O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.
 
 
+
+
+Screencast da entrega 2:
+https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
+
+
+
+
 Quadro da Sprint de entrega 2 refletindo a entrega 1:
 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0)
