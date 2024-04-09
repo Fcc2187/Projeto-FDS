@@ -42,7 +42,7 @@ Rodrigo Torres e Felipe Caminha
 
 Screencast da entrega 2:
 https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
-
+https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link (link público)
 
 
 
