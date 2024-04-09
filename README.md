@@ -29,7 +29,11 @@ Diante dessa situação, optamos por revisar, separar e realocar os componentes 
 O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.
 
 
-
+<br><br>
+Duplas:
+Miguel Becker e José Braz
+Bernardo Heuer e Luiz Felipe Arruda
+Rodrigo Torres e Felipe Caminha
 
 Screencast da entrega 2:
 https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
