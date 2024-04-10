@@ -44,6 +44,8 @@ Screencast da entrega 2:
 https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
 https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link (link público)
 
+Diagrama de atividades:
+![Imagem do WhatsApp de 2024-04-08 à(s) 12 14 36_3b177e66(https://github.com/Fcc2187/Projeto-FDS/assets/142419397/2369c254-03a1-45f3-acea-475b92c7e21d)
 
 
 Quadro da Sprint de entrega 2 refletindo a entrega 1:
