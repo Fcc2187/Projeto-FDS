@@ -52,26 +52,27 @@ def logout_user(request):
     return redirect('home')
 
 def register_user(request):
-    form = SignUpForm()
-    if request.method == "POST":
-        form = SignUpForm(request.POST)
-        if form.is_valid:
-            form.save()
-            username1 = form.cleaned_data['username']
-            password = form.cleaned_data['password1']
-            user = authenticate(username = username1, password1 = password)
-            login(request, user)
-            messages.success(request, ("Você foi registrado com sucesso!")) 
-            return redirect('home')
-        else:
-            messages.success(request, ("Ocorreu um erro, tente novamente."))
-            return redirect('register')
-    else:
-        return render(request, 'register.html', {'form' : form})
+	form = SignUpForm()
+	if request.method == "POST":
+		form = SignUpForm(request.POST)
+		if form.is_valid():
+			form.save()
+			username = form.cleaned_data['username']
+			password = form.cleaned_data['password1']
+			# log in user
+			user = authenticate(username=username, password=password)
+			login(request, user)
+			messages.success(request, ("Você Foi Cadastrado, Parabens!!!"))
+			return redirect('home')
+		else:
+			messages.success(request, ("Tivemos Um Problema, Tente Novamente"))
+			return redirect('register')
+	else:
+		return render(request, 'register.html', {'form':form})
     
 def product(request,pk):
-	product = Product.objects.get(id=pk)
-	return render(request, 'product.html', {'product':product})
+	products = Product.objects.get(id=pk)
+	return render(request, 'product.html', {'product':products})
 
 def contact(request):
     return render(request, 'contact_summary.html', {})
