@@ -1,13 +1,16 @@
 # Projeto-FDS
-Felipe Cavalcanti Caminha
-José Braz de Oliveira Neto
-Rodrigo Torres Marques Rodrigues
-Miguel Chaves Becker
-Luiz Felipe Pessoa Arruda
-Bernardo Carneiro Heuer Guimarães
-João Cláudio Beltrão
+Felipe Cavalcanti Caminha//
+José Braz de Oliveira Neto//
+Rodrigo Torres Marques Rodrigues//
+Miguel Chaves Becker//
+Luiz Felipe Pessoa Arruda//
+Bernardo Carneiro Heuer Guimarães//
+João Cláudio Beltrão//
 
 Link Jira: https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2
+
+Link deploy
+https://itechfds.azurewebsites.net/
 
 Link Figma: https://www.figma.com/file/GNcL8wpzwCpdZfd9ezt2uM/iTech?type=design&node-id=0-1&mode=design&t=nK8iW4muqMOR0FkI-0
 
@@ -29,6 +32,23 @@ Diante dessa situação, optamos por revisar, separar e realocar os componentes 
 O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.
 
 
-Quadro da Sprint refletindo a entrega 1:
+<br><br>
+Duplas:
+Miguel Becker e José Braz
+<br>
+Bernardo Heuer e Luiz Felipe Arruda
+<br>
+Rodrigo Torres e Felipe Caminha
 
+Screencast da entrega 2:
+https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
+https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link (link público)
+
+Diagrama de atividades:
+(https://github.com/Fcc2187/Projeto-FDS/assets/142419397/2369c254-03a1-45f3-acea-475b92c7e21d)
+
+
+Quadro da Sprint de entrega 2 refletindo a entrega 1:
+
+![image](https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0)
 
