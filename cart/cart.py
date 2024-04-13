@@ -33,7 +33,7 @@ class Cart():
     
     def update(self, product, quantity):
         product_id= str(product)
-        product_qty=int (quantity)
+        product_qty= int(quantity)
 
         #get cart 
         ourcart = self.cart
