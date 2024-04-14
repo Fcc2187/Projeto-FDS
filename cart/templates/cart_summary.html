@@ -65,7 +65,9 @@
                       <br></br>
                       <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
                       <button type ="button" data-index="{{product.id}}"
-                      class="btn btn-secondary update-cart">Update</button>
+                      class="btn btn-primary update-cart">Atualizar</button>
+                      <button type ="button" data-index="{{product.id}}"
+                      class="btn btn-danger delete-product">Remover</button>
 
                     </center>
                     </div>
@@ -95,6 +97,36 @@
                 product_id: $(this).data('index'),
                 product_qty: $('#select' + productid + ' option:selected').text(),
                 csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+              },
+              success: function(json){
+                  //console.log(json)
+                  //document.getElementById("cart_quantity").textContent = json.qty
+                  location.reload();
+              },
+          
+              error: function(xhr, errmsg, err){
+          
+              }
+          
+          
+              });
+          
+          })
+
+          // Delete item from cart
+          $(document).on('click', '.delete-product', function(e){
+              e.preventDefault();
+              // grab the product id
+             //var productid = $(this).data('index');
+          
+              $.ajax({
+              type: 'POST',
+              url: '{% url "cart_delete" %}',
+              data: {
+                product_id: $(this).data('index'),
+                //product_qty: $('#select' + productid + ' option:selected').text(), DEIXEI COMO COMENTARIO PQ NAO PRECISA DE QUANTIDADE QUANDO SE VAI APAGAR PRODUTO
+                csrfmiddlewaretoken: '{{ csrf_token }}',  
                 action: 'post'
               },
               success: function(json){
