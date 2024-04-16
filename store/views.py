@@ -8,6 +8,10 @@ from django import forms
 from .forms import SignUpForm
 from .models import Product, Category
 
+def category_summary(request):
+     categories = Category.objects.all()
+     return render(request, 'category_summary.html', {"categories": categories})
+
 def category(request,foo):
     #tirando o hifen
     foo = foo.replace("-"," ")
