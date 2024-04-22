@@ -18,10 +18,9 @@
                       {% if product_is.sale %}
                       <div class="d-flex justify-content-center small text-warning mb-2">
                         <div class="bi-star-fill"></div>
-                        &nbsp;&nbsp;Sale!&nbsp;&nbsp;
+                        &nbsp;&nbsp;Promoção!&nbsp;&nbsp;
                         <div class="bi-star-fill"></div>
                     </div>
-                    <!-- Product price-->
                     <strike>
                         R${{ product.price }}
                     </strike>
@@ -68,7 +67,6 @@
                 },
         
                 success: function(json){
-                    //console.log(json)
                     document.getElementById("cart_quantity").textContent = json.qty
                     location.reload();
                    
