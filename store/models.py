@@ -14,6 +14,7 @@ class Profile(models.Model):
     Estado = models.CharField(max_length=200, blank=True)
     CEP = models.CharField(max_length=200, blank=True)
     País = models.CharField(max_length=200, blank=True)
+    antigo_carrinho = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return self.user.username 
