@@ -22,7 +22,7 @@ def search(request):
             return render(request, 'search.html', {'searched':searched})
     return render(request, 'search.html', {}) 
 
-def update_info(request):
+"""def update_info(request):
     if request.user.is_authenticated:
         current_user = Profile.objects.get(user__id=request.user.id)
         form = UserInfoForm(request.POST or None, instance=current_user)
@@ -33,7 +33,27 @@ def update_info(request):
         return render(request, "update_info.html", {'form':form})
     else:
         messages.success(request, "Você precisa estar logado para acessar esta página.")
-        return redirect('home')
+        return redirect('home')"""
+
+def update_info(request):
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            user_profile = Profile.objects.get(user=request.user)
+            user_profile.Numero = request.POST.get('Numero', '')
+            user_profile.Endereço1 = request.POST.get('Endereço1', '')
+            user_profile.Endereço2 = request.POST.get('Endereço2', '')
+            user_profile.Cidade = request.POST.get('Cidade', '')
+            user_profile.Estado = request.POST.get('Estado', '')
+            user_profile.CEP = request.POST.get('CEP', '')
+            user_profile.País = request.POST.get('País', '')
+            user_profile.save()
+            messages.success(request, "Perfil atualizado com sucesso!")
+            return redirect('home')
+        else:
+            return render(request, 'update_info.html')
+    else:
+         messages.success(request, "Você precisa estar logado para acessar esta página.")
+         return redirect('home')
     
 def category_summary(request):
      categories = Category.objects.all()

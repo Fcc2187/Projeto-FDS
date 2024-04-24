@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm, SetPasswordForm
 from django import forms
 from .models import Profile
+
 class UserInfoForm(forms.ModelForm):
 	Numero = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Numero'}),required=False)
 	Endereço1 = forms.CharField(label="",widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Endereço1'}),required=False)

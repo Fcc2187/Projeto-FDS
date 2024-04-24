@@ -17,15 +17,31 @@
         			<div class="col-md-6 offset-md-3">
 
         				<br/><br/>
-<form method="POST" action="{% url 'update_info' %}">
-    {% csrf_token %}
-    
-    {{ form.as_p }}
-    <br/><br/>
-    <button type="submit" class="btn btn-secondary">
-      Atualizar Perfil
-    </button> 
-</form>
+                        <form method="post" action="{% url 'update_info' %}">
+                            {% csrf_token %}
+                            <label for="Numero">Número:</label>
+                            <input type="text" id="Numero" name="Numero" value="{{ user.profile.Numero }}"><br>
+                        
+                            <label for="Endereço1">Endereço 1:</label>
+                            <input type="text" id="Endereço1" name="Endereço1" value="{{ user.profile.Endereço1 }}"><br>
+                        
+                            <label for="Endereço2">Endereço 2:</label>
+                            <input type="text" id="Endereço2" name="Endereço2" value="{{ user.profile.Endereço2 }}"><br>
+                        
+                            <label for="Cidade">Cidade:</label>
+                            <input type="text" id="Cidade" name="Cidade" value="{{ user.profile.Cidade }}"><br>
+                        
+                            <label for="Estado">Estado:</label>
+                            <input type="text" id="Estado" name="Estado" value="{{ user.profile.Estado }}"><br>
+                        
+                            <label for="CEP">CEP:</label>
+                            <input type="text" id="CEP" name="CEP" value="{{ user.profile.CEP }}"><br>
+                        
+                            <label for="País">País:</label>
+                            <input type="text" id="País" name="País" value="{{ user.profile.País }}"><br>
+                        
+                            <button type="submit">Atualizar Perfil</button>
+                        </form>
 
 <br/><br/>
 
