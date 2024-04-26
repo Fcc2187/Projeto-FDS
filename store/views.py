@@ -10,6 +10,8 @@ from .models import Product, Category, Profile
 from django.db.models import Q
 import json
 from cart.cart import Cart
+from django.utils import timezone
+
 
 
 def search(request):
@@ -170,5 +172,5 @@ def product(request,pk):
 	products = Product.objects.get(id=pk)
 	return render(request, 'product.html', {'product':products})
 
-def contact(request):
-    return render(request, 'contact_summary.html', {})
+
+

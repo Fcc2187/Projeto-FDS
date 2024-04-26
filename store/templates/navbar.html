@@ -35,7 +35,14 @@
                         <li><a class="dropdown-item" href="{%url 'category' 'Fones de ouvido'%}">Fones de ouvido</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'contact_summary' %}">Contato</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contato</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{%url 'contact_summary'%}">Entre em contato</a></li>
+                        <li><a class="dropdown-item" href="{%url 'complaints'%}">Suas reclamações</a></li>
+                    </ul>
+                </li>
+
             </ul>
             <form class="d-flex">
                 <a href ="{% url 'cart_summary' %}"class="btn btn-outline-dark"><i class="bi-cart-fill me-1"></i>

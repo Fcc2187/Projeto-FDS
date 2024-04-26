@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Suas reclamações</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Veja suas reclamações</p>
+            </div>
+        </div>
+    </header>
+
+    <br>
+
+
+
+    <div class="col-sm-3 mb-3 mb-sm-0   ">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-name">{{ request.GET.nome }}</h6>
+            <h6 class="card-email">{{ request.GET.email }}</h6>
+            <p class="card-text">{{ request.GET.assunto }}</p>
+          </div>
+        </div>
+      </div>
+    </ul>
+        
+    <br>
+
+
+{% endblock %}
