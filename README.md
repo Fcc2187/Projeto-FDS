@@ -33,12 +33,14 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 
 <br><br>
-Duplas:
+Duplas Entrega 2:
 Miguel Becker e José Braz
 <br>
 Bernardo Heuer e Luiz Felipe Arruda
 <br>
 Rodrigo Torres e Felipe Caminha
+<br><br>
+
 
 Screencast da entrega 2:
 https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
@@ -51,4 +53,13 @@ Diagrama de atividades:
 Quadro da Sprint de entrega 2 refletindo a entrega 1:
 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0)
+
+<br><br>
+Duplas Entrega 3:
+Felipe Caminha e Miguel Becker
+<br>
+Rodrigo Torres e José Braz
+<br>
+Bernardo Heuer e João Cláudio Beltrão
+<br><br>
 
