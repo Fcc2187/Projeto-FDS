@@ -1,5 +1,5 @@
-# iTech
-
+<p align="center"><img align="center" width="280" src="media/uploads/product/cesar.logo.png"/></p>
+<hr>
 <p align="center">
   <img
     src="https://img.shields.io/github/repo-size/Fcc2187/Projeto-FDS?style=flat"
