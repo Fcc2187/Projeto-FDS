@@ -16,14 +16,14 @@
   /></a>
 </p>
 
-## Visão Geral
+## 🔎 Visão Geral
 
 <br>
 <p> A iTech é uma aplicação e-commerce que tem como foco a venda de produtos relacionados ao mercado de tecnologia. Aqui, apresentamos aos visitantes deste respositório, o processo de desenvolvimento da aplicação e informações a respeito da nossa trajetória. Somos uma equipe de alunos da CESAR School, desempenhando essa tarefa para a disciplina de Fundamentos de Desenvolvimento de Software. </p>
 
 <br><br>
 
-## Nossa Equipe
+## ⭐ Nossa Equipe
 
 <br>
 <p style="text-align: center; text-decoration: none;"> Felipe Cavalcanti Caminha </p>
@@ -62,7 +62,7 @@
 
 <br><br>
 
-## Screencast
+## 💻 Screencast
 
 <br>
 
@@ -79,11 +79,11 @@
 
 <br><br>
 
-# Entrega 2
+# 📧 Entrega 2
 
 <br>
 
-## Diagrama de Atividades
+## 📃 Diagrama de Atividades
 
 <br>
 
@@ -119,7 +119,7 @@ Quadro da Sprint de entrega 2 refletindo a entrega 1:
 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0)
 
-# Entrega 3
+# 📧 Entrega 3
 
 <br><br>
 Duplas Entrega 3:
