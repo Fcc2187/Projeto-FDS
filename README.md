@@ -16,31 +16,62 @@
   /></a>
 </p>
 
-Felipe Cavalcanti Caminha//
-José Braz de Oliveira Neto//
-Rodrigo Torres Marques Rodrigues//
-Miguel Chaves Becker//
-Luiz Felipe Pessoa Arruda//
-Bernardo Carneiro Heuer Guimarães//
-João Cláudio Beltrão//
+## Visão Geral
 
-Link Jira: https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2
+<p> A iTech é uma aplicação e-commerce que tem como foco a venda de produtos relacionados ao mercado de tecnologia. </p>
 
-Link deploy
-https://itechfds.azurewebsites.net/
+## Nossa Equipe
 
-Link Figma: https://www.figma.com/file/GNcL8wpzwCpdZfd9ezt2uM/iTech?type=design&node-id=0-1&mode=design&t=nK8iW4muqMOR0FkI-0
+<p> Felipe Cavalcanti Caminha </p>
+<p> José Braz de Oliveira Neto</p>
+<p> Rodrigo Torres Marques Rodrigues </p>
+<p> Miguel Chaves Becker </p>
+<p> Luiz Felipe Pessoa Arruda </p>
+<p> Bernardo Carneiro Heuer Guimarães </p>
+<p> João Cláudio Beltrão </p>
 
-Screencast do figma com as histórias:
-https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b
+## Links
+
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2" style="text-decoration: none;">
+    <span>🔗 Jira</span>
+  </a>
+</p>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://itechfds.azurewebsites.net/" style="text-decoration: none;">
+    <span>🔗 Azure</span>
+  </a>
+</p>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://www.figma.com/file/GNcL8wpzwCpdZfd9ezt2uM/iTech?type=design&node-id=0-1&mode=design&t=nK8iW4muqMOR0FkI-0" style="text-decoration: none;">
+    <span>🔗 Figma</span>
+  </a>
+</p>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/7b9f8064-d870-4b8c-ae89-6ed0e9216908" style="text-decoration: none;">
+    <span>🔗 Backlog</span>
+  </a>
+</p>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
+    <span>🔗 Screencast do protótipo Lo-Fi (1)</span>
+  </a>
+</p>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
+    <span>🔗 Screencast do site (1)</span>
+  </a>
+</p>
+
+# !!Entrega 2!!
+
+## Diagrama de Atividades
+
+(https://github.com/Fcc2187/Projeto-FDS/assets/142419397/2369c254-03a1-45f3-acea-475b92c7e21d)
 
 Sprint:
 <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d0253052-1593-452e-87bb-eb2aadac7b60">
 
-
-
-Backlog:
-https://github.com/Fcc2187/Projeto-FDS/assets/151794134/7b9f8064-d870-4b8c-ae89-6ed0e9216908
 
 <img width="1470" alt="Captura de Tela 2024-03-18 às 09 05 57" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/eaf3668f-cf2d-4607-81b7-b3faf23535eb">
 
@@ -63,13 +94,12 @@ Screencast da entrega 2:
 https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
 https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link (link público)
 
-Diagrama de atividades:
-(https://github.com/Fcc2187/Projeto-FDS/assets/142419397/2369c254-03a1-45f3-acea-475b92c7e21d)
-
 
 Quadro da Sprint de entrega 2 refletindo a entrega 1:
 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0)
+
+# !!Entrega 3!!
 
 <br><br>
 Duplas Entrega 3:
