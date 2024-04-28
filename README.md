@@ -118,9 +118,9 @@ Quadro da Sprint de entrega 2 refletindo a entrega 1:
 
 <br><br>
 Duplas Entrega 3:
-Felipe Caminha e Miguel Becker
+Felipe Caminha e Rodrigo Torres
 <br>
-Rodrigo Torres e José Braz
+Miguel Becker e José Braz
 <br>
 Bernardo Heuer e João Cláudio Beltrão
 <br><br>
