@@ -16,14 +16,14 @@
   /></a>
 </p>
 
-## 🔎 Visão Geral
+# 🔎 Visão Geral
 
 <br>
 <p> A iTech é uma aplicação e-commerce que tem como foco a venda de produtos relacionados ao mercado de tecnologia. Aqui, apresentamos aos visitantes deste respositório, o processo de desenvolvimento da aplicação e informações a respeito da nossa trajetória. Somos uma equipe de alunos da CESAR School, desempenhando essa tarefa para a disciplina de Fundamentos de Desenvolvimento de Software. </p>
 
 <br><br>
 
-## ⭐ Nossa Equipe
+# ⭐ Nossa Equipe
 
 <br>
 <p style="text-align: center; text-decoration: none;"> Felipe Cavalcanti Caminha </p>
@@ -36,7 +36,7 @@
 
 <br><br>
 
-## Links
+# Links
 
 <br>
 <p style="text-align: center; text-decoration: none;">
@@ -62,7 +62,7 @@
 
 <br><br>
 
-## 💻 Screencast
+# 💻 Screencast
 
 <br>
 
@@ -82,6 +82,10 @@
 # 📧 Entrega 2
 
 <br>
+<i>Resumo da Entrega 2: Começamos a desenvolver o site do iTech iniciando pela página de suporte, responsável pelo contato para reclamações e assistência aos usuários em suas interações com a equipe de administração. Essa decisão foi tomada considerando a simplicidade da história na sprint. No entanto, enfrentamos alguns contratempos. O principal deles foi que a página inicial acabou sendo a de suporte. Tentamos corrigir esse problema e avançar com o cadastro de usuários, mas as URLs e os modelos de dados permaneceram vinculados ao arquivo "contact_us".
+Diante dessa situação, optamos por revisar, separar e realocar os componentes em um novo projeto, incorporando também as histórias relacionadas ao cadastro de produtos (incluindo imagens), carrinho de compras e filtro por categorias. Decidimos deixar a implementação da página de suporte para a terceira entrega. Como todas as etapas já estão devidamente mapeadas, a compilação dessa história já implementada será mais simplificada.
+O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.</i>
+<br><br>
 
 ## 📃 Diagrama de Atividades
 
@@ -95,24 +99,15 @@ Sprint:
 
 <img width="1470" alt="Captura de Tela 2024-03-18 às 09 05 57" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/eaf3668f-cf2d-4607-81b7-b3faf23535eb">
 
-Começamos a desenvolver o site do iTech iniciando pela página de suporte, responsável pelo contato para reclamações e assistência aos usuários em suas interações com a equipe de administração. Essa decisão foi tomada considerando a simplicidade da história na sprint . No entanto, enfrentamos alguns contratempos. O principal deles foi que a página inicial acabou sendo a de suporte. Tentamos corrigir esse problema e avançar com o cadastro de usuários, mas as URLs e os modelos de dados permaneceram vinculados ao arquivo "contact_us".
-Diante dessa situação, optamos por revisar, separar e realocar os componentes em um novo projeto, incorporando também as histórias relacionadas ao cadastro de produtos (incluindo imagens), carrinho de compras e filtro por categorias. Decidimos deixar a implementação da página de suporte para a terceira entrega. Como todas as etapas já estão devidamente mapeadas, a compilação dessa história já implementada será mais simplificada.
-O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.
+<br>
 
-
-<br><br>
-Duplas Entrega 2:
+## 🎎 Pair Programming da Entrega 2
 Miguel Becker e José Braz
 <br>
 Bernardo Heuer e Luiz Felipe Arruda
 <br>
 Rodrigo Torres e Felipe Caminha
 <br><br>
-
-
-Screencast da entrega 2:
-https://drive.google.com/file/d/1fvWcFwgWUvycKNIcmlLmjwH_kt3I_m7v/view?usp=sharing
-https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link (link público)
 
 
 Quadro da Sprint de entrega 2 refletindo a entrega 1:
