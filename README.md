@@ -18,20 +18,27 @@
 
 ## Visão Geral
 
-<p> A iTech é uma aplicação e-commerce que tem como foco a venda de produtos relacionados ao mercado de tecnologia. </p>
+<br>
+<p> A iTech é uma aplicação e-commerce que tem como foco a venda de produtos relacionados ao mercado de tecnologia. Aqui, apresentamos aos visitantes deste respositório, o processo de desenvolvimento da aplicação e informações a respeito da nossa trajetória. Somos uma equipe de alunos da CESAR School, desempenhando essa tarefa para a disciplina de Fundamentos de Desenvolvimento de Software. </p>
+
+<br><br>
 
 ## Nossa Equipe
 
-<p> Felipe Cavalcanti Caminha </p>
-<p> José Braz de Oliveira Neto</p>
-<p> Rodrigo Torres Marques Rodrigues </p>
-<p> Miguel Chaves Becker </p>
-<p> Luiz Felipe Pessoa Arruda </p>
-<p> Bernardo Carneiro Heuer Guimarães </p>
-<p> João Cláudio Beltrão </p>
+<br>
+<p style="text-align: center; text-decoration: none;"> Felipe Cavalcanti Caminha </p>
+<p style="text-align: center; text-decoration: none;"> José Braz de Oliveira Neto</p>
+<p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
+<p style="text-align: center; text-decoration: none;"> Miguel Chaves Becker </p>
+<p style="text-align: center; text-decoration: none;"> Luiz Felipe Pessoa Arruda </p>
+<p style="text-align: center; text-decoration: none;"> Bernardo Carneiro Heuer Guimarães </p>
+<p style="text-align: center; text-decoration: none;"> João Cláudio Beltrão </p>
+
+<br><br>
 
 ## Links
 
+<br>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2" style="text-decoration: none;">
     <span>🔗 Jira</span>
@@ -52,6 +59,13 @@
     <span>🔗 Backlog</span>
   </a>
 </p>
+
+<br><br>
+
+## Screencast
+
+<br>
+
 <p style="text-align: center; text-decoration: none;">
   <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
     <span>🔗 Screencast do protótipo Lo-Fi (1)</span>
@@ -63,9 +77,15 @@
   </a>
 </p>
 
-# !!Entrega 2!!
+<br><br>
+
+# Entrega 2
+
+<br>
 
 ## Diagrama de Atividades
+
+<br>
 
 (https://github.com/Fcc2187/Projeto-FDS/assets/142419397/2369c254-03a1-45f3-acea-475b92c7e21d)
 
@@ -99,7 +119,7 @@ Quadro da Sprint de entrega 2 refletindo a entrega 1:
 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0)
 
-# !!Entrega 3!!
+# Entrega 3
 
 <br><br>
 Duplas Entrega 3:
