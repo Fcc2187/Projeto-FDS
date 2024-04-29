@@ -73,7 +73,7 @@
 </p>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
-    <span>🔗 Screencast do site (1)</span>
+    <span>🔗 Screencast do site  (TA ERRADO, PRECISA SER NA AZURE!!)(1)</span>
   </a>
 </p>
 
@@ -141,17 +141,16 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
 
-
 <br>
 
 ### Bug Tracker (Requisito da Entrega 2)
 <br>
 
-
+  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/b58612d3-a52f-40cd-a4ad-ab66919f4ab0">
 
 <br>
 
-## 🎎 Pair Programming da Entrega 2
+## 🎎 Pair Programming (Requisito da Entrega 2)
 
 <br>
 
@@ -185,6 +184,16 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </details>
 <br>
 
+### Deploy das Histórias da Entrega 2 (Requisito da Entrega 2)
+<br>
+
+#### Link para acesso do site na Azure
+<a href="https://itechfds.azurewebsites.net/">🔗 iTech</a>
+
+#### Screencast do site na Azure
+ <strong>A FAZER!!!</strong>
+
+<br>
 
 
 
