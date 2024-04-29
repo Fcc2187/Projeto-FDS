@@ -79,6 +79,8 @@
 
 <br><br>
 
+# 📧 Entrega 1
+
 # 📧 Entrega 2
 
 <br>
@@ -102,12 +104,37 @@ Sprint:
 <br>
 
 ## 🎎 Pair Programming da Entrega 2
-Miguel Becker e José Braz
 <br>
-Bernardo Heuer e Luiz Felipe Arruda
+
+<details>
+<summary>Miguel Becker e José Braz</summary>
+
+  <h4> História: </h4>
+  <p>...</p>
+
+<h4> FeedBack: </h4> <p> ? </p>
+</details>
 <br>
-Rodrigo Torres e Felipe Caminha
-<br><br>
+
+<details>
+<summary>Bernardo Heuer e Luiz Felipe Arruda</summary>
+
+  <h4> História: </h4>
+  <p>...</p>
+
+<h4> FeedBack: </h4> <p> ? </p>
+</details>
+<br>
+
+<details>
+<summary>Rodrigo Torres e Felipe Caminha</summary>
+
+  <h4> História: </h4>
+  <p>...</p>
+
+<h4> FeedBack: </h4> <p> ? </p>
+</details>
+<br>
 
 
 Quadro da Sprint de entrega 2 refletindo a entrega 1:
