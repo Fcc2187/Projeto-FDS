@@ -81,6 +81,45 @@
 
 # 📧 Entrega 1
 
+<br>
+<i>A Entrega 1 resumiu=se ao desenvolvimento do nosso protótipo de baixa fidelidade, a definição das nossas histórias no Jira e a realização de um screencast do nosso protótipo. Não fui uma entrega muito grande então o grupo conseguiu lidar com a situação sem muita pressão e com tempo de sobra. Contudo, após o lançamento dos resultados dessa entrega, a equipe percebeu a falta de muitos requisitos os quais vieram a ser resolvidos posteriormente na Entrega 2.</i>
+
+### Jira Backlog (Requisito da Entrega 1)
+<br>
+
+  <img src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/5d083dbb-9cf1-4044-8a0f-2bfede661333" alt="Repository Size">
+
+<br>
+
+### Jira Board (Requisito da Entrega 1)
+<br>
+
+  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d0253052-1593-452e-87bb-eb2aadac7b60">
+
+<br>
+
+### Prototipação Lo-Fi (Requisito da Entrega 1)
+<br>
+
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://www.figma.com/file/GNcL8wpzwCpdZfd9ezt2uM/iTech?type=design&node-id=0-1&mode=design&t=nK8iW4muqMOR0FkI-0" style="text-decoration: none;">
+    <span>🔗 Figma</span>
+  </a>
+</p>
+
+<br>
+
+### Screencast do Protótipo (Requisito da Entrega 1)
+<br>
+
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
+    <span>🔗 Screencast do protótipo Lo-Fi (1)</span>
+  </a>
+</p>
+
+<br>
+
 # 📧 Entrega 2
 
 <br>
@@ -95,15 +134,12 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 (https://github.com/Fcc2187/Projeto-FDS/assets/142419397/2369c254-03a1-45f3-acea-475b92c7e21d)
 
-Sprint:
-<img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d0253052-1593-452e-87bb-eb2aadac7b60">
-
-
 <img width="1470" alt="Captura de Tela 2024-03-18 às 09 05 57" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/eaf3668f-cf2d-4607-81b7-b3faf23535eb">
 
 <br>
 
 ## 🎎 Pair Programming da Entrega 2
+
 <br>
 
 <details>
