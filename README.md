@@ -128,13 +128,26 @@ Diante dessa situação, optamos por revisar, separar e realocar os componentes 
 O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.</i>
 <br><br>
 
-## 📃 Diagrama de Atividades
+
+### Sprint no Jira (Requisito da Entrega 2)
+<br>
+
+  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0">
 
 <br>
 
-(https://github.com/Fcc2187/Projeto-FDS/assets/142419397/2369c254-03a1-45f3-acea-475b92c7e21d)
+### 📃 Diagrama de Atividades (Requisito da Entrega 2)
+<br>
 
-<img width="1470" alt="Captura de Tela 2024-03-18 às 09 05 57" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/eaf3668f-cf2d-4607-81b7-b3faf23535eb">
+  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
+
+
+<br>
+
+### Bug Tracker (Requisito da Entrega 2)
+<br>
+
+
 
 <br>
 
@@ -173,9 +186,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 
-Quadro da Sprint de entrega 2 refletindo a entrega 1:
 
-![image](https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0)
 
 # 📧 Entrega 3
 
