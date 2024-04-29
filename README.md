@@ -68,12 +68,12 @@
 
 <p style="text-align: center; text-decoration: none;">
   <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
-    <span>🔗 Screencast do protótipo Lo-Fi (1)</span>
+    <span>🔗 Screencast do protótipo Lo-Fi (Entrega 1)</span>
   </a>
 </p>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
-    <span>🔗 Screencast do site  (TA ERRADO, PRECISA SER NA AZURE!!)(1)</span>
+    <span>🔗 Screencast do site (Entrega 2)</span>
   </a>
 </p>
 
@@ -188,10 +188,18 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 #### Link para acesso do site na Azure
-<a href="https://itechfds.azurewebsites.net/">🔗 iTech</a>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://itechfds.azurewebsites.net/" style="text-decoration: none;">
+    <span>🔗 iTech</span>
+  </a>
+</p>
 
 #### Screencast do site na Azure
- <strong>A FAZER!!!</strong>
+ <p style="text-align: center; text-decoration: none;">
+  <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
+    <span>🔗 Screencast do site</span>
+  </a>
+</p>
 
 <br>
 
