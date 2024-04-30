@@ -5,6 +5,7 @@ Django
 gunicorn
 idna
 packaging
+pillow
 psycopg2-binary
 python-dotenv
 requests
