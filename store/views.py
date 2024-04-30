@@ -71,7 +71,7 @@ def category(request,foo):
         products = Product.objects.filter(category=category)
         return render(request,'category.html',{'products':products, 'category':category})
     except:
-        messages.success(request, ("That category doesn't exist"))
+        messages.success(request, ("Essa categoria não existe."))
         return redirect('home')
 
 def home(request):
@@ -96,10 +96,10 @@ def login_user(request):
                  cart = Cart(request)
                  for key,value in converted_cart.items():
                       cart.db_add(product=key, quantity=value)
-            messages.success(request, ("You Logged In"))
+            messages.success(request, ("Logado com sucesso!"))
             return redirect('home')
         else:
-            messages.success(request, ("There Was An Error, Please Try Again"))
+            messages.success(request, ("Ocorreu um erro, tente novamente."))
             return redirect('login')
 
 
@@ -109,7 +109,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    messages.success(request, ("You Have Logged Out"))
+    messages.success(request, ("Deslogado com sucesso."))
     return redirect('home')
 
 def register_user(request):
@@ -123,7 +123,7 @@ def register_user(request):
 			# log in user
 			user = authenticate(username=username, password=password)
 			login(request, user)
-			messages.success(request, ("Você Foi Cadastrado,Agora insira suas informações pessoais:"))
+			messages.success(request, ("Você Foi Cadastrado, agora insira suas informações pessoais:"))
 			return redirect('update_info')
 		else:
 			messages.success(request, ("Tivemos Um Problema, Tente Novamente"))

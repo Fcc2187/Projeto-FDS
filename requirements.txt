@@ -12,3 +12,4 @@ sqlparse
 tzdata
 urllib3
 whitenoise
+selenium
