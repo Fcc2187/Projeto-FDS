@@ -64,11 +64,11 @@
                         </div>
                       </div>
                       <br></br>
-                      <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+                      <a href="{% url 'home' %}" class="btn btn-secondary" id="home">Home</a>
                       <button type ="button" data-index="{{product.id}}"
-                      class="btn btn-primary update-cart">Atualizar</button>
+                      class="btn btn-primary update-cart" id="atualizar">Atualizar</button>
                       <button type ="button" data-index="{{product.id}}"
-                      class="btn btn-danger delete-product">Remover</button>
+                      class="btn btn-danger delete-product" id="remova">Remover</button>
 
                     </center>
                     </div>
@@ -77,7 +77,7 @@
               </div>
 
             {% endfor %}
-            <h3>Total: R${{ totals }} </h3>
+            <h3 id="total">Total: R${{ totals }} </h3>
 
             <br/><br/><br/>
             {% else %}
