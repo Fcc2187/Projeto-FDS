@@ -4,7 +4,7 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Procurar Produtos</h1>
+                    <h1 class="display-4 fw-bolder" name="title">Procurar Produtos</h1>
                     <p class="lead fw-normal text-white-50 mb-0">Ache o produto que você está procurando</p>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                                 <div class="mb-3">
                                     <input type="text" class="form-control" placeholder="Ache seu produto" name="searched">
                                   </div>
-                                <button type ="submit" class="btn btn-secondary">Procurar Produtos</button>
+                                <button type ="submit" name="go" class="btn btn-secondary">Procurar Produtos</button>
                               </form>
                             </div>
                           </div>
@@ -41,7 +41,7 @@
                                   <div class="card-body p-4">
                                       <div class="text-center">
                                           
-                                          <h5 class="fw-bolder">{{ product.name }}</h5>
+                                          <h5 class="fw-bolder" name="prodname">{{ product.name }}</h5>
                                          
                                           <div class="d-flex justify-content-center small text-warning mb-2">
                                               <div class="bi-star-fill"></div>
@@ -72,7 +72,7 @@
                                   <div class="card-body p-4">
                                       <div class="text-center">
                                          
-                                          <h5 class="fw-bolder">{{ product.name }}</h5>
+                                          <h5 class="fw-bolder" name="prodname">{{ product.name }}</h5>
                                         
                                           R${{ product.price }}
                                       </div>
