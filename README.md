@@ -150,7 +150,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-## 🎎 Pair Programming (Requisito da Entrega 2)
+### 🎎 Pair Programming (Requisito da Entrega 2)
 
 <br>
 
@@ -207,12 +207,56 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 # 📧 Entrega 3
 
-<br><br>
-Duplas Entrega 3:
-Felipe Caminha e Rodrigo Torres
 <br>
-Miguel Becker e José Braz
+
+<ul>
+<li>Criação de Novo Sprint no Jira (OK)</li>
+<li>Atualização de Protótipo Lo-Fi com novo SCREENCAST (!!!)</li>
+<li>Atualização do Diagrama de atividades (OK)</li>
+<li>GitHub com commits frequentes (OK)</li>
+<li>Deploy das novas histórias com novo SCREENCAST na Azure (!!!)</li>
+<li>Bug Tracker Atualizado (!!!)</li>
+<li>CI/CD com build de deploy atualizado. Pipeline Criada no GitHub e add SCREENCAST do processo de build e deploy ao README (!!!)</li>
+<li>Testes de sistema E2E Automatizados. Adicionar SCREENCAST dos testes ao README (!!!)</li>
+<li>Atualização sobre uso do Pair Progamming (!!!)</li>
+<li>Quadro do Sprint 2 atualizado, refletindo a entrega (!!!)</li>
+</ul>
 <br>
-Bernardo Heuer e João Cláudio Beltrão
-<br><br>
+
+### Novo Sprint (2) no Jira (Requisito da Entrega 3)
+
+<br> 
+
+  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="">
+
+<br>
+
+### Diagrama de Atividades (Requisito da Entrega 3)
+
+<br>
+
+### Deploy das Histórias (Requisito da Entrega 3)
+
+<br>
+
+### Bug Tracker (Requisito da Entrega 3)
+
+<br>
+
+### CI/CD com Build de Deploy Atualizado (Requisito da Entrega 3)
+
+<br>
+
+### Testes do Sistema (Requisito da Entrega 3)
+
+<br>
+
+### 🎎 Pair Programming (Requisito da Entrega 3)
+
+<br>
+
+### Sprint 2 Refletindo a Entrega (Requisito da Entrega 3)
+
+<br>
+
 
