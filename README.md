@@ -227,11 +227,15 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br> 
 
-  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="">
+  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/161061513/1dc2edd1-4b20-46d7-8fb6-082fbe847594">
 
 <br>
 
 ### Diagrama de Atividades (Requisito da Entrega 3)
+
+<br>
+
+<img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
 
 <br>
 
