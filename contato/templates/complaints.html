@@ -11,19 +11,26 @@
     </header>
 
     <br>
-
-    
+<center>
+{% if user.is_authenticated %}
+<h5>Reclamações do Usuário: {{user.username}}</h5>
 {%for complaint in complaints%}
     <div class="col-sm-3 mb-3 mb-sm-0   ">
         <div class="card">
           <div class="card-body">
-            <h6 class="card-name">{{ complaint.nome }}</h6>
-            <h6 class="card-email">{{ complaint.email }}</h6>
             <p class="card-text">{{ complaint.assunto }}</p>
           </div>
         </div>
       </div>
     </ul>
 {%endfor%}   
+{%else%}
+<h5>Para ver suas reclamações, você precisa estar logado/registrado.</h5>
+    </br>
+        <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        <a href = "{% url 'register'%}" class = "btn btn-primary">Registrar</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+{%endif%}
     <br>
+</center>
 {% endblock %}

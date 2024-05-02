@@ -11,7 +11,8 @@
     </header>
 
     <br><br><br><br>
-
+    <center> 
+ {% if user.is_authenticated %}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -21,12 +22,6 @@
                 <form method="post" action="{% url 'contact_summary' %}" id="contactForm">
                     {% csrf_token %}
                     <div class="mb-3">
-                        <input type="text" class="form-control" name="nome" placeholder="Nome">
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                    <div class="mb-3">
                         <textarea class="form-control" name="assunto" rows="6" placeholder="Assunto"></textarea>
                     </div>
                     <br>
@@ -35,7 +30,16 @@
             </div>
         </div>
     </div>
+{% else %}
 
+    <h5>Para enviar uma reclamação, você precisa estar logado/registrado.</h5>
+    </br>
+        <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        <a href = "{% url 'register'%}" class = "btn btn-primary">Registrar</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+    {% endif %}
+
+    </center>
     <br><br><br><br>
     
     <script>
