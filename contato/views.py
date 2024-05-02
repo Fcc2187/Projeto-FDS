@@ -5,20 +5,23 @@ from django.urls import reverse
 # Create your views here.
 def contact(request):
     if request.method == "POST":
-        contact = Contato()
-        nome = request.POST.get('nome')
-        email = request.POST.get('email')
+        # Obtém ou cria um objeto de Contato associado ao usuário atual
+        contato, created = Contato.objects.get_or_create(user=request.user)
+        
+        # Obtém o assunto do formulário POST
         assunto = request.POST.get('assunto')
-        contact.email = email
-        contact.nome = nome
-        contact.assunto = assunto
-        contact.save()
         
-        # Redirecionar para a página de reclamações com informações de contato
-        return redirect(reverse('complaints') )
+        # Atualiza o campo 'assunto' do objeto contato
+        contato.assunto = assunto
         
+        # Salva as alterações no objeto contato
+        contato.save()
+        
+        # Redireciona para a página de reclamações com informações de contato
+        return redirect('complaints')
+    
     return render(request, 'contact_summary.html')
 
 def complaints(request):
-     complaints = Contato.objects.all()
+     complaints = Contato.objects.filter(user=request.user)
      return render(request, 'complaints.html', {'complaints': complaints})
