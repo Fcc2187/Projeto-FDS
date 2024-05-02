@@ -15,10 +15,10 @@ def contact(request):
         contact.save()
         
         # Redirecionar para a página de reclamações com informações de contato
-        return redirect(reverse('complaints') + f'?nome={nome}&email={email}&assunto={assunto}')
+        return redirect(reverse('complaints') )
         
     return render(request, 'contact_summary.html')
 
 def complaints(request):
-     complaints = Complaint.objects.all()
+     complaints = Contato.objects.all()
      return render(request, 'complaints.html', {'complaints': complaints})

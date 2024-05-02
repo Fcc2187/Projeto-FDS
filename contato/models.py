@@ -10,8 +10,8 @@ class Contato(models.Model):
         return self.email
     
 class Complaint(models.Model):
-    email = models.TextField()
-    assunto = models.EmailField()
+    email = models.EmailField()
+    assunto = models.TextField()
     nome = models.CharField(max_length=30)
 
     def __str__(self):

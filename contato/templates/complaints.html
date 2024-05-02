@@ -12,20 +12,18 @@
 
     <br>
 
-
-
+    
+{%for complaint in complaints%}
     <div class="col-sm-3 mb-3 mb-sm-0   ">
         <div class="card">
           <div class="card-body">
-            <h6 class="card-name">{{ request.GET.nome }}</h6>
-            <h6 class="card-email">{{ request.GET.email }}</h6>
-            <p class="card-text">{{ request.GET.assunto }}</p>
+            <h6 class="card-name">{{ complaint.nome }}</h6>
+            <h6 class="card-email">{{ complaint.email }}</h6>
+            <p class="card-text">{{ complaint.assunto }}</p>
           </div>
         </div>
       </div>
     </ul>
-        
+{%endfor%}   
     <br>
-
-
 {% endblock %}
