@@ -292,3 +292,100 @@ class ProcurarPorCategoria(LiveServerTestCase):
         botao2.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Notebooks")
         time.sleep(3)
+
+class Contato(LiveServerTestCase):
+
+    def test_cenario12(self):
+        driver.get("http://127.0.0.1:8000/")
+        time.sleep(2)
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[7]/a")
+        botao.send_keys(Keys.ENTER)
+        self.assertEqual(driver.find_element(by=By.NAME, value="logmsg").text,"Para enviar uma reclamação, você precisa estar logado/registrado.")
+        time.sleep(2)
+
+    def test_cenario13(self):
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"User_4")
+        nome.send_keys(f"Miguel")
+        sobrenome.send_keys(f"Becker")
+        email.send_keys(f"mcb4@cesar.school")
+        senha.send_keys("Senha1234")
+        confirmar_senha.send_keys("Senha1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/contato/contato/")
+        assunto = driver.find_element(by=By.NAME, value="assunto")
+        enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
+        assunto.send_keys(f"iPhone 13 está muito caro!")
+        time.sleep(2)
+        enviar.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/contato/contato/")
+        assunto = driver.find_element(by=By.NAME, value="assunto")
+        enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
+        assunto.send_keys(f"Notebook Lenovo está muito caro!")
+        time.sleep(2)
+        enviar.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[2]/div/div").text,"Notebook Lenovo está muito caro!")
+        driver.get("http://127.0.0.1:8000/logout/")
+        time.sleep(3)
+
+    def test_cenario14(self):
+        driver.get("http://127.0.0.1:8000/login/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        senha = driver.find_element(by=By.NAME, value="password")
+        botao = driver.find_element(by=By.NAME, value="login")
+
+        usuario.send_keys("User_4")
+        senha.send_keys("Senha1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/contato/complaints/")
+        time.sleep(2)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[2]/div/div").text,"Notebook Lenovo está muito caro!")
+        driver.get("http://127.0.0.1:8000/logout/")
+        time.sleep(3)
+
+    def test_cenario15(self):
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"User_5")
+        nome.send_keys(f"Bernardo")
+        sobrenome.send_keys(f"Hauer")
+        email.send_keys(f"bch@cesar.school")
+        senha.send_keys("Senha1234")
+        confirmar_senha.send_keys("Senha1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/contato/contato/")
+        assunto = driver.find_element(by=By.NAME, value="assunto")
+        enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
+        assunto.send_keys(f"Poucos produtos! Quero mais!")
+        time.sleep(2)
+        enviar.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[1]/div/div").text,"Poucos produtos! Quero mais!")
+        driver.get("http://127.0.0.1:8000/logout/")
+        time.sleep(3)
