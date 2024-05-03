@@ -30,6 +30,7 @@
                         <li><a class="dropdown-item" name="fones" href="{%url 'category' 'Fones de ouvido'%}">Fones de ouvido</a></li>
                     </ul>
                 </li>
+                {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contato</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -37,6 +38,11 @@
                         <li><a class="dropdown-item" href="{%url 'complaints'%}">Suas reclamações</a></li>
                     </ul>
                 </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'contact_summary'%}" role="button">Contato</a>
+                </li>
+                {% endif %}
 
             </ul>
             <form class="d-flex">

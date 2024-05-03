@@ -16,18 +16,19 @@
             <form method="post" action="{% url 'complaints' %}">
                 {% csrf_token %}
                 <h5>Reclamações do Usuário: {{ user.username }}</h5>
-                {% for complaints in complaints %}
+                {% for complaint in complaints %}
                     <div class="col-sm-3 mb-3 mb-sm-0">
                         <br>
                         <div class="card">
                             <div class="card-body">
-                                {{ complaints.assunto }}
+                                {{ complaint.assunto }}
                             </div>
                         </div>
                         <br>
                     </div>
                 {% endfor %}
             </form>
+
         {% else %}
             <h5>Para ver suas reclamações, você precisa estar logado/registrado.</h5>
             <br>
