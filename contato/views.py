@@ -1,16 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Contato
-from django.http import HttpResponse
+from django.urls import reverse
+from django.db.models import Q
 
-# Create your views here.
 def contact(request):
-    if request.method=="POST":
-        contact=Contato()
-        nome=request.POST.get('nome')
-        email=request.POST.get('email')
-        assunto=request.POST.get('assunto')
-        contact.email=email
-        contact.assunto=assunto
-        contact.save()
-        return HttpResponse("<h1>Obrigado por nos contatar!</h1>")
+    if request.method == "POST":
+        # Obtém o assunto do formulário POST
+        assunto = request.POST.get('assunto')
+        
+        # Cria uma nova instância de Contato associada ao usuário atual
+        contato = Contato.objects.create(user=request.user, assunto=assunto)
+        
+        # Redireciona para a página de reclamações com informações de contato
+        return redirect('complaints')
+    
     return render(request, 'contact_summary.html')
+
+def complaints(request):
+    # Filtra todas as reclamações associadas ao usuário atual
+    complaints = Contato.objects.filter(user=request.user)
+    return render(request, 'complaints.html', {'complaints': complaints})

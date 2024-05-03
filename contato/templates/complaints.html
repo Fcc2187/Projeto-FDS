@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Suas reclamações</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Veja suas reclamações</p>
+            </div>
+        </div>
+    </header>
+
+    <br>
+    <center>
+        {% if user.is_authenticated %}
+            <form method="post" action="{% url 'complaints' %}">
+                {% csrf_token %}
+                <h5>Reclamações do Usuário: {{ user.username }}</h5>
+                {% for complaint in complaints %}
+                    <div class="col-sm-3 mb-3 mb-sm-0">
+                        <br>
+                        <div class="card">
+                            <div class="card-body">
+                                {{ complaint.assunto }}
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                {% endfor %}
+            </form>
+
+        {% else %}
+            <h5>Para ver suas reclamações, você precisa estar logado/registrado.</h5>
+            <br>
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
+            <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+        {% endif %}
+        <br>
+    </center>
+{% endblock %}

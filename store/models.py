@@ -1,5 +1,30 @@
 from django.db import models
 import datetime
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    date_modified = models.DateTimeField(User, auto_now=True)
+    Numero = models.CharField(max_length = 20, blank = True)
+    Endereço1 = models.CharField(max_length=200, blank=True)
+    Endereço2 = models.CharField(max_length=200, blank=True)
+    Cidade = models.CharField(max_length=200, blank=True)
+    Estado = models.CharField(max_length=200, blank=True)
+    CEP = models.CharField(max_length=200, blank=True)
+    País = models.CharField(max_length=200, blank=True)
+    antigo_carrinho = models.CharField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username 
+
+def create_profile(sender, instance, created, **kwards):
+    if created:
+        user_profile = Profile(user=instance)
+        user_profile.save()
+    
+post_save.connect(create_profile, sender=User)
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -45,3 +70,5 @@ class Order(models.Model):
 
     def _str_ (self):
         return self.product
+    
+
