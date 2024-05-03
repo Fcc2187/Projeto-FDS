@@ -136,13 +136,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-### Diagrama de Atividades (Requisito da Entrega 2)
-<br>
-
-  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
-
-<br>
-
 ### Bug Tracker (Requisito da Entrega 2)
 <br>
 
@@ -231,11 +224,12 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-### Diagrama de Atividades (Requisito da Entrega 3)
+### Diagrama de Atividades
 
 <br>
 
-<img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
+<img width="1326" alt="![image](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3b3dbe0d-bd3b-4544-b984-8ea7e5a337fe)
+" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
 
 <br>
 
