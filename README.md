@@ -54,11 +54,6 @@
     <span>🔗 Figma</span>
   </a>
 </p>
-<p style="text-align: center; text-decoration: none;">
-  <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/7b9f8064-d870-4b8c-ae89-6ed0e9216908" style="text-decoration: none;">
-    <span>🔗 Backlog</span>
-  </a>
-</p>
 
 <br><br>
 
