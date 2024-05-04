@@ -199,9 +199,9 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br> 
 
- alt="![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/e7e5e74b-c852-4996-b6b4-84c06b694970)
+ ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/e7e5e74b-c852-4996-b6b4-84c06b694970)
 
-" 
+
 
 <br>
 
