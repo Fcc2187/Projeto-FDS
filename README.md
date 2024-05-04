@@ -56,6 +56,12 @@
 </p>
 
 <br><br>
+### - Diagrama de Atividades
+
+<br>
+
+<img width="1326" alt="![image](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3b3dbe0d-bd3b-4544-b984-8ea7e5a337fe)
+" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
 
 # Instruções de Uso
 
@@ -207,15 +213,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 ### - Backlog 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/056c9640-4835-4a05-9c35-702b2af2e55b)
-
-<br>
-
-### - Diagrama de Atividades
-
-<br>
-
-<img width="1326" alt="![image](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3b3dbe0d-bd3b-4544-b984-8ea7e5a337fe)
-" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
 
 <br>
 
