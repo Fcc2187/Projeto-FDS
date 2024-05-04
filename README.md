@@ -45,7 +45,7 @@
   </a>
 </p>
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://itechfds.azurewebsites.net/" style="text-decoration: none;">
+  <a href="https://itechdeployment.azurewebsites.net/" style="text-decoration: none;">
     <span>🔗 Azure</span>
   </a>
 </p>
