@@ -199,7 +199,8 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br> 
 
-  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/161061513/1dc2edd1-4b20-46d7-8fb6-082fbe847594">
+  <img width="1326" alt="![PFDSCS - Agile board - Jira - Google Chrome 04_05_2024 14_27_18](https://github.com/Fcc2187/Projeto-FDS/assets/142419397/1a0bc5d0-11c7-4462-a155-f7094e9d9c46)
+" src="https://github.com/Fcc2187/Projeto-FDS/assets/161061513/1dc2edd1-4b20-46d7-8fb6-082fbe847594">
 
 <br>
 
