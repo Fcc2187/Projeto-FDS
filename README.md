@@ -26,13 +26,13 @@
 # ⭐ Nossa Equipe
 
 <br>
-<p style="text-align: center; text-decoration: none;"> Felipe Cavalcanti Caminha </p>
-<p style="text-align: center; text-decoration: none;"> José Braz de Oliveira Neto</p>
-<p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
-<p style="text-align: center; text-decoration: none;"> Miguel Chaves Becker </p>
-<p style="text-align: center; text-decoration: none;"> Luiz Felipe Pessoa de Arruda </p>
 <p style="text-align: center; text-decoration: none;"> Bernardo Carneiro Heuer Guimarães </p>
+<p style="text-align: center; text-decoration: none;"> Felipe Cavalcanti Caminha</p>
 <p style="text-align: center; text-decoration: none;"> João Cláudio Beltrão </p>
+<p style="text-align: center; text-decoration: none;"> José Braz de Oliveira Neto </p>
+<p style="text-align: center; text-decoration: none;"> Luiz Felipe Pessoa de Arruda </p>
+<p style="text-align: center; text-decoration: none;"> Miguel Chaves Becker </p>
+<p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
 
 <br><br>
 
