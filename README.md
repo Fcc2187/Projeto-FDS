@@ -168,13 +168,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 ### - Deploy das Histórias da Entrega 2
 <br>
 
-#### Link para acesso do site na Azure
-<p style="text-align: center; text-decoration: none;">
-  <a href="https://itechfds.azurewebsites.net/" style="text-decoration: none;">
-    <span>🔗 iTech</span>
-  </a>
-</p>
-
 #### Screencast do site na Azure
  <p style="text-align: center; text-decoration: none;">
   <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
