@@ -57,18 +57,6 @@
 
 <br><br>
 
-# 💻 Screencast
-
-<br>
-
-<p style="text-align: center; text-decoration: none;">
-  <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
-    <span>🔗 Screencast do protótipo Lo-Fi (Entrega 1)</span>
-  </a>
-</p>
-
-<br><br>
-
 # Instruções de Uso
 
 <br>
