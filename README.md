@@ -224,6 +224,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 ### - Bug Tracker
+![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/b75323dc-38e8-4ccc-95ef-9df9f8ef7a3e)
 
 <br>
 
