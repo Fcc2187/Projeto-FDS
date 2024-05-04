@@ -205,6 +205,11 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
+### - Backlog 
+![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/056c9640-4835-4a05-9c35-702b2af2e55b)
+
+<br>
+
 ### - Diagrama de Atividades
 
 <br>
