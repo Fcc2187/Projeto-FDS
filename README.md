@@ -66,11 +66,6 @@
     <span>🔗 Screencast do protótipo Lo-Fi (Entrega 1)</span>
   </a>
 </p>
-<p style="text-align: center; text-decoration: none;">
-  <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
-    <span>🔗 Screencast do site (Entrega 2)</span>
-  </a>
-</p>
 
 <br><br>
 
