@@ -226,6 +226,12 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 ### - CI/CD com Build de Deploy Atualizado
+<br>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/AD2lcN06BO0?si=bCOJb3v2Wyvjljp8" style="text-decoration: none;">
+    <span>🔗 Screencast CI/CD</span>
+  </a>
+</p>
 
 <br>
 
