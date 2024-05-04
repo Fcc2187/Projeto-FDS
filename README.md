@@ -1,4 +1,4 @@
-![PFDSCS - Agile board - Jira - Google Chrome 04_05_2024 14_27_18](https://github.com/Fcc2187/Projeto-FDS/assets/142419397/bd32af78-bdaf-46e7-a4fb-a87d6d03501a)<p align="center"><img align="center" width="280" src="media/uploads/product/cesar.logo.png"/></p>
+<p align="center"><img align="center" width="280" src="media/uploads/product/cesar.logo.png"/></p>
 <hr>
 <p align="center">
   <img
