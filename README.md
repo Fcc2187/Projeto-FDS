@@ -199,11 +199,11 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <li>Atualização do Diagrama de atividades (OK)</li>
 <li>GitHub com commits frequentes (OK)</li>
 <li>Deploy das novas histórias com novo SCREENCAST na Azure (!!!)</li>
-<li>Bug Tracker Atualizado (!!!)</li>
-<li>CI/CD com build de deploy atualizado. Pipeline Criada no GitHub e add SCREENCAST do processo de build e deploy ao README (!!!)</li>
-<li>Testes de sistema E2E Automatizados. Adicionar SCREENCAST dos testes ao README (!!!)</li>
-<li>Atualização sobre uso do Pair Progamming (!!!)</li>
-<li>Quadro do Sprint 2 atualizado, refletindo a entrega (!!!)</li>
+<li>Bug Tracker Atualizado (OK)</li>
+<li>CI/CD com build de deploy atualizado. Pipeline Criada no GitHub e add SCREENCAST do processo de build e deploy ao README (OK)</li>
+<li>Testes de sistema E2E Automatizados. Adicionar SCREENCAST dos testes ao README (ok)</li>
+<li>Atualização sobre uso do Pair Progamming (OK)</li>
+<li>Quadro do Sprint 2 atualizado, refletindo a entrega (ok)</li>
 </ul>
 <br>
 
