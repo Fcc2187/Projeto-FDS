@@ -207,7 +207,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </ul>
 <br>
 
-### - Novo Sprint (2) no Jira
+### - Sprint 2 Refletindo a Entrega 3 
 
 <br> 
 
@@ -245,7 +245,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-### - Sprint 2 Refletindo a Entrega
+
 
 <br>
 
