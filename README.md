@@ -165,8 +165,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </details>
 <br>
 
-### - Deploy das Histórias da Entrega 2
-<br>
 
 #### Screencast do site na Azure
  <p style="text-align: center; text-decoration: none;">
