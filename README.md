@@ -55,6 +55,12 @@
   </a>
 </p>
 
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://docs.google.com/document/d/1rZFu_fQTW7q7PWi0CVUGxjzFjZWSsbrrWYx7XUuSl2Q/edit?usp=sharing" style="text-decoration: none;">
+    <span>🔗 Documento do Pair Programming</span>
+  </a>
+</p>
+
 <br><br>
 ### - Diagrama de Atividades
 
@@ -236,10 +242,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 ### - Testes do Sistema
-
-<br>
-
-### - Pair Programming
 
 <br>
 
