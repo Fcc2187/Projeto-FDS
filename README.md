@@ -63,12 +63,15 @@
 
 <br><br>
 ### - Diagrama de Atividades
-[Diagrama de Atividades FDS Itech.drawio.pdf]
+<p style="text-align: center; text-decoration: none;">
+  <a href="[Diagrama.de.Atividades.FDS.Itech.drawio.pdf](https://github.com/Fcc2187/Projeto-FDS/files/15211443/Diagrama.de.Atividades.FDS.Itech.drawio.pdf)" style="text-decoration: none;">
+    <span>🔗 Link do PDF do diagrama de atividades </span>
+  </a>
+</p>
 
 <br>
 
-<img width="1326" alt="![image](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3b3dbe0d-bd3b-4544-b984-8ea7e5a337fe)
-" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
+
 
 # Instruções de Uso
 
