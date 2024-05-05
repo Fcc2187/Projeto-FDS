@@ -148,34 +148,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-<details>
-<summary>Miguel Becker e José Braz</summary>
-
-  <h4> História: </h4>
-  <p>...</p>
-
-<h4> FeedBack: </h4> <p> ? </p>
-</details>
-<br>
-
-<details>
-<summary>Bernardo Heuer e Luiz Felipe Arruda</summary>
-
-  <h4> História: </h4>
-  <p>...</p>
-
-<h4> FeedBack: </h4> <p> ? </p>
-</details>
-<br>
-
-<details>
-<summary>Rodrigo Torres e Felipe Caminha</summary>
-
-  <h4> História: </h4>
-  <p>...</p>
-
-<h4> FeedBack: </h4> <p> ? </p>
-</details>
 <br>
 
 
