@@ -224,7 +224,11 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 ### - Deploy das Histórias 
-
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/r0Wov5bPIJw?si=TVDEuYRg3f2prAfk" style="text-decoration: none;">
+    <span>🔗 Screencast das Histórias no deploy</span>
+  </a>
+</p>
 <br>
 
 ### - Bug Tracker
