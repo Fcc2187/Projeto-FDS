@@ -110,7 +110,7 @@
 
 <br>
 
-### - Screencast do Protótipo (Requisito da Entrega 1)
+### - Screencast do Protótipo
 <br>
 
 <p style="text-align: center; text-decoration: none;">
@@ -144,13 +144,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-### - Pair Programming
-
-<br>
-
-<br>
-
-
 #### Screencast do site na Azure
  <p style="text-align: center; text-decoration: none;">
   <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
@@ -164,20 +157,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 # 📧 Entrega 3
 
-<br>
-
-<ul>
-<li>Criação de Novo Sprint no Jira (OK)</li>
-<li>Atualização de Protótipo Lo-Fi com novo SCREENCAST (!!!)</li>
-<li>Atualização do Diagrama de atividades (OK)</li>
-<li>GitHub com commits frequentes (OK)</li>
-<li>Deploy das novas histórias com novo SCREENCAST na Azure (!!!)</li>
-<li>Bug Tracker Atualizado (OK)</li>
-<li>CI/CD com build de deploy atualizado. Pipeline Criada no GitHub e add SCREENCAST do processo de build e deploy ao README (OK)</li>
-<li>Testes de sistema E2E Automatizados. Adicionar SCREENCAST dos testes ao README (ok)</li>
-<li>Atualização sobre uso do Pair Progamming (OK)</li>
-<li>Quadro do Sprint 2 atualizado, refletindo a entrega (ok)</li>
-</ul>
 <br>
 
 ### - Sprint 2 Refletindo a Entrega 3 
@@ -219,6 +198,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 ### - Testes do Sistema
+<br>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/qYtwkSLU-MA?si=VBHez3zvBQgUJ6V3" style="text-decoration: none;">
     <span>🔗 Screencast Testes automatizados</span>
@@ -226,8 +206,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </p>
 <br>
 
-
-
+### - Screencast do Protótipo
 <br>
 
 
