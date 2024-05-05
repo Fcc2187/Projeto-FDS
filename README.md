@@ -208,8 +208,10 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 ### - Screencast do Protótipo
 <p style="text-align: center; text-decoration: none;">
-  <a href="(https://youtu.be/r1VHVAW8MtQ?feature=shared)" style="text-decoration: none;">
+  <a href="https://youtu.be/r1VHVAW8MtQ?feature=shared" style="text-decoration: none;">
     <span>🔗 Screencast Prototipo </span>
+  </a>
+</p>
 <br>
 
 
