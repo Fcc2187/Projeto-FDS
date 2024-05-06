@@ -26,13 +26,13 @@
 # ⭐ Nossa Equipe
 
 <br>
-<p style="text-align: center; text-decoration: none;"> Felipe Cavalcanti Caminha </p>
-<p style="text-align: center; text-decoration: none;"> José Braz de Oliveira Neto</p>
-<p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
-<p style="text-align: center; text-decoration: none;"> Miguel Chaves Becker </p>
-<p style="text-align: center; text-decoration: none;"> Luiz Felipe Pessoa de Arruda </p>
 <p style="text-align: center; text-decoration: none;"> Bernardo Carneiro Heuer Guimarães </p>
+<p style="text-align: center; text-decoration: none;"> Felipe Cavalcanti Caminha</p>
 <p style="text-align: center; text-decoration: none;"> João Cláudio Beltrão </p>
+<p style="text-align: center; text-decoration: none;"> José Braz de Oliveira Neto </p>
+<p style="text-align: center; text-decoration: none;"> Luiz Felipe Pessoa de Arruda </p>
+<p style="text-align: center; text-decoration: none;"> Miguel Chaves Becker </p>
+<p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
 
 <br><br>
 
@@ -45,7 +45,7 @@
   </a>
 </p>
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://itechfds.azurewebsites.net/" style="text-decoration: none;">
+  <a href="https://itechdeployment.azurewebsites.net/" style="text-decoration: none;">
     <span>🔗 Azure</span>
   </a>
 </p>
@@ -54,51 +54,53 @@
     <span>🔗 Figma</span>
   </a>
 </p>
+
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/7b9f8064-d870-4b8c-ae89-6ed0e9216908" style="text-decoration: none;">
-    <span>🔗 Backlog</span>
+  <a href="https://docs.google.com/document/d/1rZFu_fQTW7q7PWi0CVUGxjzFjZWSsbrrWYx7XUuSl2Q/edit?usp=sharing" style="text-decoration: none;">
+    <span>🔗 Documento do Pair Programming</span>
   </a>
 </p>
 
 <br><br>
+### - Diagrama de Atividades
+![Diagrama de Atividades FDS Itech drawio (1)](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/305bbf37-94c8-480f-8caf-3c0d899e81ab)
 
-# 💻 Screencast
+
+
+<br>
+
+
+
+# Instruções de Uso
 
 <br>
 
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
-    <span>🔗 Screencast do protótipo Lo-Fi (Entrega 1)</span>
+  <a href="https://docs.google.com/document/d/16JZanuh7EmsBjp4mzp4iHEvsfLdQwLgmjqpEObKvE4w/edit" style="text-decoration: none;">
+    <span>🔗 Link</span>
   </a>
 </p>
-<p style="text-align: center; text-decoration: none;">
-  <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
-    <span>🔗 Screencast do site (Entrega 2)</span>
-  </a>
-</p>
-
-<br><br>
 
 # 📧 Entrega 1
 
 <br>
 <i>A Entrega 1 resumiu=se ao desenvolvimento do nosso protótipo de baixa fidelidade, a definição das nossas histórias no Jira e a realização de um screencast do nosso protótipo. Não fui uma entrega muito grande então o grupo conseguiu lidar com a situação sem muita pressão e com tempo de sobra. Contudo, após o lançamento dos resultados dessa entrega, a equipe percebeu a falta de muitos requisitos os quais vieram a ser resolvidos posteriormente na Entrega 2.</i>
 
-### Jira Backlog (Requisito da Entrega 1)
+### - Jira Backlog
 <br>
 
   <img src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/5d083dbb-9cf1-4044-8a0f-2bfede661333" alt="Repository Size">
 
 <br>
 
-### Jira Board (Requisito da Entrega 1)
+### - Jira Board 
 <br>
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d0253052-1593-452e-87bb-eb2aadac7b60">
 
 <br>
 
-### Prototipação Lo-Fi (Requisito da Entrega 1)
+### - Prototipação Lo-Fi
 <br>
 
 <p style="text-align: center; text-decoration: none;">
@@ -109,7 +111,7 @@
 
 <br>
 
-### Screencast do Protótipo (Requisito da Entrega 1)
+### - Screencast do Protótipo
 <br>
 
 <p style="text-align: center; text-decoration: none;">
@@ -129,70 +131,19 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br><br>
 
 
-### Sprint no Jira (Requisito da Entrega 2)
+### - Sprint no Jira
 <br>
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0">
 
 <br>
 
-### Diagrama de Atividades (Requisito da Entrega 2)
-<br>
-
-  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
-
-<br>
-
-### Bug Tracker (Requisito da Entrega 2)
+### - Bug Tracker
 <br>
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/b58612d3-a52f-40cd-a4ad-ab66919f4ab0">
 
 <br>
-
-### 🎎 Pair Programming (Requisito da Entrega 2)
-
-<br>
-
-<details>
-<summary>Miguel Becker e José Braz</summary>
-
-  <h4> História: </h4>
-  <p>...</p>
-
-<h4> FeedBack: </h4> <p> ? </p>
-</details>
-<br>
-
-<details>
-<summary>Bernardo Heuer e Luiz Felipe Arruda</summary>
-
-  <h4> História: </h4>
-  <p>...</p>
-
-<h4> FeedBack: </h4> <p> ? </p>
-</details>
-<br>
-
-<details>
-<summary>Rodrigo Torres e Felipe Caminha</summary>
-
-  <h4> História: </h4>
-  <p>...</p>
-
-<h4> FeedBack: </h4> <p> ? </p>
-</details>
-<br>
-
-### Deploy das Histórias da Entrega 2 (Requisito da Entrega 2)
-<br>
-
-#### Link para acesso do site na Azure
-<p style="text-align: center; text-decoration: none;">
-  <a href="https://itechfds.azurewebsites.net/" style="text-decoration: none;">
-    <span>🔗 iTech</span>
-  </a>
-</p>
 
 #### Screencast do site na Azure
  <p style="text-align: center; text-decoration: none;">
@@ -209,58 +160,59 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-<ul>
-<li>Criação de Novo Sprint no Jira (OK)</li>
-<li>Atualização de Protótipo Lo-Fi com novo SCREENCAST (!!!)</li>
-<li>Atualização do Diagrama de atividades (OK)</li>
-<li>GitHub com commits frequentes (OK)</li>
-<li>Deploy das novas histórias com novo SCREENCAST na Azure (!!!)</li>
-<li>Bug Tracker Atualizado (!!!)</li>
-<li>CI/CD com build de deploy atualizado. Pipeline Criada no GitHub e add SCREENCAST do processo de build e deploy ao README (!!!)</li>
-<li>Testes de sistema E2E Automatizados. Adicionar SCREENCAST dos testes ao README (!!!)</li>
-<li>Atualização sobre uso do Pair Progamming (!!!)</li>
-<li>Quadro do Sprint 2 atualizado, refletindo a entrega (!!!)</li>
-</ul>
-<br>
-
-### Novo Sprint (2) no Jira (Requisito da Entrega 3)
+### - Sprint 2 Refletindo a Entrega 3 
 
 <br> 
 
-  <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/161061513/1dc2edd1-4b20-46d7-8fb6-082fbe847594">
+ ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/e7e5e74b-c852-4996-b6b4-84c06b694970)
+
+
 
 <br>
 
-### Diagrama de Atividades (Requisito da Entrega 3)
+### - Backlog 
+![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/056c9640-4835-4a05-9c35-702b2af2e55b)
 
 <br>
 
-<img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/977eb89b-dcf0-43c4-8a9b-eb5c659c5aa5">
+### - Deploy das Histórias 
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/r0Wov5bPIJw?si=TVDEuYRg3f2prAfk" style="text-decoration: none;">
+    <span>🔗 Screencast das Histórias no deploy</span>
+  </a>
+</p>
+<br>
+
+### - Bug Tracker
+![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/b75323dc-38e8-4ccc-95ef-9df9f8ef7a3e)
 
 <br>
 
-### Deploy das Histórias (Requisito da Entrega 3)
+### - CI/CD com Build de Deploy Atualizado
+<br>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/AD2lcN06BO0?si=bCOJb3v2Wyvjljp8" style="text-decoration: none;">
+    <span>🔗 Screencast CI/CD</span>
+  </a>
+</p>
 
 <br>
 
-### Bug Tracker (Requisito da Entrega 3)
-
+### - Testes do Sistema
+<br>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/qYtwkSLU-MA?si=VBHez3zvBQgUJ6V3" style="text-decoration: none;">
+    <span>🔗 Screencast Testes automatizados</span>
+  </a>
+</p>
 <br>
 
-### CI/CD com Build de Deploy Atualizado (Requisito da Entrega 3)
-
-<br>
-
-### Testes do Sistema (Requisito da Entrega 3)
-
-<br>
-
-### 🎎 Pair Programming (Requisito da Entrega 3)
-
-<br>
-
-### Sprint 2 Refletindo a Entrega (Requisito da Entrega 3)
-
+### - Screencast do Protótipo
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/r1VHVAW8MtQ?feature=shared" style="text-decoration: none;">
+    <span>🔗 Screencast Prototipo </span>
+  </a>
+</p>
 <br>
 
 
