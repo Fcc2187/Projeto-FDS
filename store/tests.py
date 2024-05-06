@@ -293,6 +293,21 @@ class ProcurarPorCategoria(LiveServerTestCase):
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Notebooks")
         time.sleep(3)
 
+    def testcenario16(self):
+        driver.get("http://127.0.0.1:8000/")
+        time.sleep(2)
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[6]/a")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+        botao2 = driver.find_element(by=By.NAME, value="all")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(2)
+        botao3 = driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/h3[2]/a")
+        botao3.send_keys(Keys.ENTER)
+        time.sleep(3)
+        self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Celulares")
+        time.sleep(3)
+
 class Contato(LiveServerTestCase):
 
     def test_cenario12(self):
