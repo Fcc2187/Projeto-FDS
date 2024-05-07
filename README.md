@@ -201,7 +201,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 ### - Testes do Sistema
 <br>
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://youtu.be/qYtwkSLU-MA?si=VBHez3zvBQgUJ6V3" style="text-decoration: none;">
+  <a href="https://youtu.be/eH3Rpc6XIRw?si=31JltYk3SrhnrGP9" style="text-decoration: none;">
     <span>🔗 Screencast Testes automatizados</span>
   </a>
 </p>
