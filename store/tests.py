@@ -274,11 +274,11 @@ class GerenciarCarrinho(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(2)
 
-        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$16000.00")
+        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$12500.00")
         driver.get("http://127.0.0.1:8000/logout/")
         time.sleep(3)
 
-    def test_cenario10(self):
+    def test_cenario92(self):
         driver.get("http://127.0.0.1:8000/login/")
         usuario = driver.find_element(by=By.NAME, value="username")
         senha = driver.find_element(by=By.NAME, value="password")
@@ -307,7 +307,7 @@ class GerenciarCarrinho(LiveServerTestCase):
         botaodel.send_keys(Keys.ENTER)
         time.sleep(2)
         
-        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$12000.00")
+        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$14000.00")
         driver.get("http://127.0.0.1:8000/logout/")
         time.sleep(3)
 
