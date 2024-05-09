@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Página de Favoritos</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Veja Seus Produtos Favoritos</p>
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        {% if favoritos_products %}
+            {% for product in favoritos_products %}
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="Imagem do Produto">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.name }}</h5>
+                                <p class="card-text">{{ product.description }}</p>
+
+                                {% if product.sale %}
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        &nbsp;&nbsp;Sale!&nbsp;&nbsp;
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <strike>R${{ product.price }}</strike>
+                                    R${{ product.sale_price }}
+                                {% else %}
+                                    R${{ product.price }}
+                                {% endif %}
+                                <br><br>
+                                <button type="button" class="btn btn-danger delete-product" data-index="{{ product.id }}">Remover</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Sua página de favoritos está vazia.</p>
+        {% endif %}
+    </div>
+
+    <script>
+        // Deletar Favorito
+        $(document).on('click', '.delete-product', function(e){
+            e.preventDefault();
+            var product_id = $(this).data('index');
+            $.ajax({
+                type: 'POST',
+                url: '{% url "favoritos_delete" %}',
+                data: {
+                    product_id: product_id,
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    action: 'post'
+                },
+                success: function(json){
+                    location.reload();
+                },
+                error: function(xhr, errmsg, err){
+
+                }
+            });
+        });
+    </script>
+{% endblock %}

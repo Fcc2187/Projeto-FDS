@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404, render, redirect
 from . import models
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -11,7 +12,7 @@ from django.db.models import Q
 import json
 from cart.cart import Cart
 from django.utils import timezone
-
+from .models import Favoritos
 
 
 def search(request):
@@ -171,6 +172,44 @@ def update_user(request):
 def product(request,pk):
 	products = Product.objects.get(id=pk)
 	return render(request, 'product.html', {'product':products})
+
+#Favorios
+
+
+def pag_favoritos(request):
+    favoritos = Favoritos(request)
+    favoritos_products = favoritos.get_prods()
+
+    return render(request, 'pag_favoritos.html', {"favoritos_products": favoritos_products})
+
+def favoritos_add(request):
+    if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        favoritos = Favoritos(request)
+        product_id = int(request.POST.get('product_id'))
+        product = get_object_or_404(Product, id=product_id)
+        favoritos.favoritos_add(product)
+        favoritos_qty = len(favoritos)
+        response_data = {'qty': favoritos_qty, 'success': True}
+        return JsonResponse(response_data)
+    else:
+        # Se não for uma solicitação POST AJAX, retorne uma resposta apropriada
+        return JsonResponse({'error': 'Requisição inválida'})
+
+
+
+
+    
+def favoritos_delete(request):
+    favoritos = Favoritos(request)
+    if request.POST.get('action') == 'post':
+        # Get stuff
+        product_id = int(request.POST.get('product_id'))
+        # Call delete function in cart
+        favoritos.delete(product=product_id)
+        response = JsonResponse({'product': product_id})
+        # return redirect('cart_summary')
+        messages.success(request, ("Produto removido do carrinho."))
+        return response
 
 
 
