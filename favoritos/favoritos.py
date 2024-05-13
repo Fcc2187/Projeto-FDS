@@ -5,12 +5,13 @@ class Favoritos:
     def __init__(self, request):
         self.session = request.session
         self.request = request
-        favoritos = self.session.get('session_key')
+        favoritos = self.session.get('favoritos', {})
 
-        if 'session_key' not in request.session:
-            favoritos = self.session['session_key'] = {}
+        if 'favoritos' not in request.session:
+            favoritos = self.session['favoritos'] = {}
 
-        self.favoritos =favoritos
+        self.favoritos = favoritos
+
 
     def db_add(self, product, quantity):
         product_id = str(product)
