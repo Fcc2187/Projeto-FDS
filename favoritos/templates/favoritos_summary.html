@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Favoritos</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Aqui Você Vê Seus Produtos Favoritos</p>
+                </div>
+            </div>
+        </header>
+        <br>
+        <div class="container">
+      {% if user.is_authenticated %}
+        {% if favoritos_products %}
+            {% for product in favoritos_products %}
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                    <center>
+                      <h5 class="card-title">{{product.name}}</h5>
+                      <p class="card-text">{{product.description}}</p>
+                    <br></br>
+                      <br></br>
+                      <a href="{% url 'home' %}" class="btn btn-secondary" id="home">Home</a>
+                      <button type ="button" data-index="{{product.id}}"
+                      class="btn btn-danger delete-product" id="remova">Remover</button>
+
+                    </center>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            {% endfor %}
+            <h3 id="total">Total: R${{ totals }} </h3>
+
+            <br/><br/><br/>
+            {% else %}
+                    <div>
+                        <center><h5>Você Não Tem Favoritos</h5></center>
+                    </div>
+                    {% endif %}
+        </div>
+
+
+        <script>
+          $(document).on('click', '.delete-product', function(e){
+              e.preventDefault();
+              // grab the product id
+             //var productid = $(this).data('index');
+          
+              $.ajax({
+              type: 'POST',
+              url: '{% url "favoritos_delete" %}',
+              data: {
+                product_id: $(this).data('index'),
+                //product_qty: $('#select' + productid + ' option:selected').text(), DEIXEI COMO COMENTARIO PQ NAO PRECISA DE QUANTIDADE QUANDO SE VAI APAGAR PRODUTO
+                csrfmiddlewaretoken: '{{ csrf_token }}',  
+                action: 'post'
+              },
+              success: function(json){
+                  //console.log(json)
+                  //document.getElementById("cart_quantity").textContent = json.qty
+                  location.reload();
+              },
+          
+              error: function(xhr, errmsg, err){
+          
+              }
+          
+          
+              });
+          
+          })
+</script>
+{% endif %}
+{% endblock %}

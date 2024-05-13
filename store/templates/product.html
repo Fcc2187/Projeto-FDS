@@ -86,31 +86,28 @@
             });
         })
 
-
-
-        //favoritos
         $(document).on('click', '#add-favoritos', function(e){
-    e.preventDefault();
-    var product_id = $(this).val();  
-    $.ajax({
-        type: 'POST',
-        url: "{% url 'favoritos_add' %}",
-        data: {
-            product_id: product_id,
-            csrfmiddlewaretoken: '{{ csrf_token }}',
-            action: 'post'
-        },
-        success: function(json){
-            if (json.success) {
-                alert('Produto adicionado aos favoritos com sucesso!');
-                window.location.href = "{% url 'pag_favoritos' %}";  // Redirecionar para a página de favoritos
-            }
-        },
-        error: function(xhr, errmsg, err){
-            alert('Erro ao adicionar produto aos favoritos.');
-        }
-    });
-});
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'favoritos_add' %}",
+                data: {
+                    product_id: $(this).val(),
+                    product_qty: $('#qty-cart option:selected').text(),
+                    csrfmiddlewaretoken: '{{ csrf_token }}',
+                    action: 'post'
+                },  
+
+                success: function(json){
+                    document.getElementById("favoritos_quantity").textContent = json.qty;
+                    location.reload();
+                },
+
+                error: function(xhr, errmsg, err){
+                    alert('Erro ao adicionar produto ao carrinho.');
+                }
+            });
+        })
 
     </script>
 {% endblock %}

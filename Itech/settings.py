@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'cart',
     'contato',
     'payment',
+    'favoritos',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +90,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.context_processors.cart',
+                'favoritos.context_processors.favoritos',
             ],
         },
     },
