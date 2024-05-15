@@ -105,7 +105,7 @@ def login_user(request):
             messages.success(request, ("Logado com sucesso!"))
             return redirect('home')
         else:
-            messages.success(request, ("Ocorreu um erro, tente novamente."))
+            messages.success(request, ("Ocorreu um erro, se você não possuir uma conta, registre-se, caso contrário, verifique suas informações."))
             return redirect('login')
 
 
