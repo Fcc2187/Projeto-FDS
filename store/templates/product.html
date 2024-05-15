@@ -42,17 +42,18 @@
                             </div>
                             <br></br>
                             {% if user.is_authenticated %}
-                                <button type="button" value="{{ product.id }}" class="btn btn-primary" id="add-favoritos">Acicionar aos Favoritos</button>
                                 <button type="button" value="{{ product.id }}" class="btn btn-primary" id="add-cart">Adicionar ao carrinho</button>
                                 <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+                                <button type="button" value="{{ product.id }}" class="btn btn-star" id="add-favoritos">
+                                    <i class="bi bi-star-fill"></i>
+                                </button>
                             {% else %}
                                 <h5>Para adicionar um produto ao carrinho ou adicionar aos favoritos, você precisa estar logado/registrado.</h5>
-                          </br>
+                                </br>
                                 <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
-                                <a href = "{% url 'register'%}" class = "btn btn-primary">Registrar</a>
+                                <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
                                 <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
                             {% endif %}
-  
                         </center>
                     </div>
                 </div>
@@ -74,12 +75,10 @@
                     csrfmiddlewaretoken: '{{ csrf_token }}',
                     action: 'post'
                 },
-
                 success: function(json){
                     document.getElementById("cart_quantity").textContent = json.qty;
                     location.reload();
                 },
-
                 error: function(xhr, errmsg, err){
                     alert('Erro ao adicionar produto ao carrinho.');
                 }
@@ -96,18 +95,15 @@
                     product_qty: $('#qty-cart option:selected').text(),
                     csrfmiddlewaretoken: '{{ csrf_token }}',
                     action: 'post'
-                },  
-
+                },
                 success: function(json){
                     document.getElementById("favoritos_quantity").textContent = json.qty;
                     location.reload();
                 },
-
                 error: function(xhr, errmsg, err){
-                    alert('Erro ao adicionar produto ao carrinho.');
+                    alert('Erro ao adicionar produto aos favoritos.');
                 }
             });
         })
-
     </script>
 {% endblock %}

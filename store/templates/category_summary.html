@@ -1,28 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Categorias</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Escolha uma categoria abaixo!</p>
-                </div>
-            </div>
-        </header>
-
-        <div class="container">
-            <div class="row">
-                <center>
-                    <div class="col-8">
-                        <br/><br/>
-
-                        {% for category in categories %}
-    <h3><a href="{% url 'category' category %}">{{ category }}</a></h3>
-
-                        {% endfor %}
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    </div>
-                </center>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Categorias</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Escolha uma categoria abaixo!</p>
             </div>
         </div>
+    </header>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8 text-center">
+                <br/><br/>
+                <div class="d-flex flex-column align-items-center">
+                    {% for category in categories %}
+                        <a href="{% url 'category' category %}" class="custom-category">{{ category }}</a><br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+

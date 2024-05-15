@@ -2843,6 +2843,29 @@ textarea.form-control-lg {
   opacity: var(--bs-btn-disabled-opacity);
 }
 
+.btn-star {
+  background-color: transparent;
+  border: none;
+  color: #ffbf00; /* Bootstrap yellow */
+  font-size: 2.5rem; /* Increased font size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem; /* Increased width */
+  height: 3.5rem; /* Increased height */
+  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
+  position: absolute; /* Positioning the button absolutely */
+  top: 0.5rem; /* Small margin from the top */
+  right: 0.5rem; /* Small margin from the right */
+}
+
+.btn-star:hover {
+  color: #ecd867; /* Lighter yellow on hover */
+}
+
+
+
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #0d6efd;
@@ -10824,3 +10847,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+.custom-category {
+  color: #fff; /* Define a cor do texto */
+  background-color: rgba(var(--bs-dark-rgb)); /* Define a cor de fundo */
+  padding: 15px 20px; /* Aumenta o preenchimento ao redor do texto */
+  border-radius: 5px; /* Adiciona cantos arredondados */
+  text-decoration: none; /* Remove o sublinhado do link */
+  display: inline-block; /* Faz com que o link se comporte como um bloco inline */
+  margin: 3px 0; /* Adiciona margem vertical menor */
+  font-size: 1.2em; /* Aumenta o tamanho do texto */
+}
+
+.custom-category:hover {
+  background-color: #424649; /* Muda a cor de fundo ao passar o mouse */
+  color: #fff;
+}
+
+
+
