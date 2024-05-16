@@ -6,14 +6,14 @@ from django.db.models.signals import post_save
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    date_modified = models.DateTimeField(auto_now=True)
-    Numero = models.IntegerField(blank=True)
-    Endereco1 = models.CharField(max_length=200, blank=True)
-    Endereco2 = models.CharField(max_length=200, blank=True)
+    date_modified = models.DateTimeField(User, auto_now=True)
+    Numero = models.CharField(max_length = 20, blank = True)
+    Endereço1 = models.CharField(max_length=200, blank=True)
+    Endereço2 = models.CharField(max_length=200, blank=True)
     Cidade = models.CharField(max_length=200, blank=True)
     Estado = models.CharField(max_length=200, blank=True)
-    CEP = models.IntegerField(blank=True)
-    Pais = models.CharField(max_length=200, blank=True)
+    CEP = models.CharField(max_length=200, blank=True)
+    País = models.CharField(max_length=200, blank=True)
     antigo_carrinho = models.CharField(max_length=200, blank=True, null=True)
     antigo_favoritos = models.CharField(max_length=200, blank=True, null=True)
 
