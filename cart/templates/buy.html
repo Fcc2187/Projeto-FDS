@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Informações de Pagamento</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Preencha os campos a seguir para realizar sua compra</p>
+                </div>
+            </div>
+        </header>
+        
+        <br><br>
+
+        <div class="container">
+      {% if user.is_authenticated %}
+        {% if cart_products %}
+
+        <div class="container">
+            <div class="row">
+        
+                    <div class="col-md-6 offset-md-3">
+        
+                        <br/><br/>
+                        <form method="post" action="{% url 'buy' %}">
+        
+                            <h5>Preencha suas informações pessoais</h5>
+                            <br>
+
+                            <input type="text" id="Numero" class="form-control" placeholder="CPF" name="Numero" value=""><br>
+
+                            <input type="text" id="Numero" class="form-control" placeholder="Email" name="Numero" value=""><br>
+        
+                            <input type="text" id="Numero" class="form-control" placeholder="Nome Completo" name="Numero" value=""><br>
+        
+                            <input type="text" id="Endereço1" class="form-control" placeholder="Data de Nascimento" name="Endereço1" value=""><br>
+        
+                            <input type="text" id="Endereço2" class="form-control" placeholder="Telefone" name="Endereço2" value=""><br>
+        
+                            <input type="text" id="Estado" class="form-control" placeholder="Estado" name="Estado" value=""><br>
+
+                            <input type="text" id="Estado" class="form-control" placeholder="Cidade" name="Estado" value=""><br>                            
+
+                            <input type="text" id="Cidade" class="form-control" placeholder="Endereço de Entrega" name="Cidade" value=""><br>
+        
+                            <input type="text" id="Estado" class="form-control" placeholder="CEP" name="Estado" value=""><br>
+        
+                            <br>
+                            <h5>Preencha os dados do seu cartão</h5>
+                            <br>
+
+                            <input type="text" id="Estado" class="form-control" placeholder="Número do Cartão" name="Estado" value=""><br>
+
+                            <input type="text" id="Estado" class="form-control" placeholder="Nome Impresso no Cartão" name="Estado" value=""><br>
+
+                            <input type="text" id="Estado" class="form-control" placeholder="CPF do titular" name="Estado" value=""><br>
+
+                            <input type="text" id="Estado" class="form-control" placeholder="Validade" name="Estado" value=""><br>
+
+                            <input type="text" id="Estado" class="form-control" placeholder="CVV" name="Estado" value=""><br>
+
+                            <br>
+                            <center><h5 id="total">Total: R${{ totals }}</h3></center>
+                            <br>
+
+                            <center><a class="btn btn-secondary" id="comprar">Finalizar Pedido</a></center>
+
+                                <br><br><br>
+
+                        </form>
+                </div>
+                <br/><br/>
+                    
+            </div>
+        </div>
+
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for product in cart_products %}
+
+            <div class="col">
+              <div class="card h-100">
+           
+                <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <center><h4 class="card-title">{{product.name}}</h4></center>
+                  {% if product_is.sale %}
+                  <div class="d-flex justify-content-center small text-warning mb-2">
+                    <div class="bi-star-fill"></div>
+                    &nbsp;&nbsp;Sale!&nbsp;&nbsp;
+                    <div class="bi-star-fill"></div>
+                    </div>
+                    <!-- Product price-->
+                    <strike>
+                        <center>R${{ product.price }}</center>
+                    </strike>
+                    <center><h5 class="card-title">R${{ product.sale_price }}</h5></center>
+
+                {% else %}
+                    <center><h5 class="card-title">R${{ product.price }}</h5></center>
+                {% endif %}
+                  <br>
+                  <center><button type ="button" data-index="{{product.id}}"
+                  class="btn btn-danger delete-product" id="remova">Remover</button></center>
+                  <br>
+                </div>
+              </div>
+            </div>
+
+        {% endfor %}
+        </div>
+
+            <br>
+
+            <br/><br/><br/>
+            {% else %}
+            <h5>Seu carrinho está vazio...</h5>
+            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+            {% endif %}
+        </div>
+
+
+        <script>
+          // Update Cart
+          $(document).on('click', '.update-cart', function(e){
+              e.preventDefault();
+              // grab the product id
+              var productid = $(this).data('index');
+          
+              $.ajax({
+              type: 'POST',
+              url: '{% url "cart_update" %}',
+              data: {
+                product_id: $(this).data('index'),
+                product_qty: $('#select' + productid + ' option:selected').text(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+              },
+              success: function(json){
+                  //console.log(json)
+                  //document.getElementById("cart_quantity").textContent = json.qty
+                  location.reload();
+              },
+          
+              error: function(xhr, errmsg, err){
+          
+              }
+          
+          
+              });
+          
+          })
+
+          // Delete item from cart
+          $(document).on('click', '.delete-product', function(e){
+              e.preventDefault();
+              // grab the product id
+             //var productid = $(this).data('index');
+          
+              $.ajax({
+              type: 'POST',
+              url: '{% url "cart_delete" %}',
+              data: {
+                product_id: $(this).data('index'),
+                //product_qty: $('#select' + productid + ' option:selected').text(), DEIXEI COMO COMENTARIO PQ NAO PRECISA DE QUANTIDADE QUANDO SE VAI APAGAR PRODUTO
+                csrfmiddlewaretoken: '{{ csrf_token }}',  
+                action: 'post'
+              },
+              success: function(json){
+                  //console.log(json)
+                  //document.getElementById("cart_quantity").textContent = json.qty
+                  location.reload();
+              },
+          
+              error: function(xhr, errmsg, err){
+          
+              }
+          
+          
+              });
+          
+          })
+</script>
+{% else %}
+<h5>Realize o Login para acessar esta página...</h5>
+</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+{% endif %}
+{% endblock %}

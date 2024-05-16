@@ -14,35 +14,32 @@
         <div class="container">
       {% if user.is_authenticated %}
         {% if favoritos_products %}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
             {% for product in favoritos_products %}
-
-            <div class="card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                    <center>
-                      <h5 class="card-title">{{product.name}}</h5>
-                      <p class="card-text">{{product.description}}</p>
-                    <br></br>
+      
+                  <div class="col">
+                    <div class="card h-100">
+                 
+                      <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                      <center><h5 class="card-title">{{product.name}}</h5></center>
+                      <center><p class="card-text">{{product.description}}</p></center>
                       <br></br>
-                      <a href="{% url 'home' %}" class="btn btn-secondary" id="home">Home</a>
-                      <button type ="button" data-index="{{product.id}}"
-                      class="btn btn-danger delete-product" id="remova">Remover</button>
-
-                    </center>
+                      <center><button type ="button" data-index="{{product.id}}"
+                      class="btn btn-danger delete-product" id="remova">Remover</button></center>
+                      <br>
                     </div>
                   </div>
                 </div>
-              </div>
 
             {% endfor %}
+            </div>
+            <br>
             {% else %}
                     <div>
                         <center><h5>Você Não Tem Favoritos</h5></center>
                     </div>
+                    <br><br><br><br><br><br><br><br><br>
                     {% endif %}
         </div>
 

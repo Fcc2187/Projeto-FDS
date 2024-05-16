@@ -53,3 +53,10 @@ def cart_update(request):
         # return redirect('cart_summary')
         messages.success(request, ("Seu carrinho foi atualizado."))
         return response
+
+def cart_buy(request):
+    cart = Cart(request)
+    cart_products = cart.get_prods
+    quantities = cart.get_quants
+    totals = cart.cart_total()
+    return render(request,'buy.html', {"cart_products":cart_products, "quantities":quantities, "totals":totals})

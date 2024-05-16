@@ -11,6 +11,7 @@
             </div>
         </header>
         <br>
+        <br><br><br>
         <div class="container">
       {% if user.is_authenticated %}
         {% if cart_products %}
@@ -77,11 +78,14 @@
               </div>
 
             {% endfor %}
+            <br>
             <h3 id="total">Total: R${{ totals }} </h3>
+            <br>
+            <a href="{% url 'buy' %}" class="btn btn-secondary" id="comprar">Comprar</a>
 
             <br/><br/><br/>
             {% else %}
-            Seu carrinho está vazio...
+            <h5>Seu carrinho está vazio...</h5>
             </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
             {% endif %}
         </div>
