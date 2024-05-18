@@ -9,7 +9,11 @@
 
                 {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
-                    <li class="nav-item"><a class="nav-link" href="{% url 'update_info' %}">Perfil</a></li>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Perfil</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'update_info' %}">Minhas informações</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'meus-pedidos' %}">Meus pedidos</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link " name="procurar" aria-current="page" href="{%url 'search'%}">Procurar</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'favoritos_summary' %}">Favoritos</a></li>
