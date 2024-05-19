@@ -7,12 +7,14 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm, UserInfoForm
-from .models import Product, Category, Profile
+from .models import Product, Category, Profile,Comentario
 from django.db.models import Q
 import json
 from cart.cart import Cart
 from django.utils import timezone
 from favoritos.favoritos import Favoritos
+from django.views import View
+
 
 def search(request):
     if request.method == "POST":
@@ -178,4 +180,19 @@ def product(request,pk):
 	products = Product.objects.get(id=pk)
 	return render(request, 'product.html', {'product':products})
 
+class AdicionarComentarioView(View):
+    def get(self, request, produto_id):
+        produto = get_object_or_404(Product, id=produto_id)
+        return render(request, 'store/adicionar_comentario.html', {'produto': produto})
 
+    def post(self, request, produto_id):
+        texto = request.POST.get('texto').strip()
+        produto = get_object_or_404(Product, id=produto_id)
+
+        if not texto:
+            messages.error(request, 'Por favor, adicione um texto ao comentário.')
+            return redirect('adicionar_comentario', produto_id=produto_id)
+
+        Comentario.objects.create(autor=request.user, texto=texto, produto=produto)
+        messages.success(request, 'Comentário adicionado com sucesso.')
+        return redirect('product', pk=produto_id)  # Atualizado para redirecionar para a visualização do detalhe do produto

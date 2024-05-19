@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from django.contrib.auth.decorators import login_required
+from .views import AdicionarComentarioView
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -17,5 +18,6 @@ urlpatterns = [
     path('category_summary/',views.category_summary, name='category_summary'),
     path('search/', views.search, name='search'),
     path('meus-pedidos/', views.update_password, name='meus-pedidos'),
+    path('produto/<int:produto_id>/adicionar_comentario/', AdicionarComentarioView.as_view(), name='adicionar_comentario'),
 
 ]

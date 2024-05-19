@@ -1,109 +1,150 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container">
-        <br/>
-        <div class="card mb-3">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <center>
-                            <h5 class="card-title">{{product.name}}</h5>
-                            <p class="card-text">{{product.description}}</p>
+<div class="container">
+    <br/>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">{{product.name}}</h5>
+                        <p class="card-text">{{product.description}}</p>
 
-                            {% if product_is.sale %}
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    &nbsp;&nbsp;Promoção!&nbsp;&nbsp;
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <strike>
-                                    R${{ product.price }}
-                                </strike>
-                                R${{ product.sale_price }}
-
-                            {% else %}
-                                R${{ product.price }}
-                            {% endif %}
-                            <br></br>
-                            <div class="row justify-content-center">
-                                <div class="col-md-2">Quantidade:</div>
-                                <div class="col-md-2">
-                                    <select class="form-select form-select-sm" id="qty-cart">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-                                </div>
+                        {% if product.is_sale %}
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                &nbsp;&nbsp;Promoção!&nbsp;&nbsp;
+                                <div class="bi-star-fill"></div>
                             </div>
-                            <br></br>
-                            {% if user.is_authenticated %}
-                                <button type="button" value="{{ product.id }}" class="btn btn-primary" id="add-cart">Adicionar ao carrinho</button>
-                                <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
-                                <button type="button" value="{{ product.id }}" class="btn btn-star" id="add-favoritos">
-                                    <i class="bi bi-star-fill"></i>
-                                </button>
-                            {% else %}
-                                <h5>Para adicionar um produto ao carrinho ou aos favoritos, você precisa estar logado/registrado.</h5>
-                                </br>
-                                <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
-                                <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
-                                <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
-                            {% endif %}
-                        </center>
-                    </div>
+                            <strike>
+                                R${{ product.price }}
+                            </strike>
+                            R${{ product.sale_price }}
+
+                        {% else %}
+                            R${{ product.price }}
+                        {% endif %}
+                        <br></br>
+                        <div class="row justify-content-center">
+                            <div class="col-md-2">Quantidade:</div>
+                            <div class="col-md-2">
+                                <select class="form-select form-select-sm" id="qty-cart">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br></br>
+                        {% if user.is_authenticated %}
+                            <button type="button" value="{{ product.id }}" class="btn btn-primary" id="add-cart">Adicionar ao carrinho</button>
+                            <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+                            <button type="button" value="{{ product.id }}" class="btn btn-star" id="add-favoritos">
+                                <i class="bi bi-star-fill"></i>
+                            </button>
+                        {% else %}
+                            <h5>Para adicionar um produto ao carrinho ou aos favoritos, você precisa estar logado/registrado.</h5>
+                            <br/>
+                            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                            <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
+                            <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+                        {% endif %}
+                    </center>
                 </div>
             </div>
         </div>
     </div>
-    </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
 
-    <script>
-        // Check if button pressed
-        $(document).on('click', '#add-cart', function(e){
-            e.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: "{% url 'cart_add' %}",
-                data: {
-                    product_id: $(this).val(),
-                    product_qty: $('#qty-cart option:selected').text(),
-                    csrfmiddlewaretoken: '{{ csrf_token }}',
-                    action: 'post'
-                },
-                success: function(json){
-                    document.getElementById("cart_quantity").textContent = json.qty;
-                    location.reload();
-                },
-                error: function(xhr, errmsg, err){
-                    alert('Erro ao adicionar produto ao carrinho.');
-                }
-            });
-        })
+    {% if user.is_authenticated %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Adicionar Comentário</h5>
+            <form method="post" action="{% url 'adicionar_comentario' produto_id=product.id %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <textarea name="texto" class="form-control" rows="3" placeholder="Escreva seu comentário aqui..."></textarea>
+                </div>
+                <br/>
+                <button type="submit" class="btn btn-primary">Adicionar Comentário</button>
+            </form>
+        </div>
+    </div>
+    {% else %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Adicionar Comentário</h5>
+            <p>Para adicionar um comentário, você precisa estar logado/registrado.</p>
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
+        </div>
+    </div>
+    {% endif %}
 
-        $(document).on('click', '#add-favoritos', function(e){
-            e.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: "{% url 'favoritos_add' %}",
-                data: {
-                    product_id: $(this).val(),
-                    product_qty: $('#qty-cart option:selected').text(),
-                    csrfmiddlewaretoken: '{{ csrf_token }}',
-                    action: 'post'
-                },
-                success: function(json){
-                    document.getElementById("favoritos_quantity").textContent = json.qty;
-                    location.reload();
-                },
-                error: function(xhr, errmsg, err){
-                    alert('Erro ao adicionar produto aos favoritos.');
-                }
-            });
-        })
-    </script>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Comentários</h5>
+            {% for comentario in product.comentarios.all %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">{{ comentario.autor.username }}</h6>
+                    <p class="card-text">{{ comentario.texto }}</p>
+                    <p class="card-text"><small class="text-muted">Publicado em {{ comentario.data_publicacao }}</small></p>
+                </div>
+            </div>
+            {% empty %}
+            <p>Não há comentários para este produto ainda.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+    // Check if button pressed
+    $(document).on('click', '#add-cart', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'cart_add' %}",
+            data: {
+                product_id: $(this).val(),
+                product_qty: $('#qty-cart option:selected').text(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+            },
+            success: function(json){
+                document.getElementById("cart_quantity").textContent = json.qty;
+                location.reload();
+            },
+            error: function(xhr, errmsg, err){
+                alert('Erro ao adicionar produto ao carrinho.');
+            }
+        });
+    });
+
+    $(document).on('click', '#add-favoritos', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'favoritos_add' %}",
+            data: {
+                product_id: $(this).val(),
+                product_qty: $('#qty-cart option:selected').text(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+            },
+            success: function(json){
+                document.getElementById("favoritos_quantity").textContent = json.qty;
+                location.reload();
+            },
+            error: function(xhr, errmsg, err){
+                alert('Erro ao adicionar produto aos favoritos.');
+            }
+        });
+    });
+</script>
 {% endblock %}
