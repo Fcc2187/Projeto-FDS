@@ -60,3 +60,10 @@ def cart_buy(request):
     quantities = cart.get_quants
     totals = cart.cart_total()
     return render(request,'buy.html', {"cart_products":cart_products, "quantities":quantities, "totals":totals})
+
+def buy_done(request):
+    if 'session_key' in request.session:
+        del request.session['session_key']
+        request.session.modified = True
+
+    return render(request, 'buy_done.html', {'message': 'Obrigado pela compra, estamos avaliando seu pedido'})

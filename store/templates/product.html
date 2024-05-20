@@ -106,7 +106,9 @@
             {% endfor %}
         </div>
     </div>
+    <br>
 </div>
+
 
 <script>
     // Adicionar ao carrinho
@@ -131,27 +133,30 @@
         });
     });
 
-    // Adicionar aos favoritos
-    $(document).on('click', '#add-favoritos', function(e){
-        e.preventDefault();
-        $.ajax({
-            type: 'POST',
-            url: "{% url 'favoritos_add' %}",
-            data: {
-                product_id: $(this).val(),
-                product_qty: $('#qty-cart option:selected').text(),
-                csrfmiddlewaretoken: '{{ csrf_token }}',
-                action: 'post'
-            },
-            success: function(json){
-                document.getElementById("favoritos_quantity").textContent = json.qty;
-                location.reload();
-            },
-            error: function(xhr, errmsg, err){
-                alert('Erro ao adicionar produto aos favoritos.');
-            }
-        });
+// Adicionar aos favoritos
+$(document).on('click', '#add-favoritos', function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: "{% url 'favoritos_add' %}",
+        data: {
+            product_id: $(this).val(),
+            product_qty: $('#qty-cart option:selected').text(),
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            action: 'post'
+        },
+        success: function(json){
+            document.getElementById("favoritos_quantity").textContent = json.qty;
+            location.reload();
+            // Exibir mensagem de alerta
+            alert('Produto adicionado aos favoritos com sucesso!');
+        },
+        error: function(xhr, errmsg, err){
+            alert('Erro ao adicionar produto aos favoritos.');
+        }
     });
+});
+
 
     // Deletar comentário
     $(document).on('submit', '.delete-comentario-form', function(e){
