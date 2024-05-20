@@ -1,4 +1,4 @@
-<p align="center"><img align="center" width="280" src="media/uploads/product/cesar.logo.png"/></p>
+
 <hr>
 <p align="center">
   <img
