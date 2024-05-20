@@ -5,13 +5,13 @@
     <div class="card mb-3">
         <div class="row g-0">
             <div class="col-md-4">
-                <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
+                <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
                     <center>
-                        <h5 class="card-title">{{product.name}}</h5>
-                        <p class="card-text">{{product.description}}</p>
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
 
                         {% if product.is_sale %}
                             <div class="d-flex justify-content-center small text-warning mb-2">
@@ -23,11 +23,10 @@
                                 R${{ product.price }}
                             </strike>
                             R${{ product.sale_price }}
-
                         {% else %}
                             R${{ product.price }}
                         {% endif %}
-                        <br></br>
+                        <br><br>
                         <div class="row justify-content-center">
                             <div class="col-md-2">Quantidade:</div>
                             <div class="col-md-2">
@@ -40,7 +39,7 @@
                                 </select>
                             </div>
                         </div>
-                        <br></br>
+                        <br><br>
                         {% if user.is_authenticated %}
                             <button type="button" value="{{ product.id }}" class="btn btn-primary" id="add-cart">Adicionar ao carrinho</button>
                             <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
@@ -94,6 +93,12 @@
                     <h6 class="card-subtitle mb-2 text-muted">{{ comentario.autor.username }}</h6>
                     <p class="card-text">{{ comentario.texto }}</p>
                     <p class="card-text"><small class="text-muted">Publicado em {{ comentario.data_publicacao }}</small></p>
+                    {% if comentario.autor == user %}
+                    <form method="post" action="{% url 'delete_comentario' comentario.id %}" class="d-inline delete-comentario-form">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+                    </form>
+                    {% endif %}
                 </div>
             </div>
             {% empty %}
@@ -104,7 +109,7 @@
 </div>
 
 <script>
-    // Check if button pressed
+    // Adicionar ao carrinho
     $(document).on('click', '#add-cart', function(e){
         e.preventDefault();
         $.ajax({
@@ -126,6 +131,7 @@
         });
     });
 
+    // Adicionar aos favoritos
     $(document).on('click', '#add-favoritos', function(e){
         e.preventDefault();
         $.ajax({
@@ -143,6 +149,27 @@
             },
             error: function(xhr, errmsg, err){
                 alert('Erro ao adicionar produto aos favoritos.');
+            }
+        });
+    });
+
+    // Deletar comentário
+    $(document).on('submit', '.delete-comentario-form', function(e){
+        e.preventDefault();
+        var form = $(this);
+        $.ajax({
+            type: 'POST',
+            url: form.attr('action'),
+            data: form.serialize(),
+            success: function(response){
+                if (response.success) {
+                    form.closest('.card').remove();
+                } else {
+                    alert('Erro ao deletar o comentário.');
+                }
+            },
+            error: function(xhr, errmsg, err){
+                alert('Erro ao deletar o comentário.');
             }
         });
     });
