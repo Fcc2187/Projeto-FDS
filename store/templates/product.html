@@ -2,6 +2,7 @@
 {% block content %}
 <div class="container">
     <br/>
+
     <div class="card mb-3">
         <div class="row g-0">
             <div class="col-md-4">
@@ -66,10 +67,10 @@
             <form method="post" action="{% url 'adicionar_comentario' produto_id=product.id %}">
                 {% csrf_token %}
                 <div class="form-group">
-                    <textarea name="texto" class="form-control" rows="3" placeholder="Escreva seu comentário aqui..."></textarea>
+                    <textarea id="comentario-texto" name="texto" class="form-control" rows="3" placeholder="Escreva seu comentário aqui..."></textarea>
                 </div>
                 <br/>
-                <button type="submit" class="btn btn-primary">Adicionar Comentário</button>
+                <button type="submit" id="adicionar-comentario-btn" class="btn btn-primary" style="display: none;">Adicionar Comentário</button>
             </form>
         </div>
     </div>
@@ -109,8 +110,20 @@
     <br>
 </div>
 
-
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var comentarioTexto = document.getElementById('comentario-texto');
+        var adicionarComentarioBtn = document.getElementById('adicionar-comentario-btn');
+
+        comentarioTexto.addEventListener('input', function() {
+            if (comentarioTexto.value.trim().length > 0) {
+                adicionarComentarioBtn.style.display = 'block';
+            } else {
+                adicionarComentarioBtn.style.display = 'none';
+            }
+        });
+    });
+
     // Adicionar ao carrinho
     $(document).on('click', '#add-cart', function(e){
         e.preventDefault();
@@ -133,30 +146,29 @@
         });
     });
 
-// Adicionar aos favoritos
-$(document).on('click', '#add-favoritos', function(e){
-    e.preventDefault();
-    $.ajax({
-        type: 'POST',
-        url: "{% url 'favoritos_add' %}",
-        data: {
-            product_id: $(this).val(),
-            product_qty: $('#qty-cart option:selected').text(),
-            csrfmiddlewaretoken: '{{ csrf_token }}',
-            action: 'post'
-        },
-        success: function(json){
-            document.getElementById("favoritos_quantity").textContent = json.qty;
-            location.reload();
-            // Exibir mensagem de alerta
-            alert('Produto adicionado aos favoritos com sucesso!');
-        },
-        error: function(xhr, errmsg, err){
-            alert('Erro ao adicionar produto aos favoritos.');
-        }
+    // Adicionar aos favoritos
+    $(document).on('click', '#add-favoritos', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: "{% url 'favoritos_add' %}",
+            data: {
+                product_id: $(this).val(),
+                product_qty: $('#qty-cart option:selected').text(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+            },
+            success: function(json){
+                document.getElementById("favoritos_quantity").textContent = json.qty;
+                location.reload();
+                // Exibir mensagem de alerta
+                alert('Produto adicionado aos favoritos com sucesso!');
+            },
+            error: function(xhr, errmsg, err){
+                alert('Erro ao adicionar produto aos favoritos.');
+            }
+        });
     });
-});
-
 
     // Deletar comentário
     $(document).on('submit', '.delete-comentario-form', function(e){

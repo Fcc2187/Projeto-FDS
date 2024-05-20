@@ -195,12 +195,11 @@ class AdicionarComentarioView(View):
 
         Comentario.objects.create(autor=request.user, texto=texto, produto=produto)
         messages.success(request, 'Comentário adicionado com sucesso.')
-        return redirect('product', pk=produto_id)  # Atualizado para redirecionar para a visualização do detalhe do produto
+        return redirect('product', pk=produto_id) # Redireciona para a visualização do detalhe do produto
 
 def delete_comentario(request, comentario_id):
     comentario = get_object_or_404(Comentario, id=comentario_id, autor=request.user)
     if request.method == "POST":
         comentario.delete()
-        messages.success(request, "Comentário deletado com sucesso.")
         return JsonResponse({'success': True})
     return JsonResponse({'success': False})
