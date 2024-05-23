@@ -97,6 +97,7 @@
                     {% if comentario.autor == user %}
                     <form method="post" action="{% url 'delete_comentario' comentario.id %}" class="d-inline delete-comentario-form">
                         {% csrf_token %}
+                        <!--<button type="submit" class="btn btn-danger btn-sm">Deletar</button>-->
                     </form>
                     {% endif %}
                 </div>
