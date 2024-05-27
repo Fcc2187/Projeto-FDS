@@ -34,14 +34,14 @@
             <br>
         {% else %}
             <br>
-            <h5>Você ainda não adicionou produtos aos favoritos.</h5>
+            <h5>Não existem produtos nos seus favoritos.</h5>
             <br>
             <br><br><br>
         {% endif %}
     {% else %}
         <br>
         <div>
-            <h5>Para adicionar um produto aos favoritos, você precisa estar logado/registrado.</h5>
+            <h5>Para gerenciar/ver seus produtos favoritos, você precisa estar logado/registrado.</h5>
             <br/>
             <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
             <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
