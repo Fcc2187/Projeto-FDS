@@ -1,79 +1,73 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Favoritos</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Aqui Você Vê Seus Produtos Favoritos</p>
-                </div>
-            </div>
-        </header>
-        <br>
-        <div class="container">
-      {% if user.is_authenticated %}
-        {% if favoritos_products %}
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            {% for product in favoritos_products %}
-      
-                  <div class="col">
-                    <div class="card h-100">
-                 
-                      <img src="{{product.image.url}}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                      <center><h5 class="card-title">{{product.name}}</h5></center>
-                      <center><p class="card-text">{{product.description}}</p></center>
-                      <br></br>
-                      <center><button type ="button" data-index="{{product.id}}"
-                      class="btn btn-danger delete-product" id="remova">Remover</button></center>
-                      <br>
-                    </div>
-                  </div>
-                </div>
-
-            {% endfor %}
-            </div>
-            <br>
-            {% else %}
-            <br>
-                    <div>
-                        <center><h5>Você Não Tem Favoritos</h5></center>
-                    </div>
-                    <br><br><br><br><br><br><br><br><br>
-                    {% endif %}
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Favoritos</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Aqui Você Vê Seus Produtos Favoritos</p>
         </div>
+    </div>
+</header>
+<br>
+<div class="container">
+    {% if user.is_authenticated %}
+        {% if favoritos_products %}
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {% for product in favoritos_products %}
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="{{product.image.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <center><h5 class="card-title">{{product.name}}</h5></center>
+                                <center><p class="card-text">{{product.description}}</p></center>
+                                <br></br>
+                                <center><button type="button" data-index="{{product.id}}"
+                                    class="btn btn-danger delete-product" id="remova">Remover</button></center>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <br>
+        {% else %}
+            <br>
+            <h5>Você ainda não adicionou produtos aos favoritos.</h5>
+            <br>
+            <br><br><br>
+        {% endif %}
+    {% else %}
+        <br>
+        <div>
+            <h5>Para adicionar um produto aos favoritos, você precisa estar logado/registrado.</h5>
+            <br/>
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-primary">Registrar</a>
+            <a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+        </div>
+    {% endif %}
+</div>
 
-
-        <script>
-          $(document).on('click', '.delete-product', function(e){
-              e.preventDefault();
-              // grab the product id
-             //var productid = $(this).data('index');
-          
-              $.ajax({
-              type: 'POST',
-              url: '{% url "favoritos_delete" %}',
-              data: {
+<script>
+    $(document).on('click', '.delete-product', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '{% url "favoritos_delete" %}',
+            data: {
                 product_id: $(this).data('index'),
-                //product_qty: $('#select' + productid + ' option:selected').text(), DEIXEI COMO COMENTARIO PQ NAO PRECISA DE QUANTIDADE QUANDO SE VAI APAGAR PRODUTO
-                csrfmiddlewaretoken: '{{ csrf_token }}',  
+                csrfmiddlewaretoken: '{{ csrf_token }}',
                 action: 'post'
-              },
-              success: function(json){
-                  //console.log(json)
-                  //document.getElementById("cart_quantity").textContent = json.qty
-                  location.reload();
-              },
-          
-              error: function(xhr, errmsg, err){
-          
-              }
-          
-          
-              });
-          
-          })
+            },
+            success: function(json){
+                location.reload();
+            },
+            error: function(xhr, errmsg, err){
+                // Handle the error
+            }
+        });
+    })
 </script>
-{% endif %}
 {% endblock %}

@@ -593,6 +593,55 @@ class AdicionarComentarios(LiveServerTestCase):
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/p").text,"Para adicionar um comentário, você precisa estar logado/registrado.")
         time.sleep(4)
 
+class AdicionarAosFavoritos(LiveServerTestCase):
+    def test_cenario21(self):
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+        time.sleep(2)
+
+        usuario.send_keys(f"Rodrigo_Torres1988")
+        nome.send_keys(f"Rodrigo")
+        sobrenome.send_keys(f"Torres")
+        email.send_keys(f"Torres@cesar.school")
+        senha.send_keys("Suadao1234")
+        confirmar_senha.send_keys("Suadao1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        favoritos = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[2]")
+        favoritos.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/")
+        botao3= driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[2]/div/div[2]/div/a")
+        botao3.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        favoritos2 = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[2]")
+        favoritos2.send_keys(Keys.ENTER)
+        time.sleep(2)
+        driver.get("http://127.0.0.1:8000/favoritos")
+        time.sleep(3)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div[1]/div/div/center[1]/h5").text,"iPhone 13")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div[2]/div/div/center[1]/h5").text,"Notebook Lenovo")
+        driver.get("http://127.0.0.1:8000/logout/")
+        time.sleep(3)
+
+    def test_cenario22(self):
+        driver.get("http://127.0.0.1:8000/favoritos")
+        time.sleep(3)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/h5").text,"Para adicionar um produto aos favoritos, você precisa estar logado/registrado.")
 
 
 

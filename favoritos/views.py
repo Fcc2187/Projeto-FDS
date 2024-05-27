@@ -22,7 +22,7 @@ def favoritos_add(request):
             favoritos_quantity = favoritos.__len__()
             # response = JsonResponse({"Product name: ": product.name})
             response = JsonResponse({'qty': favoritos_quantity})
-            messages.success(request, ("Produto adicionado com sucesso."))
+            messages.success(request, ("Produto adicionado aos favoritos com sucesso."))
             return redirect('home')
         else:
             messages.success(request, "Você precisa estar logado para adicionar esse produto.")
@@ -34,6 +34,6 @@ def favoritos_delete(request):
         product_id = int(request.POST.get('product_id'))
         favoritos.delete(product=product_id)
         response = JsonResponse({'product': product_id})
-        messages.success(request, ("Produto removido do carrinho."))
+        messages.success(request, ("Produto removido dos favoritos."))
         return response
 
