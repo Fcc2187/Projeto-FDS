@@ -8,7 +8,6 @@ import time
 driver = webdriver.Chrome()
 
 class AtualizarPerfil(LiveServerTestCase):
-
     def test_cenario1(self):
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
@@ -47,8 +46,8 @@ class AtualizarPerfil(LiveServerTestCase):
         pais.send_keys(f"Brasil")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-
-        self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"iTech Store")
+        driver.get("http://127.0.0.1:8000/update_info/")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/form/input[2]").text,"8199999999")
         driver.get("http://127.0.0.1:8000/logout/")
         time.sleep(5)
 
@@ -86,7 +85,8 @@ class AtualizarPerfil(LiveServerTestCase):
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
 
-        self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"iTech Store")
+        driver.get("http://127.0.0.1:8000/update_info/")
+        self.assertEqual(driver.find_element(by=By.ID, value="81999999"))
         driver.get("http://127.0.0.1:8000/logout/")
         time.sleep(4)
 
@@ -696,7 +696,7 @@ class RemoverDosFavoritos(LiveServerTestCase):
 
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div[2]/h5").text,"Não existem produtos nos seus favoritos.")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(1)
+        time.sleep(2)
 
     def test_cenario24(self):
         driver.get("http://127.0.0.1:8000/favoritos")
