@@ -188,7 +188,7 @@ class PesquisarProduto(LiveServerTestCase):
         pesquisa.send_keys("Fechadura eletrônica")
         time.sleep(2)
         botao.send_keys(Keys.ENTER)
-        self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Procurar Produtos")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div[1]").text,"Não achamos nenhum produto, tente denovo")
         time.sleep(2)
 
 class AdicionarNoCarrinho(LiveServerTestCase):
