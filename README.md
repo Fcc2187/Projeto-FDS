@@ -79,6 +79,7 @@
   </a>
 </p>
 </details>
+<br>
 <details>
 <summary># 📧 Entrega 1</summary>
 
@@ -121,7 +122,7 @@
 
 <br>
 </details>
-<br><br>
+<br>
 <details>
 
 <summary> # 📧 Entrega 2 </summary>
@@ -157,7 +158,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 </details>
-<br><br>
+<br>
 <details>
 <summary># 📧 Entrega 3 </summary>
 
@@ -219,4 +220,4 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 </details>
-<br><br>
+<br>
