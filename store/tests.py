@@ -9,6 +9,14 @@ import time, subprocess
 driver = webdriver.Chrome()
 
 class AtualizarPerfil(LiveServerTestCase):
+
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
+
     def test_cenario1(self):
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
@@ -47,12 +55,60 @@ class AtualizarPerfil(LiveServerTestCase):
         pais.send_keys(f"Brasil")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
+
         driver.get("http://127.0.0.1:8000/update_info/")
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/form/input[2]").text,"8199999999")
+        numero = driver.find_element(by=By.NAME, value="Numero")
+        value_numero = numero.get_attribute("value")
+        self.assertEqual(value_numero, "8199999999")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(5)
+        time.sleep(2)
 
     def test_cenario2(self):
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"User_1")
+        nome.send_keys(f"José")
+        sobrenome.send_keys(f"Braz")
+        email.send_keys(f"jbon@cesar.school")
+        senha.send_keys("Senha1234")
+        confirmar_senha.send_keys("Senha1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/update_info/")
+        numero = driver.find_element(by=By.NAME, value="Numero")
+        endereco1 = driver.find_element(by=By.NAME, value="Endereço1")
+        endereco2 = driver.find_element(by=By.NAME, value="Endereço2")
+        cidade = driver.find_element(by=By.NAME, value="Cidade")
+        estado = driver.find_element(by=By.NAME, value="Estado")
+        cep = driver.find_element(by=By.NAME, value="CEP")
+        pais = driver.find_element(by=By.NAME, value="País")
+        botao2 = driver.find_element(by=By.NAME, value="atualizar")
+
+        numero.send_keys("8199999999")
+        endereco1.send_keys(f"Rua Le Parc, 100")
+        endereco2.send_keys(f"Rua Cais do Apolo, 77")
+        cidade.send_keys(f"Recife")
+        estado.send_keys(f"Pernambuco")
+        cep.send_keys("123456789")
+        pais.send_keys(f"Brasil")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/update_info/")
+        numero = driver.find_element(by=By.NAME, value="Numero")
+        value_numero = numero.get_attribute("value")
+        self.assertEqual(value_numero, "8199999999")
+        driver.get("http://127.0.0.1:8000/logout/")
+        time.sleep(2)
+
         driver.get("http://127.0.0.1:8000/login/")
         usuario = driver.find_element(by=By.NAME, value="username")
         senha = driver.find_element(by=By.NAME, value="password")
@@ -72,7 +128,7 @@ class AtualizarPerfil(LiveServerTestCase):
 
         for i in range(10):
             numero.send_keys(Keys.BACK_SPACE)
-        numero.send_keys("8199999990")
+        numero.send_keys("8199099190")
         for j in range(17):
             endereco1.send_keys(Keys.BACKSPACE)
         endereco1.send_keys(f"Rua Cais do Apolo, 77")
@@ -87,7 +143,9 @@ class AtualizarPerfil(LiveServerTestCase):
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/update_info/")
-        self.assertEqual(driver.find_element(by=By.ID, value="81999999"))
+        numero = driver.find_element(by=By.NAME, value="Numero")
+        value_numero = numero.get_attribute("value")
+        self.assertEqual(value_numero, "8199099190")
         driver.get("http://127.0.0.1:8000/logout/")
         time.sleep(4)
 
