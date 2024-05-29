@@ -674,9 +674,25 @@ class Contato(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
 class AdicionarComentarios(LiveServerTestCase):
-    def test_cenario17(self):
 
-        driver.get("http://127.0.0.1:8000/register/")
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
+        subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
+
+    def test_cenario1_and_2(self):
+        driver.get("http://127.0.0.1:8000/")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/p").text,"Para adicionar um comentário, você precisa estar logado/registrado.")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/a[2]")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(1)
+        
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
         sobrenome = driver.find_element(by=By.NAME, value="last_name")
@@ -684,7 +700,6 @@ class AdicionarComentarios(LiveServerTestCase):
         senha = driver.find_element(by=By.NAME, value="password1")
         confirmar_senha = driver.find_element(by=By.NAME, value="password2")
         botao = driver.find_element(by=By.NAME, value="registro")
-        time.sleep(2)
 
         usuario.send_keys(f"Caminha_21032006")
         nome.send_keys(f"Teteu")
@@ -696,21 +711,20 @@ class AdicionarComentarios(LiveServerTestCase):
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div/div/div[2]/div/a")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
-        time.sleep(2)
+        time.sleep(1)
 
         comentario = driver.find_element(by=By.NAME, value="texto")
         comentario.send_keys(f"Esse iphone é muito bonito, gostei!")
-        time.sleep(2)
+        time.sleep(1)
         enviarcomentario = driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/form/button")
         enviarcomentario.send_keys(Keys.ENTER)
-        time.sleep(5)
+        time.sleep(2)
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[3]/div/div[1]/div/p[1]").text,"Esse iphone é muito bonito, gostei!")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
 
-    def test_cenario18(self):
+    def test_cenario3(self):
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -719,63 +733,94 @@ class AdicionarComentarios(LiveServerTestCase):
         senha = driver.find_element(by=By.NAME, value="password1")
         confirmar_senha = driver.find_element(by=By.NAME, value="password2")
         botao = driver.find_element(by=By.NAME, value="registro")
-        time.sleep(2)
 
-        usuario.send_keys(f"Jose_Braz1987")
-        nome.send_keys(f"Felipe")
-        sobrenome.send_keys(f"Caminha")
-        email.send_keys(f"becker@cesar.school")
+        usuario.send_keys(f"Caminha_21032006")
+        nome.send_keys(f"Teteu")
+        sobrenome.send_keys(f"Brazao")
+        email.send_keys(f"gustavson@cesar.school")
         senha.send_keys("Suadao1234")
         confirmar_senha.send_keys("Suadao1234")
         botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div/div/div[2]/div/a")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(1)
+
+        comentario = driver.find_element(by=By.NAME, value="texto")
+        comentario.send_keys(f"Esse iphone é muito bonito, gostei!")
+        time.sleep(1)
+        enviarcomentario = driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/form/button")
+        enviarcomentario.send_keys(Keys.ENTER)
+        time.sleep(2)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[3]/div/div[1]/div/p[1]").text,"Esse iphone é muito bonito, gostei!")
+        driver.get("http://127.0.0.1:8000/logout/")
+
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"Suwado_d3m41s")
+        nome.send_keys(f"Beckinho")
+        sobrenome.send_keys(f"do Joguinho")
+        email.send_keys(f"kuffour@cesar.school")
+        senha.send_keys("Suadao1234")
+        confirmar_senha.send_keys("Suadao1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
 
         comentario = driver.find_element(by=By.NAME, value="texto")
         comentario.send_keys(f"Esse iphone esta muito caro, Que assalto!")
-        time.sleep(2)
+        time.sleep(1)
         enviarcomentario = driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/form/button")
         enviarcomentario.send_keys(Keys.ENTER)
-        time.sleep(5)
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[3]/div/div[2]/div/p[1]").text,"Esse iphone esta muito caro, Que assalto!")
+        time.sleep(2)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div[2]/div[3]/div/div[1]/div/p[1]").text,"Esse iphone é muito bonito, gostei!")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div[2]/div[3]/div/div[2]/div/p[1]").text,"Esse iphone esta muito caro, Que assalto!")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
     
-    def test_cenario19(self):
-        driver.get("http://127.0.0.1:8000/login/")
+    def test_cenario4(self):
+        driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
-        senha = driver.find_element(by=By.NAME, value="password")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"Suwado_d3m41s")
+        nome.send_keys(f"Beckinho")
+        sobrenome.send_keys(f"do Joguinho")
+        email.send_keys(f"kuffour@cesar.school")
+        senha.send_keys("Suadao1234")
+        confirmar_senha.send_keys("Suadao1234")
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
-        usuario.send_keys(f"Jose_Braz1987")
-        senha.send_keys("Suadao1234")
-        botao = driver.find_element(by=By.NAME, value="login")
-        botao.send_keys(Keys.ENTER)
-        time.sleep(1)
-
         driver.get("http://127.0.0.1:8000/")
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[2]/div/div[2]/div/a")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
         comentario = driver.find_element(by=By.NAME, value="texto")
         comentario.send_keys(f"Esse Lenovo esta muito caro, Que assalto!")
-        time.sleep(2)
+        time.sleep(1)
         enviarcomentario = driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/form/button")
         enviarcomentario.send_keys(Keys.ENTER)
-        time.sleep(4)
+        time.sleep(2)
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div[2]/div[3]/div/div/div/p[1]").text,"Esse Lenovo esta muito caro, Que assalto!")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
-
-    def test_cenario20(self):
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[2]/div/div[2]/div/a")
-        botao2.send_keys(Keys.ENTER)
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/p").text,"Para adicionar um comentário, você precisa estar logado/registrado.")
-        time.sleep(4)
 
 class AdicionarAosFavoritos(LiveServerTestCase):
     def test_cenario21(self):
@@ -886,19 +931,3 @@ class RemoverDosFavoritos(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/favoritos")
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/h5").text,"Para gerenciar/ver seus produtos favoritos, você precisa estar logado/registrado.")
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
