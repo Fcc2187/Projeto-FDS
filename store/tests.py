@@ -451,96 +451,147 @@ class GerenciarCarrinho(LiveServerTestCase):
 
 class ProcurarPorCategoria(LiveServerTestCase):
 
-    def test_cenario11(self):
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
+
+    def test_cenario1(self):
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
-        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[6]/a")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
         botao.send_keys(Keys.ENTER)
         time.sleep(1)
         botao2 = driver.find_element(by=By.NAME, value="notebooks")
         botao2.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Notebooks")
         time.sleep(2)
-        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[6]/a")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
         botao.send_keys(Keys.ENTER)
         time.sleep(1)
         botao3 = driver.find_element(by=By.NAME, value="celulares")
         botao3.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Celulares")
         time.sleep(2)
-        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[6]/a")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
         botao.send_keys(Keys.ENTER)
         time.sleep(1)
         botao4 = driver.find_element(by=By.NAME, value="tablets")
         botao4.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Tablets")
         time.sleep(2)
-        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[6]/a")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
         botao.send_keys(Keys.ENTER)
         time.sleep(1)
         botao5 = driver.find_element(by=By.NAME, value="smartwatchs")
         botao5.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Smartwatchs")
         time.sleep(2)
-        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[6]/a")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
         botao.send_keys(Keys.ENTER)
         time.sleep(1)
         botao6 = driver.find_element(by=By.NAME, value="fones")
         botao6.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Fones de ouvido")
-        time.sleep(2)
 
-    def testcenario16(self):
+    def test_cenario2(self):
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
-        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[6]/a")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
         botao.send_keys(Keys.ENTER)
         time.sleep(1)
         botao2 = driver.find_element(by=By.NAME, value="all")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        botao3 = driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/h3[1]/a")
+        botao3 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[1]")
         botao3.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Notebooks")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao4 = driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/h3[2]/a")
+        botao4 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[2]")
         botao4.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Celulares")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao5 = driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/h3[3]/a")
+        botao5 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[3]")
         botao5.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Tablets")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao6 = driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/h3[4]/a")
+        botao6 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[4]")
         botao6.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Smartwatchs")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao7 = driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/h3[5]/a")
+        botao7 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[5]")
         botao7.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Fones de ouvido")
-        time.sleep(3)
-
 
 class Contato(LiveServerTestCase):
 
-    def test_cenario12(self):
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
+        subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
+
+    def test_cenario1_and_2(self):
         driver.get("http://127.0.0.1:8000/")
-        time.sleep(2)
-        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul/li[7]/a")
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[5]/a")
         botao.send_keys(Keys.ENTER)
+        time.sleep(1)
         self.assertEqual(driver.find_element(by=By.NAME, value="logmsg").text,"Para enviar uma reclamação, você precisa estar logado/registrado.")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/center/a[2]")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(1)
+
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"User_4")
+        nome.send_keys(f"Miguel")
+        sobrenome.send_keys(f"Becker")
+        email.send_keys(f"mcb4@cesar.school")
+        senha.send_keys("Senha1234")
+        confirmar_senha.send_keys("Senha1234")
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
-    def test_cenario13(self):
+        driver.get("http://127.0.0.1:8000/contato/contato/")
+        assunto = driver.find_element(by=By.NAME, value="assunto")
+        enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
+        assunto.send_keys(f"iPhone 13 está muito caro!")
+        time.sleep(1)
+        enviar.send_keys(Keys.ENTER)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div/div/div").text,"iPhone 13 está muito caro!")
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/contato/contato/")
+        assunto = driver.find_element(by=By.NAME, value="assunto")
+        enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
+        assunto.send_keys(f"Notebook Lenovo está muito caro!")
+        time.sleep(1)
+        enviar.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[2]/div/div").text,"Notebook Lenovo está muito caro!")
+        driver.get("http://127.0.0.1:8000/logout/")
+
+    def test_cenario3(self):
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -563,28 +614,24 @@ class Contato(LiveServerTestCase):
         assunto = driver.find_element(by=By.NAME, value="assunto")
         enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
         assunto.send_keys(f"iPhone 13 está muito caro!")
-        time.sleep(2)
+        time.sleep(1)
         enviar.send_keys(Keys.ENTER)
-        time.sleep(2)
-
         driver.get("http://127.0.0.1:8000/contato/contato/")
         assunto = driver.find_element(by=By.NAME, value="assunto")
         enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
         assunto.send_keys(f"Notebook Lenovo está muito caro!")
         time.sleep(2)
         enviar.send_keys(Keys.ENTER)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[1]/div/div").text,"iPhone 13 está muito caro!")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[2]/div/div").text,"Notebook Lenovo está muito caro!")
+        time.sleep(1)
+        driver.get("http://127.0.0.1:8000/logout/")
         time.sleep(2)
 
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[2]/div/div").text,"Notebook Lenovo está muito caro!")
-        driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
-
-    def test_cenario14(self):
         driver.get("http://127.0.0.1:8000/login/")
         usuario = driver.find_element(by=By.NAME, value="username")
         senha = driver.find_element(by=By.NAME, value="password")
         botao = driver.find_element(by=By.NAME, value="login")
-
         usuario.send_keys("User_4")
         senha.send_keys("Senha1234")
         botao.send_keys(Keys.ENTER)
@@ -592,11 +639,11 @@ class Contato(LiveServerTestCase):
 
         driver.get("http://127.0.0.1:8000/contato/complaints/")
         time.sleep(2)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[1]/div/div").text,"iPhone 13 está muito caro!")
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[2]/div/div").text,"Notebook Lenovo está muito caro!")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
 
-    def test_cenario15(self):
+    def test_cenario4(self):
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -619,13 +666,12 @@ class Contato(LiveServerTestCase):
         assunto = driver.find_element(by=By.NAME, value="assunto")
         enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
         assunto.send_keys(f"Poucos produtos! Quero mais!")
-        time.sleep(2)
+        time.sleep(1)
         enviar.send_keys(Keys.ENTER)
         time.sleep(2)
 
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[1]/div/div").text,"Poucos produtos! Quero mais!")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div/div/div").text,"Poucos produtos! Quero mais!")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
 
 class AdicionarComentarios(LiveServerTestCase):
     def test_cenario17(self):
