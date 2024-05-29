@@ -121,13 +121,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'  # Código de linguagem para português do Brasil
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'  # Fuso horário para São Paulo
 
-USE_I18N = True
+USE_I18N = True  # Ativa a internacionalização
 
-USE_TZ = True
+USE_TZ = True  # Ativa a utilização de fuso horário
 
 
 # Static files (CSS, JavaScript, Images)
