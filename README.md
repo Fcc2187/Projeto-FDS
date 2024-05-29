@@ -60,12 +60,10 @@
   </a>
 </p>
 </details>
-<br><br>
+<br>
+
 ### - Diagrama de Atividades
 ![Diagrama de Atividades FDS Itech](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3be67e37-7852-42d7-ba02-a0ec2e177334)
-
-
-
 
 <br>
 
@@ -81,6 +79,7 @@
   </a>
 </p>
 </details>
+<br>
 <details>
 <summary># 📧 Entrega 1</summary>
 
@@ -123,6 +122,7 @@
 
 <br>
 </details>
+<br>
 <details>
 
 <summary> # 📧 Entrega 2 </summary>
@@ -158,6 +158,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 </details>
+<br>
 <details>
 <summary># 📧 Entrega 3 </summary>
 
@@ -219,4 +220,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 <br>
 
 </details>
-
+<br>
+<details>
+<summary># 📧 Entrega 4</summary>
+</details>
