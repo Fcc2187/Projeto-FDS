@@ -221,3 +221,6 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 </details>
 <br>
+<details>
+<summary># 📧 Entrega 4</summary>
+</details>
