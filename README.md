@@ -35,9 +35,8 @@
 <p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
 
 <br><br>
-
-# Links
-
+<details>
+<summary># Links</summary>
 <br>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2" style="text-decoration: none;">
@@ -60,7 +59,7 @@
     <span>🔗 Documento do Pair Programming</span>
   </a>
 </p>
-
+</details>
 <br><br>
 ### - Diagrama de Atividades
 ![Diagrama de Atividades FDS Itech](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3be67e37-7852-42d7-ba02-a0ec2e177334)
