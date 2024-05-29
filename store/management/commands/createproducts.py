@@ -50,7 +50,7 @@ class Command(BaseCommand):
                 'price': 2600.00,
                 'category_name': 'Tablets',
                 'description': 'Tablet Samsung Galaxy Tab S6 Lite com Caneta 10,4" 64GB 4GB RAM Android 14 Exynos 1280 Octa-Core Wi-Fi 4G',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/Tablet.jpg",
+                'image_path': "media/uploads/product/Tablet.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -59,7 +59,7 @@ class Command(BaseCommand):
                 'price': 2900.00,
                 'category_name': 'Tablets',
                 'description': 'Tablet Apple iPad 10ª Geração 64GB Wi-Fi 10,9" iPadOS 12MP Silver (Prateado)',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/Ipad.png",
+                'image_path': "media/uploads/product/Ipad.png",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -68,7 +68,7 @@ class Command(BaseCommand):
                 'price': 250.00,
                 'category_name': 'Smartwatchs',
                 'description': 'Xiaomi-Redmi Watch 3 Active display LCD, frequência cardíaca, sangue, oxigênio, freqüência cardíaca, Bluetooth, chamada de voz, mais de 100 modos esportivos, 1,83 polegadas',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/Smartwatch.jpg",
+                'image_path': "media/uploads/product/Smartwatch.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -77,7 +77,7 @@ class Command(BaseCommand):
                 'price': 360.00,
                 'category_name': 'Fones de ouvido',
                 'description': 'Fone De Ouvido Headset Gamer Razer Blackshark V2 X7.1 Pc Ps4 Cor Branco',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/Blackshark.jpg",
+                'image_path': "media/uploads/product/Blackshark.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -86,7 +86,7 @@ class Command(BaseCommand):
                 'price': 1600.00,
                 'category_name': 'Notebooks',
                 'description': 'Notebook Positivo Motion C4128g-14 Intel® Celeron® Dual-Core™ 128GB 4GB Windows 11 Home 14" - Cinza',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/notebook positivo.jpg",
+                'image_path': "media/uploads/product/notebook_positivo.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -95,7 +95,7 @@ class Command(BaseCommand):
                 'price': 4800.00,
                 'category_name': 'Notebooks',
                 'description': 'Notebook Acer Nitro 5 AN515-58-54UH Ci5 12ª Gen Windows 11 Home 8GB 512GB RTX 3050 15.6” Full HD',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/notebook gamer acer.jpg",
+                'image_path': "media/uploads/product/notebook_gamer_acer.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -104,7 +104,7 @@ class Command(BaseCommand):
                 'price': 2500.00,
                 'category_name': 'Celulares',
                 'description': 'Smartphone Samsung Galaxy S21 FE 5G Verde 256GB, 8GB RAM, Tela Infinita de 6.4”, Câmera Traseira Tripla, Android 11 e Processador Octa-Core',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/s21 fe.jpg",
+                'image_path': "media/uploads/product/s21_fe.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -113,7 +113,7 @@ class Command(BaseCommand):
                 'price': 6000.00,
                 'category_name': 'Tablets',
                 'description': 'iPad Air da Apple (5a geração): Com chip M1, tela Liquid Retina de 10,9 polegadas, 64 GB Wi-Fi 6, câmera frontal de 12 MP, câmera traseira de 12 MP, Touch ID, Azul',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/ipad air 5.jpg",
+                'image_path': "media/uploads/product/ipad_air_5.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -122,7 +122,7 @@ class Command(BaseCommand):
                 'price': 1200.00,
                 'category_name': 'Fones de ouvido',
                 'description': 'Apple AirPods (3ª geração) com estojo de recarga Lightning',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/airpods.jpg",
+                'image_path': "media/uploads/product/airpods.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -131,7 +131,7 @@ class Command(BaseCommand):
                 'price': 1500.00,
                 'category_name': 'Smartwatchs',
                 'description': 'Apple Watch Se 2 Geração 40mm Preto',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/apple watch.jpg",
+                'image_path': "media/uploads/product/apple_watch.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -140,7 +140,7 @@ class Command(BaseCommand):
                 'price': 800.00,
                 'category_name': 'Fones de ouvido',
                 'description': 'Samsung Galaxy Buds vivo, Wireless Earbuds w / ativo de cancelamento de ruído (Mística Black)',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/samsung pods.jpg",
+                'image_path': "media/uploads/product/samsung_pods.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },

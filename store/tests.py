@@ -15,6 +15,7 @@ class AtualizarPerfil(LiveServerTestCase):
 
     def tearDown(self):
         subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1(self):
@@ -156,6 +157,7 @@ class PesquisarProduto(LiveServerTestCase):
 
     def tearDown(self):
         subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
 
     def test_cenario3(self):
         driver.get("http://127.0.0.1:8000/search/")
@@ -198,6 +200,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
 
     def tearDown(self):
         subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario6(self):
