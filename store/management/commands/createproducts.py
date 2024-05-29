@@ -14,7 +14,7 @@ class Command(BaseCommand):
                 'price': 2500.00,
                 'category_name': 'Notebooks',
                 'description': 'Notebook Lenovo IdeaPad 1i Intel Core i5 - 8GB RAM SSD 512GB Windows 11 15,6” 15IAU7',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/Lenovo.jpg",
+                'image_path': "media/uploads/product/Lenovo.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -22,8 +22,8 @@ class Command(BaseCommand):
                 'name': 'Macbook',
                 'price': 2800.00,
                 'category_name': 'Notebooks',
-                'description': 'Apple Macbook Air (13 Polegadas, 2020, Chip M1, 256 Gb De Ssd, 8 Gb De Ram) - Cinza-espacial',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/macbook.png",
+                'description': 'Apple Macbook Air (13 Polegadas, 2020, Chip M1, 256 Gb De Ssd, 8Gb De Ram) - Cinza-espacial',
+                'image_path': "media/uploads/product/macbook.png",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -32,7 +32,7 @@ class Command(BaseCommand):
                 'price': 3400.00,
                 'category_name': 'Celulares',
                 'description': 'Smartphone Samsung Galaxy S23 256GB Preto 5G 8GB RAM 6,1” Câm Tripla + Selfie 12MP',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/Samsung s23.jpg",
+                'image_path': "media/uploads/product/Samsung_s23.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },
@@ -41,7 +41,7 @@ class Command(BaseCommand):
                 'price': 3200.00,
                 'category_name': 'Celulares',
                 'description': 'Apple iPhone 13 128GB Meia-Noite 5G Tela 6,1" Câm. Traseira 12+12MP Frontal 12MP',
-                'image_path': "C:/Users/brazg/Downloads/fotos projeto/Iphone.jpg",
+                'image_path': "media/uploads/product/Iphone.jpg",
                 'is_sale': False,
                 'sale_price': 0.0
             },

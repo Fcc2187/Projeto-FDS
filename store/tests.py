@@ -3,7 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 from selenium import webdriver
-import time
+from django.core.management import call_command
+import time, subprocess
 
 driver = webdriver.Chrome()
 
@@ -92,6 +93,12 @@ class AtualizarPerfil(LiveServerTestCase):
 
 class PesquisarProduto(LiveServerTestCase):
 
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+
     def test_cenario3(self):
         driver.get("http://127.0.0.1:8000/search/")
         pesquisa = driver.find_element(by=By.NAME, value="searched")
@@ -100,10 +107,11 @@ class PesquisarProduto(LiveServerTestCase):
         pesquisa.send_keys("iPhone")
         time.sleep(2)
         botao.send_keys(Keys.ENTER)
-        self.assertEqual(driver.find_element(by=By.NAME, value="prodname").text,"iPhone 13")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/div[2]/div/div/div[1]/div/h5").text,"iPhone 13")
         time.sleep(2)
 
     def test_cenario4(self):
+
         driver.get("http://127.0.0.1:8000/search/")
         pesquisa = driver.find_element(by=By.NAME, value="searched")
         botao = driver.find_element(by=By.NAME, value="go")
@@ -111,7 +119,7 @@ class PesquisarProduto(LiveServerTestCase):
         pesquisa.send_keys("8gb")
         time.sleep(2)
         botao.send_keys(Keys.ENTER)
-        self.assertEqual(driver.find_element(by=By.NAME, value="prodname").text,"iPhone 13")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/div[2]/div[4]/div/div[1]/div/h5").text,"iPhone 13")
         time.sleep(2)
 
     def test_cenario5(self):
