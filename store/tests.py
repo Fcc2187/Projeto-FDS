@@ -193,8 +193,22 @@ class PesquisarProduto(LiveServerTestCase):
 
 class AdicionarNoCarrinho(LiveServerTestCase):
 
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
+
     def test_cenario6(self):
-        driver.get("http://127.0.0.1:8000/register/")
+        driver.get("http://127.0.0.1:8000/")
+        time.sleep(2)
+        botao = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[3]/div/div[2]/div/a")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(3)
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/a[2]")
+        botao2.send_keys(Keys.ENTER)
+        
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
         sobrenome = driver.find_element(by=By.NAME, value="last_name")
@@ -213,7 +227,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[5]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
         botaoadd = driver.find_element(by=By.ID, value="add-cart")
@@ -223,25 +237,30 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         botaocart.send_keys(Keys.ENTER)
         time.sleep(2)
 
-        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$2500.00")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/h5").text,"Tablet Samsung")
         driver.get("http://127.0.0.1:8000/logout/")
         time.sleep(2)
-        driver.get("http://127.0.0.1:8000/cart/")
-        time.sleep(3)
 
     def test_cenario7(self):
-        driver.get("http://127.0.0.1:8000/login/")
+        driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
-        senha = driver.find_element(by=By.NAME, value="password")
-        botao = driver.find_element(by=By.NAME, value="login")
-
-        usuario.send_keys("User_3")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+        usuario.send_keys(f"User_3")
+        nome.send_keys(f"Rodrigo")
+        sobrenome.send_keys(f"Torre")
+        email.send_keys(f"rtmr@cesar.school")
         senha.send_keys("Senha1234")
+        confirmar_senha.send_keys("Senha1234")
         botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[7]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
         botaoadd = driver.find_element(by=By.ID, value="add-cart")
@@ -251,23 +270,55 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         botaocart.send_keys(Keys.ENTER)
         time.sleep(2)
         
-        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$5700.00")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/h5").text,"Smartwatch")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
+        time.sleep(2)
 
-    def test_cenario8(self):
         driver.get("http://127.0.0.1:8000/login/")
         usuario = driver.find_element(by=By.NAME, value="username")
         senha = driver.find_element(by=By.NAME, value="password")
         botao = driver.find_element(by=By.NAME, value="login")
-
         usuario.send_keys("User_3")
         senha.send_keys("Senha1234")
         botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[15]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(2)
+        botaoadd = driver.find_element(by=By.ID, value="add-cart")
+        botaoadd.send_keys(Keys.ENTER)
+        time.sleep(2)
+        botaocart = driver.find_element(by=By.NAME, value="carrinho")
+        botaocart.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/h5").text,"Smartwatch")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/div[2]/div/center/h5").text,"Samsung Buds")
+        driver.get("http://127.0.0.1:8000/logout/")
+        time.sleep(1)
+
+    def test_cenario8(self):
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+        usuario.send_keys(f"User_3")
+        nome.send_keys(f"Rodrigo")
+        sobrenome.send_keys(f"Torre")
+        email.send_keys(f"rtmr@cesar.school")
+        senha.send_keys("Senha1234")
+        confirmar_senha.send_keys("Senha1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[3]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
         botaoqty = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/div/div[2]/select")
@@ -281,15 +332,9 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         botaocart.send_keys(Keys.ENTER)
         time.sleep(6)
         
-        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$5700.00")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/h5").text,"Samsung Galaxy S23")
+        self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$6800,00")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
-
-    def test_cenario9(self):
-        driver.get("http://127.0.0.1:8000/")
-        time.sleep(2)
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[3]/div/div[2]/div/a")
-        botao2.send_keys(Keys.ENTER)
         time.sleep(3)
 
 
