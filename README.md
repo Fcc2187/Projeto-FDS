@@ -70,8 +70,8 @@
 <br>
 
 
-
-# Instruções de Uso
+<details>
+<summary># Instruções de Uso</summary>
 
 <br>
 
@@ -80,8 +80,9 @@
     <span>🔗 Link</span>
   </a>
 </p>
-
-# 📧 Entrega 1
+</details>
+<details>
+<summary># 📧 Entrega 1</summary>
 
 <br>
 <i>A Entrega 1 resumiu=se ao desenvolvimento do nosso protótipo de baixa fidelidade, a definição das nossas histórias no Jira e a realização de um screencast do nosso protótipo. Não fui uma entrega muito grande então o grupo conseguiu lidar com a situação sem muita pressão e com tempo de sobra. Contudo, após o lançamento dos resultados dessa entrega, a equipe percebeu a falta de muitos requisitos os quais vieram a ser resolvidos posteriormente na Entrega 2.</i>
@@ -121,8 +122,10 @@
 </p>
 
 <br>
+</details>
+<details>
 
-# 📧 Entrega 2
+<summary> # 📧 Entrega 2 </summary>
 
 <br>
 <i>Resumo da Entrega 2: Começamos a desenvolver o site do iTech iniciando pela página de suporte, responsável pelo contato para reclamações e assistência aos usuários em suas interações com a equipe de administração. Essa decisão foi tomada considerando a simplicidade da história na sprint. No entanto, enfrentamos alguns contratempos. O principal deles foi que a página inicial acabou sendo a de suporte. Tentamos corrigir esse problema e avançar com o cadastro de usuários, mas as URLs e os modelos de dados permaneceram vinculados ao arquivo "contact_us".
@@ -154,9 +157,9 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-
-
-# 📧 Entrega 3
+</details>
+<details>
+<summary># 📧 Entrega 3 </summary>
 
 <br>
 
@@ -215,6 +218,5 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </p>
 <br>
 
+</details>
 
-
-faça com que ao vc clicar na aba da entrega 1 apareça apenas as coisas da entrega 1, meio que um sumarry
