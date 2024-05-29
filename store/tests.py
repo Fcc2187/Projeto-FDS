@@ -823,7 +823,23 @@ class AdicionarComentarios(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
 class AdicionarAosFavoritos(LiveServerTestCase):
-    def test_cenario21(self):
+
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
+        subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
+
+    def test_cenario1(self):
+        driver.get("http://127.0.0.1:8000/")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(2)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/h5[2]").text,"Para adicionar um produto ao carrinho ou aos favoritos, você precisa estar logado/registrado.")
+        time.sleep(1)
+
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -832,7 +848,6 @@ class AdicionarAosFavoritos(LiveServerTestCase):
         senha = driver.find_element(by=By.NAME, value="password1")
         confirmar_senha = driver.find_element(by=By.NAME, value="password2")
         botao = driver.find_element(by=By.NAME, value="registro")
-        time.sleep(2)
 
         usuario.send_keys(f"Rodrigo_Torres1988")
         nome.send_keys(f"Rodrigo")
@@ -861,21 +876,12 @@ class AdicionarAosFavoritos(LiveServerTestCase):
         favoritos2.send_keys(Keys.ENTER)
         time.sleep(2)
         driver.get("http://127.0.0.1:8000/favoritos")
-        time.sleep(3)
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div[1]/div/div/center[1]/h5").text,"iPhone 13")
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div[2]/div/div/center[1]/h5").text,"Notebook Lenovo")
-        driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(3)
-
-    def test_cenario22(self):
-        driver.get("http://127.0.0.1:8000/")
-        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
-        botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/h5[2]").text,"Para adicionar um produto ao carrinho ou aos favoritos, você precisa estar logado/registrado.")
-        
-class RemoverDosFavoritos(LiveServerTestCase):
-    def test_cenario23(self):
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div[1]/div/div/center[1]/h5").text,"Notebook Lenovo")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div[2]/div/div/center[1]/h5").text,"Macbook")
+        driver.get("http://127.0.0.1:8000/logout/")
+
+    def test_cenario2(self):
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -884,7 +890,75 @@ class RemoverDosFavoritos(LiveServerTestCase):
         senha = driver.find_element(by=By.NAME, value="password1")
         confirmar_senha = driver.find_element(by=By.NAME, value="password2")
         botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"Braz_J0se")
+        nome.send_keys(f"Neto")
+        sobrenome.send_keys(f"Oliveira")
+        email.send_keys(f"seilamano@cesar.school")
+        senha.send_keys("Suadao1234")
+        confirmar_senha.send_keys("Suadao1234")
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
+        
+        driver.get("http://127.0.0.1:8000/")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        favoritos = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[2]")
+        favoritos.send_keys(Keys.ENTER)
+        time.sleep(2)
+        driver.get("http://127.0.0.1:8000/logout/")
+        time.sleep(1)
+
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
+
+        usuario.send_keys(f"Rodrigo_Torres1988")
+        nome.send_keys(f"Rodrigo")
+        sobrenome.send_keys(f"Torres")
+        email.send_keys(f"Torres@cesar.school")
+        senha.send_keys("Suadao1234")
+        confirmar_senha.send_keys("Suadao1234")
+        botao.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        driver.get("http://127.0.0.1:8000/favoritos")
+        time.sleep(2)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/center/h5").text,"Não existem produtos nos seus favoritos.")
+        driver.get("http://127.0.0.1:8000/logout/")
+
+class RemoverDosFavoritos(LiveServerTestCase):
+
+    def setUp(self):
+        subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
+
+    def tearDown(self):
+        subprocess.run(['python', 'manage.py', 'deleteproducts'], check=True)
+        subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
+        subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
+
+    def test_cenario1(self):
+        driver.get("http://127.0.0.1:8000/favoritos/")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/center/div/h5").text,"Para gerenciar/ver seus produtos favoritos, você precisa estar logado/registrado.")
+        time.sleep(2)
+
+    def test_cenario2(self):
+
+        driver.get("http://127.0.0.1:8000/register/")
+        usuario = driver.find_element(by=By.NAME, value="username")
+        nome = driver.find_element(by=By.NAME, value="first_name")
+        sobrenome = driver.find_element(by=By.NAME, value="last_name")
+        email = driver.find_element(by=By.NAME, value="email")
+        senha = driver.find_element(by=By.NAME, value="password1")
+        confirmar_senha = driver.find_element(by=By.NAME, value="password2")
+        botao = driver.find_element(by=By.NAME, value="registro")
 
         usuario.send_keys(f"João_Claudio1988")
         nome.send_keys(f"Jocla")
@@ -899,35 +973,14 @@ class RemoverDosFavoritos(LiveServerTestCase):
         botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-
         favoritos = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[2]")
         favoritos.send_keys(Keys.ENTER)
         time.sleep(2)
 
-        driver.get("http://127.0.0.1:8000/")
-        botao3= driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[2]/div/div[2]/div/a")
-        botao3.send_keys(Keys.ENTER)
-        time.sleep(2)
-
-        favoritos2 = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[2]")
-        favoritos2.send_keys(Keys.ENTER)
-        time.sleep(2)
         driver.get("http://127.0.0.1:8000/favoritos")
+        time.sleep(1)
+        remover = driver.find_element(by=By.XPATH,value="/html/body/div/div/div/div/div/center[3]/button")
+        remover.send_keys(Keys.ENTER)
         time.sleep(2)
-
-        remover2 =driver.find_element(by=By.XPATH,value="/html/body/div/div/div[2]/div/div/center[3]/button")
-        remover2.send_keys(Keys.ENTER)
-        time.sleep(1)
-
-        remover1 =driver.find_element(by=By.XPATH,value="/html/body/div/div/div[1]/div/div/center[3]/button")
-        remover1.send_keys(Keys.ENTER)
-        time.sleep(1)
-
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div[2]/h5").text,"Não existem produtos nos seus favoritos.")
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div[2]/center/h5").text,"Não existem produtos nos seus favoritos.")
         driver.get("http://127.0.0.1:8000/logout/")
-        time.sleep(2)
-
-    def test_cenario24(self):
-        driver.get("http://127.0.0.1:8000/favoritos")
-        time.sleep(2)
-        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/h5").text,"Para gerenciar/ver seus produtos favoritos, você precisa estar logado/registrado.")
