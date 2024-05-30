@@ -37,7 +37,6 @@ jobs:
       - name: Run local server
         run: |
           ls
-          rm db.sqlite3
           python manage.py makemigrations
 
           python manage.py migrate
