@@ -26,11 +26,11 @@ jobs:
           set -ex
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt install ./google-chrome-stable_current_amd64.deb
+          sudo apt update
+          sudo apt install -y chromium-chromedriver
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install msedge-selenium-tools
-          
-      - uses: nanasess/setup-chromedriver@v2
 
       - name: Run local server
         run: |
@@ -39,7 +39,7 @@ jobs:
           python manage.py runserver &
           sleep 5
           python manage.py test store.tests
-          
+
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
 
@@ -82,3 +82,5 @@ jobs:
         with:
           app-name: 'iTechDeployment'
           slot-name: 'Production'
+
+
