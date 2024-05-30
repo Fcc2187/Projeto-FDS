@@ -21,15 +21,26 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: '3.12'
-
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-      
+          
       - name: Install dependencies
-        run: pip install -r requirements.txt
-        
+        run: |
+          set -ex
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install msedge-selenium-tools
+      - uses: nanasess/setup-chromedriver@v2
+      - run: |
+          chromedriver --url-base=/wd/hub &
+
+      - name: Run local server
+        run: |
+          python manage.py makemigrations
+          python manage.py migrate
+          python manage.py runserver &
+          sleep 5
+          python manage.py test store.tests
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
