@@ -1,4 +1,4 @@
-<p align="center"><img align="center" width="280" src="media/uploads/product/cesar.logo.png"/></p>
+
 <hr>
 <p align="center">
   <img
@@ -35,9 +35,8 @@
 <p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
 
 <br><br>
-
-# Links
-
+<details>
+<summary># Links</summary>
 <br>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2" style="text-decoration: none;">
@@ -60,18 +59,17 @@
     <span>🔗 Documento do Pair Programming</span>
   </a>
 </p>
+</details>
+<br>
 
-<br><br>
 ### - Diagrama de Atividades
-![Diagrama de Atividades FDS Itech drawio (1)](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/305bbf37-94c8-480f-8caf-3c0d899e81ab)
-
-
+![Diagrama de Atividades FDS Itech](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3be67e37-7852-42d7-ba02-a0ec2e177334)
 
 <br>
 
 
-
-# Instruções de Uso
+<details>
+<summary># Instruções de Uso</summary>
 
 <br>
 
@@ -80,8 +78,10 @@
     <span>🔗 Link</span>
   </a>
 </p>
-
-# 📧 Entrega 1
+</details>
+<br>
+<details>
+<summary># 📧 Entrega 1</summary>
 
 <br>
 <i>A Entrega 1 resumiu=se ao desenvolvimento do nosso protótipo de baixa fidelidade, a definição das nossas histórias no Jira e a realização de um screencast do nosso protótipo. Não fui uma entrega muito grande então o grupo conseguiu lidar com a situação sem muita pressão e com tempo de sobra. Contudo, após o lançamento dos resultados dessa entrega, a equipe percebeu a falta de muitos requisitos os quais vieram a ser resolvidos posteriormente na Entrega 2.</i>
@@ -121,8 +121,11 @@
 </p>
 
 <br>
+</details>
+<br>
+<details>
 
-# 📧 Entrega 2
+<summary> # 📧 Entrega 2 </summary>
 
 <br>
 <i>Resumo da Entrega 2: Começamos a desenvolver o site do iTech iniciando pela página de suporte, responsável pelo contato para reclamações e assistência aos usuários em suas interações com a equipe de administração. Essa decisão foi tomada considerando a simplicidade da história na sprint. No entanto, enfrentamos alguns contratempos. O principal deles foi que a página inicial acabou sendo a de suporte. Tentamos corrigir esse problema e avançar com o cadastro de usuários, mas as URLs e os modelos de dados permaneceram vinculados ao arquivo "contact_us".
@@ -154,9 +157,10 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-
-
-# 📧 Entrega 3
+</details>
+<br>
+<details>
+<summary># 📧 Entrega 3 </summary>
 
 <br>
 
@@ -201,7 +205,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 ### - Testes do Sistema
 <br>
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://youtu.be/qYtwkSLU-MA?si=VBHez3zvBQgUJ6V3" style="text-decoration: none;">
+  <a href="https://youtu.be/eH3Rpc6XIRw?si=31JltYk3SrhnrGP9" style="text-decoration: none;">
     <span>🔗 Screencast Testes automatizados</span>
   </a>
 </p>
@@ -215,4 +219,8 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </p>
 <br>
 
-
+</details>
+<br>
+<details>
+<summary># 📧 Entrega 4</summary>
+</details>

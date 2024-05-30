@@ -2,7 +2,7 @@ from django.db import models
 import datetime
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
-
+from django.utils import timezone 
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -15,6 +15,8 @@ class Profile(models.Model):
     CEP = models.CharField(max_length=200, blank=True)
     País = models.CharField(max_length=200, blank=True)
     antigo_carrinho = models.CharField(max_length=200, blank=True, null=True)
+    antigo_favoritos = models.CharField(max_length=200, blank=True, null=True)
+
 
     def __str__(self):
         return self.user.username 
@@ -71,4 +73,14 @@ class Order(models.Model):
     def _str_ (self):
         return self.product
     
+
+class Comentario(models.Model):
+    autor=models.ForeignKey(User,on_delete=models.CASCADE)
+    texto=models.TextField()
+    data_publicacao= models.DateTimeField(default=timezone.now)
+    produto=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='comentarios')
+
+    def _str_ (self):
+        return f"comentário de {self.autor} no produto {self.produto}: {self.texto}"
+
 

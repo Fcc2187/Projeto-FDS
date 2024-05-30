@@ -2,62 +2,60 @@
 {% block content %}
 
 <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Atualizar informações</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Atualizar informações do Usuário...</p>
-                </div>
-            </div>
-        </header>
-
-        <div class="container">
-        	<div class="row">
-        		
-        			<div class="col-md-6 offset-md-3">
-
-        				<br/><br/>
-                        <form method="post" action="{% url 'update_info' %}">
-                            {% csrf_token %}
-                            
-                            <h5>Informações do Usuário: {{user.username}}</h5>
-                            <br>
-
-                            <input type="text" id="Numero" class="form-control" placeholder="Número" name="Numero" value="{{ user.profile.Numero }}"><br>
-                        
-                            
-                            <input type="text" id="Endereço1" class="form-control" placeholder="Endereço Principal" name="Endereço1" value="{{ user.profile.Endereço1 }}"><br>
-                        
-                            
-                            <input type="text" id="Endereço2" class="form-control" placeholder="Endereço Secundário" name="Endereço2" value="{{ user.profile.Endereço2 }}"><br>
-                        
-                            
-                            <input type="text" id="Cidade" class="form-control" placeholder="Cidade" name="Cidade" value="{{ user.profile.Cidade }}"><br>
-                        
-                            
-                            <input type="text" id="Estado" class="form-control" placeholder="Estado" name="Estado" value="{{ user.profile.Estado }}"><br>
-                        
-                            
-                            <input type="text" id="CEP" class="form-control" placeholder="CEP" name="CEP" value="{{ user.profile.CEP }}"><br>
-                        
-                            
-                            <input type="text" id="País" class="form-control" name="País" placeholder="País" value="{{ user.profile.País }}"><br>
-                        
-                            <button type="submit" class="btn btn-secondary" name="atualizar">Atualizar Perfil</button>
-                        </form>
-
-<br/><br/>
-
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-<br/><br/>
-        			</div>
-        		
-        	</div>
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Meu perfil </h1>
+            <p class="lead fw-normal text-white-50 mb-0">Atualizar informações do Usuário...</p>
         </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+
+                <br/><br/>
+                <form method="post" action="{% url 'update_info' %}">
+                    {% csrf_token %}
+
+                    <h5>Informações do Usuário: {{user.username}}</h5>
+                    <br>
+
+                    <input type="text" id="Numero" class="form-control" placeholder="Número" name="Numero" value="{{ user.profile.Numero }}"><br>
+
+
+                    <input type="text" id="Endereço1" class="form-control" placeholder="Endereço Principal" name="Endereço1" value="{{ user.profile.Endereço1 }}"><br>
+
+
+                    <input type="text" id="Endereço2" class="form-control" placeholder="Endereço Secundário" name="Endereço2" value="{{ user.profile.Endereço2 }}"><br>
+
+
+                    <input type="text" id="Cidade" class="form-control" placeholder="Cidade" name="Cidade" value="{{ user.profile.Cidade }}"><br>
+
+
+                    <input type="text" id="Estado" class="form-control" placeholder="Estado" name="Estado" value="{{ user.profile.Estado }}"><br>
+
+
+                    <input type="text" id="CEP" class="form-control" placeholder="CEP" name="CEP" value="{{ user.profile.CEP }}"><br>
+
+
+                    <input type="text" id="País" class="form-control" name="País" placeholder="País" value="{{ user.profile.País }}"><br>
+
+                    <button type="submit" class="btn btn-secondary" name="atualizar">Atualizar Perfil</button>
+                </form>
+                <br><br>
+        </div>
+
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+        	
+    </div>
+</div>
 
 {% endblock %}
