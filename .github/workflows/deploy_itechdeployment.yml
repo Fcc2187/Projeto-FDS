@@ -82,5 +82,3 @@ jobs:
         with:
           app-name: 'iTechDeployment'
           slot-name: 'Production'
-
-
