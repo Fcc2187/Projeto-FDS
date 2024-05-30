@@ -6,17 +6,25 @@ from selenium import webdriver
 from django.core.management import call_command
 import time, subprocess
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("--disable-browser-side-navigation")
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--window-size=1440,1080")
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument("--disable-extensions")
-
-driver = webdriver.Chrome()
-
 class AtualizarPerfil(LiveServerTestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
 
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
@@ -27,6 +35,7 @@ class AtualizarPerfil(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -72,6 +81,7 @@ class AtualizarPerfil(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario2(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -158,6 +168,24 @@ class AtualizarPerfil(LiveServerTestCase):
 
 class PesquisarProduto(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -166,6 +194,7 @@ class PesquisarProduto(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
 
     def test_cenario1(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/search/")
         pesquisa = driver.find_element(by=By.NAME, value="searched")
         botao = driver.find_element(by=By.NAME, value="go")
@@ -176,7 +205,7 @@ class PesquisarProduto(LiveServerTestCase):
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/div[2]/div/div/div[1]/div/h5").text,"iPhone 13")
 
     def test_cenario2(self):
-
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/search/")
         pesquisa = driver.find_element(by=By.NAME, value="searched")
         botao = driver.find_element(by=By.NAME, value="go")
@@ -187,6 +216,7 @@ class PesquisarProduto(LiveServerTestCase):
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/center/div/div[2]/div[4]/div/div[1]/div/h5").text,"iPhone 13")
 
     def test_cenario3(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/search/")
         pesquisa = driver.find_element(by=By.NAME, value="searched")
         botao = driver.find_element(by=By.NAME, value="go")
@@ -198,6 +228,24 @@ class PesquisarProduto(LiveServerTestCase):
 
 class AdicionarNoCarrinho(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -207,6 +255,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1_and_2(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
         botao = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[3]/div/div[2]/div/a")
@@ -247,6 +296,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario3(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -304,6 +354,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario4(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -342,6 +393,24 @@ class AdicionarNoCarrinho(LiveServerTestCase):
 
 class GerenciarCarrinho(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -351,6 +420,7 @@ class GerenciarCarrinho(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -399,6 +469,7 @@ class GerenciarCarrinho(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario2(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -459,6 +530,24 @@ class GerenciarCarrinho(LiveServerTestCase):
 
 class ProcurarPorCategoria(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -467,6 +556,7 @@ class ProcurarPorCategoria(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deletedoubles'], check=True)
 
     def test_cenario1(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
         botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
@@ -505,6 +595,7 @@ class ProcurarPorCategoria(LiveServerTestCase):
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Fones de ouvido")
 
     def test_cenario2(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
         botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
@@ -544,6 +635,24 @@ class ProcurarPorCategoria(LiveServerTestCase):
 
 class Contato(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -553,6 +662,7 @@ class Contato(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1_and_2(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[5]/a")
         botao.send_keys(Keys.ENTER)
@@ -600,6 +710,7 @@ class Contato(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario3(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -652,6 +763,7 @@ class Contato(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario4(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -683,6 +795,24 @@ class Contato(LiveServerTestCase):
 
 class AdicionarComentarios(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -692,6 +822,7 @@ class AdicionarComentarios(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1_and_2(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         botao = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
         botao.send_keys(Keys.ENTER)
@@ -733,6 +864,7 @@ class AdicionarComentarios(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario3(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -799,6 +931,7 @@ class AdicionarComentarios(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
     
     def test_cenario4(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -832,6 +965,24 @@ class AdicionarComentarios(LiveServerTestCase):
 
 class AdicionarAosFavoritos(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -841,6 +992,7 @@ class AdicionarAosFavoritos(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[1]/div/div[2]/div/a")
         botao2.send_keys(Keys.ENTER)
@@ -890,6 +1042,7 @@ class AdicionarAosFavoritos(LiveServerTestCase):
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario2(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
@@ -944,6 +1097,24 @@ class AdicionarAosFavoritos(LiveServerTestCase):
 
 class RemoverDosFavoritos(LiveServerTestCase):
 
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument("--disable-browser-side-navigation")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=1440,1080")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-extensions")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.implicitly_wait(10)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.driver.quit()
+        super().tearDownClass()
+
     def setUp(self):
         subprocess.run(['python', 'manage.py', 'createproducts'], check=True)
 
@@ -953,12 +1124,13 @@ class RemoverDosFavoritos(LiveServerTestCase):
         subprocess.run(['python', 'manage.py', 'deleteusers'], check=True)
 
     def test_cenario1(self):
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/favoritos/")
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/center/div/h5").text,"Para gerenciar/ver seus produtos favoritos, você precisa estar logado/registrado.")
         time.sleep(2)
 
     def test_cenario2(self):
-
+        driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
         usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
