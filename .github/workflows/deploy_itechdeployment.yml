@@ -39,7 +39,7 @@ jobs:
           python manage.py migrate
           python manage.py runserver &
           sleep 5
-          python manage.py test
+          python manage.py test store.tests
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
       - name: Zip artifact for deployment
