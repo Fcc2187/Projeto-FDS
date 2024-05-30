@@ -19,6 +19,7 @@ class AtualizarPerfil(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -179,6 +180,7 @@ class PesquisarProduto(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -239,6 +241,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -404,6 +407,7 @@ class GerenciarCarrinho(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -541,6 +545,7 @@ class ProcurarPorCategoria(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -646,6 +651,7 @@ class Contato(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -806,6 +812,7 @@ class AdicionarComentarios(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -976,6 +983,7 @@ class AdicionarAosFavoritos(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
@@ -1108,6 +1116,7 @@ class RemoverDosFavoritos(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-extensions")
         cls.driver = webdriver.Chrome(options=chrome_options)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.implicitly_wait(10)
 
     @classmethod
