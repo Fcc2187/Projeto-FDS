@@ -32,6 +32,7 @@ jobs:
 
       - name: Run local server
         run: |
+          cd Itech
           python manage.py migrate
           python manage.py runserver &
           sleep 5
