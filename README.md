@@ -85,19 +85,19 @@
 
 <br>
 
-### Jira Backlog
+### 📄 Jira Backlog
 
   <img src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/5d083dbb-9cf1-4044-8a0f-2bfede661333" alt="Repository Size">
 
 <br>
 
-### Jira Board 
+### 📄 Jira Board 
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d0253052-1593-452e-87bb-eb2aadac7b60">
 
 <br>
 
-### Prototipação Lo-Fi
+### 📄 Prototipação Lo-Fi
 
 <p style="text-align: center; text-decoration: none;">
   <a href="https://www.figma.com/file/GNcL8wpzwCpdZfd9ezt2uM/iTech?type=design&node-id=0-1&mode=design&t=nK8iW4muqMOR0FkI-0" style="text-decoration: none;">
@@ -107,7 +107,7 @@
 
 <br>
 
-### Screencast do Protótipo
+### 🎥 Screencast do Protótipo
 
 <p style="text-align: center; text-decoration: none;">
   <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
@@ -123,19 +123,19 @@
 
 <br>
 
-### Sprint no Jira
+### 📄 Sprint no Jira
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0">
 
 <br>
 
-### Bug Tracker
+### 📄 Bug Tracker
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/b58612d3-a52f-40cd-a4ad-ab66919f4ab0">
 
 <br>
 
-### Screencast do site na Azure
+### 🎥 Screencast do site na Azure
  <p style="text-align: center; text-decoration: none;">
   <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
     <span>🔗 Screencast do site</span>
@@ -150,20 +150,25 @@
 
 <br>
 
-### Sprint 2 Refletindo a Entrega 3 
+### 📄 Sprint 2 Refletindo a Entrega 3 
 
  ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/e7e5e74b-c852-4996-b6b4-84c06b694970)
 
 
-
 <br>
 
-### Backlog 
+### 📄 Backlog 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/056c9640-4835-4a05-9c35-702b2af2e55b)
 
 <br>
 
-### Deploy das Histórias 
+
+### 📄 Bug Tracker
+![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/b75323dc-38e8-4ccc-95ef-9df9f8ef7a3e)
+
+<br>
+
+### 🎥 Deploy das Histórias 
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/r0Wov5bPIJw?si=TVDEuYRg3f2prAfk" style="text-decoration: none;">
     <span>🔗 Screencast das Histórias no deploy</span>
@@ -171,12 +176,7 @@
 </p>
 <br>
 
-### Bug Tracker
-![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/b75323dc-38e8-4ccc-95ef-9df9f8ef7a3e)
-
-<br>
-
-### CI/CD com Build de Deploy Atualizado
+### 🎥 CI/CD com Build de Deploy Atualizado
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/AD2lcN06BO0?si=bCOJb3v2Wyvjljp8" style="text-decoration: none;">
     <span>🔗 Screencast CI/CD</span>
@@ -185,7 +185,7 @@
 
 <br>
 
-### Testes do Sistema
+### 🎥 Testes do Sistema
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/eH3Rpc6XIRw?si=31JltYk3SrhnrGP9" style="text-decoration: none;">
     <span>🔗 Screencast Testes automatizados</span>
@@ -193,7 +193,7 @@
 </p>
 <br>
 
-### Screencast do Protótipo
+### 🎥 Screencast do Protótipo
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/r1VHVAW8MtQ?feature=shared" style="text-decoration: none;">
     <span>🔗 Screencast Prototipo </span>
@@ -204,4 +204,11 @@
 
 <details>
 <summary>📧 Entrega 4</summary>
+
+<br>
+
+### 📄 Contributing MD
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
+    <span>Contributing MD</span>
 </details>
