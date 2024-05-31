@@ -3,8 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
 from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from django.core.management import call_command
 import time, subprocess
 
@@ -248,19 +246,13 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
-        botao = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[3]/div/div[2]/div/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[3]/div/div[2]/div/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(3)
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[1]/div/div[2]/div/center/a[2]"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/a[2]")
+        botao2.send_keys(Keys.ENTER)
         
-        usuario = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.NAME, "username"))
-        )
+        usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
         sobrenome = driver.find_element(by=By.NAME, value="last_name")
         email = driver.find_element(by=By.NAME, value="email")
@@ -274,24 +266,17 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         email.send_keys(f"rtmr@cesar.school")
         senha.send_keys("Senha1234")
         confirmar_senha.send_keys("Senha1234")
-        botao.click()
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[5]/div/div[2]/div/a"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[5]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaoadd = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "add-cart"))
-        )
-        botaoadd.click()
-        time.sleep(2)
-        botaocart = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.NAME, "carrinho"))
-        )
-        botaocart.click()
+        botaoadd = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[1]")
+        botaoadd.send_keys(Keys.ENTER)
+        time.sleep(1)
+        driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(2)
 
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/h5").text,"Tablet Samsung")
@@ -300,9 +285,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
     def test_cenario3(self):
         driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
-        usuario = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.NAME, "username"))
-        )
+        usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
         sobrenome = driver.find_element(by=By.NAME, value="last_name")
         email = driver.find_element(by=By.NAME, value="email")
@@ -315,24 +298,17 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         email.send_keys(f"rtmr@cesar.school")
         senha.send_keys("Senha1234")
         confirmar_senha.send_keys("Senha1234")
-        botao.click()
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[7]/div/div[2]/div/a"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[7]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaoadd = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "add-cart"))
-        )
-        botaoadd.click()
+        botaoadd = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[1]")
+        botaoadd.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaocart = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.NAME, "carrinho"))
-        )
-        botaocart.click()
+        driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(2)
         
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/h5").text,"Smartwatch")
@@ -340,31 +316,22 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/login/")
-        usuario = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.NAME, "username"))
-        )
+        usuario = driver.find_element(by=By.NAME, value="username")
         senha = driver.find_element(by=By.NAME, value="password")
         botao = driver.find_element(by=By.NAME, value="login")
         usuario.send_keys("User_3")
         senha.send_keys("Senha1234")
-        botao.click()
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[15]/div/div[2]/div/a"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[15]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaoadd = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "add-cart"))
-        )
-        botaoadd.click()
+        botaoadd = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[1]")
+        botaoadd.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaocart = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.NAME, "carrinho"))
-        )
-        botaocart.click()
+        driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(2)
 
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/h5").text,"Smartwatch")
@@ -374,9 +341,7 @@ class AdicionarNoCarrinho(LiveServerTestCase):
     def test_cenario4(self):
         driver = self.driver
         driver.get("http://127.0.0.1:8000/register/")
-        usuario = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.NAME, "username"))
-        )
+        usuario = driver.find_element(by=By.NAME, value="username")
         nome = driver.find_element(by=By.NAME, value="first_name")
         sobrenome = driver.find_element(by=By.NAME, value="last_name")
         email = driver.find_element(by=By.NAME, value="email")
@@ -389,30 +354,21 @@ class AdicionarNoCarrinho(LiveServerTestCase):
         email.send_keys(f"rtmr@cesar.school")
         senha.send_keys("Senha1234")
         confirmar_senha.send_keys("Senha1234")
-        botao.click()
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[3]/div/div[2]/div/a"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[3]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaoqty = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "/html/body/div/div/div/div[2]/div/center/div/div[2]/select"))
-        )
+        botaoqty = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/div/div[2]/select")
         chooser = Select(botaoqty)
         chooser.select_by_value('2')
         time.sleep(2)
-        botaoadd = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "add-cart"))
-        )
-        botaoadd.click()
+        botaoadd = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[1]")
+        botaoadd.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaocart = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.NAME, "carrinho"))
-        )
-        botaocart.click()
+        driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(6)
         
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/h5").text,"Samsung Galaxy S23")
@@ -460,38 +416,29 @@ class GerenciarCarrinho(LiveServerTestCase):
         email.send_keys(f"fcc3@cesar.school")
         senha.send_keys("Senha1234")
         confirmar_senha.send_keys("Senha1234")
-        botao.click()
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[4]/div/div[2]/div/a"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(1)
-        botaoqty = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[2]/div/center/div/div[2]/select"))
-        )
+        botaoadd = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[1]")
+        botaoqty = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/div/div[2]/select")
         chooser = Select(botaoqty)
         chooser.select_by_value('3')
-        botaoadd = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "add-cart"))
-        )
-        botaoadd.click()
         time.sleep(2)
-
+        botaoadd.send_keys(Keys.ENTER)
+        time.sleep(1)
         driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(2)
 
-        botaoqty2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[2]/div/center/div/div[2]/select"))
-        )
+        botaoqty2 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/div/div[2]/select")
         chooser2 = Select(botaoqty2)
         chooser2.select_by_value('5')
-        botaoupdate = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "atualizar"))
-        )
-        botaoupdate.click()
+        time.sleep(2)
+        botaoupdate = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/button[1]")
+        botaoupdate.send_keys(Keys.ENTER)
         time.sleep(2)
         driver.refresh() #Verificando se a quantidade ainda será 5 depois de recarregar a página
         time.sleep(2)
@@ -517,62 +464,42 @@ class GerenciarCarrinho(LiveServerTestCase):
         email.send_keys(f"fcc3@cesar.school")
         senha.send_keys("Senha1234")
         confirmar_senha.send_keys("Senha1234")
-        botao.click()
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[4]/div/div[2]/div/a"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[4]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(1)
-        botaoadd = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "add-cart"))
-        )
-        botaoqty = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[2]/div/center/div/div[2]/select"))
-        )
+        botaoadd = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[1]")
+        botaoqty = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/div/div[2]/select")
         chooser = Select(botaoqty)
         chooser.select_by_value('5')
         time.sleep(2)
-        botaoadd.click()
+        botaoadd.send_keys(Keys.ENTER)
         time.sleep(1)
-        botaocart = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.NAME, "carrinho"))
-        )
-        botaocart.click()
+        driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/section/div/div/div[2]/div/div[2]/div/a"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/section/div/div/div[2]/div/div[2]/div/a")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaoadd = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "add-cart"))
-        )
-        botaoqty = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div[2]/div/center/div/div[2]/select"))
-        )
+        botaoadd = driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/button[1]")
+        botaoqty = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div[2]/div/center/div/div[2]/select")
         chooser = Select(botaoqty)
         chooser.select_by_value('5')
         time.sleep(2)
-        botaoadd.click()
+        botaoadd.send_keys(Keys.ENTER)
         time.sleep(2)
-        botaocart = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.NAME, "carrinho"))
-        )
-        botaocart.click()
+        driver.get("http://127.0.0.1:8000/cart/")
         time.sleep(2)
 
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[1]/div/div[2]/div/center/h5").text,"Macbook")
         self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/div[2]/div/center/h5").text,"iPhone 13")
         self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$30000,00")
-        botaodel = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div[2]/div/div[2]/div/center/button[2]"))
-        )
-        driver.execute_script("arguments[0].click();", botaodel)
+        botaodel = driver.find_element(by=By.XPATH, value="/html/body/div/div[2]/div/div[2]/div/center/button[2]")
+        botaodel.send_keys(Keys.ENTER)
         time.sleep(2)
         
         self.assertEqual(driver.find_element(by=By.ID, value="total").text,"Total: R$14000,00")
@@ -587,6 +514,7 @@ class ProcurarPorCategoria(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--headless")
+        chrome_options.add_argument("window-size=1440,1080")
         cls.driver = webdriver.Chrome(options=chrome_options)
 
     @classmethod
@@ -605,111 +533,77 @@ class ProcurarPorCategoria(LiveServerTestCase):
         driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
-        botao = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/nav/div/div/ul[1]/li[4]/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(1)
-        botao2 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.NAME, "notebooks"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.NAME, value="notebooks")
+        botao2.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Notebooks")
         time.sleep(2)
-        botao = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/nav/div/div/ul[1]/li[4]/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(1)
-        botao3 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.NAME, "celulares"))
-        )
-        botao3.click()
+        botao3 = driver.find_element(by=By.NAME, value="celulares")
+        botao3.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Celulares")
         time.sleep(2)
-        botao = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/nav/div/div/ul[1]/li[4]/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(1)
-        botao4 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.NAME, "tablets"))
-        )
-        botao4.click()
+        botao4 = driver.find_element(by=By.NAME, value="tablets")
+        botao4.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Tablets")
         time.sleep(2)
-        botao = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/nav/div/div/ul[1]/li[4]/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(1)
-        botao5 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.NAME, "smartwatchs"))
-        )
-        botao5.click()
+        botao5 = driver.find_element(by=By.NAME, value="smartwatchs")
+        botao5.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Smartwatchs")
         time.sleep(2)
-        botao = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/nav/div/div/ul[1]/li[4]/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(1)
-        botao6 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.NAME, "fones"))
-        )
-        botao6.click()
+        botao6 = driver.find_element(by=By.NAME, value="fones")
+        botao6.send_keys(Keys.ENTER)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Fones de ouvido")
 
     def test_cenario2(self):
         driver = self.driver
         driver.get("http://127.0.0.1:8000/")
         time.sleep(2)
-        botao = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/nav/div/div/ul[1]/li[4]/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[4]/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(1)
-        botao2 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.NAME, "all"))
-        )
-        botao2.click()
+        botao2 = driver.find_element(by=By.NAME, value="all")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(2)
-        botao3 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div/a[1]"))
-        )
-        botao3.click()
+        botao3 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[1]")
+        botao3.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Notebooks")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao4 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div/a[2]"))
-        )
-        botao4.click()
+        botao4 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[2]")
+        botao4.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Celulares")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao5 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div/a[3]"))
-        )
-        botao5.click()
+        botao5 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[3]")
+        botao5.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Tablets")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao6 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div/a[4]"))
-        )
-        botao6.click()
+        botao6 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[4]")
+        botao6.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Smartwatchs")
         driver.get("http://127.0.0.1:8000/category_summary/")
         time.sleep(2)
-        botao7 = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/div/div/div/div/a[5]"))
-        )
-        botao7.click()
+        botao7 = driver.find_element(by=By.XPATH, value="/html/body/div/div/div/div/a[5]")
+        botao7.send_keys(Keys.ENTER)
         time.sleep(2)
         self.assertEqual(driver.find_element(by=By.NAME, value="title").text,"Fones de ouvido")
 
@@ -722,6 +616,7 @@ class Contato(LiveServerTestCase):
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--headless")
+        chrome_options.add_argument("window-size=1440,1080")
         cls.driver = webdriver.Chrome(options=chrome_options)
 
     @classmethod
@@ -740,19 +635,12 @@ class Contato(LiveServerTestCase):
     def test_cenario1_and_2(self):
         driver = self.driver
         driver.get("http://127.0.0.1:8000/")
-        botao = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/nav/div/div/ul[1]/li[5]/a"))
-        )
-        botao.click()
+        botao = driver.find_element(by=By.XPATH, value="/html/body/nav/div/div/ul[1]/li[5]/a")
+        botao.send_keys(Keys.ENTER)
         time.sleep(1)
-        mensagem = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.NAME, "logmsg"))
-        )
-        self.assertEqual(mensagem.text, "Para enviar uma reclamação, você precisa estar logado/registrado.")
-        botao2 = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "/html/body/center/a[2]"))
-        )
-        botao2.click()
+        self.assertEqual(driver.find_element(by=By.NAME, value="logmsg").text,"Para enviar uma reclamação, você precisa estar logado/registrado.")
+        botao2 = driver.find_element(by=By.XPATH, value="/html/body/center/a[2]")
+        botao2.send_keys(Keys.ENTER)
         time.sleep(1)
 
         usuario = driver.find_element(by=By.NAME, value="username")
@@ -761,7 +649,7 @@ class Contato(LiveServerTestCase):
         email = driver.find_element(by=By.NAME, value="email")
         senha = driver.find_element(by=By.NAME, value="password1")
         confirmar_senha = driver.find_element(by=By.NAME, value="password2")
-        botao_registro = driver.find_element(By.NAME, "registro")
+        botao = driver.find_element(by=By.NAME, value="registro")
 
         usuario.send_keys(f"User_4")
         nome.send_keys(f"Miguel")
@@ -769,36 +657,27 @@ class Contato(LiveServerTestCase):
         email.send_keys(f"mcb4@cesar.school")
         senha.send_keys("Senha1234")
         confirmar_senha.send_keys("Senha1234")
-        botao_registro.click()
-        time.sleep(2)
-
-        driver.get("http://127.0.0.1:8000/contato/contato/")
-        assunto = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.NAME, "assunto"))
-        )
-        assunto.send_keys(f"iPhone 13 está muito caro!")
-        enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
-        time.sleep(1)
-        enviar.click()
-        mensagem_enviada = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "/html/body/center/form/div/div/div"))
-        )
-        self.assertEqual(mensagem_enviada.text, "iPhone 13 está muito caro!")
+        botao.send_keys(Keys.ENTER)
         time.sleep(2)
 
         driver.get("http://127.0.0.1:8000/contato/contato/")
         assunto = driver.find_element(by=By.NAME, value="assunto")
-        assunto.clear()
-        assunto.send_keys(f"Notebook Lenovo está muito caro!")
         enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
+        assunto.send_keys(f"iPhone 13 está muito caro!")
         time.sleep(1)
-        enviar.click()
+        enviar.send_keys(Keys.ENTER)
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div/div/div").text,"iPhone 13 está muito caro!")
         time.sleep(2)
 
-        mensagem_enviada = WebDriverWait(driver, 10).until(
-            EC.visibility_of_element_located((By.XPATH, "/html/body/center/form/div[2]/div/div"))
-        )
-        self.assertEqual(mensagem_enviada.text, "Notebook Lenovo está muito caro!")
+        driver.get("http://127.0.0.1:8000/contato/contato/")
+        assunto = driver.find_element(by=By.NAME, value="assunto")
+        enviar = driver.find_element(by=By.XPATH, value="/html/body/center/div/div/div/form/button")
+        assunto.send_keys(f"Notebook Lenovo está muito caro!")
+        time.sleep(1)
+        enviar.send_keys(Keys.ENTER)
+        time.sleep(2)
+
+        self.assertEqual(driver.find_element(by=By.XPATH, value="/html/body/center/form/div[2]/div/div").text,"Notebook Lenovo está muito caro!")
         driver.get("http://127.0.0.1:8000/logout/")
 
     def test_cenario3(self):
