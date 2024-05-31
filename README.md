@@ -15,8 +15,9 @@
       alt="License"
   /></a>
 </p>
+<br>
 
-# 🔎 Visão Geral
+# 🔎 iTech - Visão Geral
 
 <br>
 <p> A iTech é uma aplicação e-commerce que tem como foco a venda de produtos relacionados ao mercado de tecnologia. Aqui, apresentamos aos visitantes deste respositório, o processo de desenvolvimento da aplicação e informações a respeito da nossa trajetória. Somos uma equipe de alunos da CESAR School, desempenhando essa tarefa para a disciplina de Fundamentos de Desenvolvimento de Software. </p>
@@ -35,8 +36,12 @@
 <p style="text-align: center; text-decoration: none;"> Rodrigo Torres Marques Rodrigues </p>
 
 <br><br>
+
+# 🔨 Processo
+<br>
+
 <details>
-<summary># Links</summary>
+<summary>Links</summary>
 <br>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://projeto-fds2.atlassian.net/jira/software/projects/PFDSCS/boards/2" style="text-decoration: none;">
@@ -60,48 +65,39 @@
   </a>
 </p>
 </details>
-<br>
-
-### - Diagrama de Atividades
-![Diagrama de Atividades FDS Itech](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3be67e37-7852-42d7-ba02-a0ec2e177334)
-
-<br>
-
 
 <details>
-<summary># Instruções de Uso</summary>
+<summary>Diagrama de Atividades</summary>
+![Diagrama de Atividades FDS Itech](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3be67e37-7852-42d7-ba02-a0ec2e177334)
+</details>
 
-<br>
-
+<details>
+<summary>Instruções de Uso</summary>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://docs.google.com/document/d/16JZanuh7EmsBjp4mzp4iHEvsfLdQwLgmjqpEObKvE4w/edit" style="text-decoration: none;">
     <span>🔗 Link</span>
   </a>
 </p>
 </details>
-<br>
+
 <details>
-<summary># 📧 Entrega 1</summary>
+<summary>📧 Entrega 1</summary>
 
 <br>
-<i>A Entrega 1 resumiu=se ao desenvolvimento do nosso protótipo de baixa fidelidade, a definição das nossas histórias no Jira e a realização de um screencast do nosso protótipo. Não fui uma entrega muito grande então o grupo conseguiu lidar com a situação sem muita pressão e com tempo de sobra. Contudo, após o lançamento dos resultados dessa entrega, a equipe percebeu a falta de muitos requisitos os quais vieram a ser resolvidos posteriormente na Entrega 2.</i>
 
-### - Jira Backlog
-<br>
+### Jira Backlog
 
   <img src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/5d083dbb-9cf1-4044-8a0f-2bfede661333" alt="Repository Size">
 
 <br>
 
-### - Jira Board 
-<br>
+### Jira Board 
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d0253052-1593-452e-87bb-eb2aadac7b60">
 
 <br>
 
-### - Prototipação Lo-Fi
-<br>
+### Prototipação Lo-Fi
 
 <p style="text-align: center; text-decoration: none;">
   <a href="https://www.figma.com/file/GNcL8wpzwCpdZfd9ezt2uM/iTech?type=design&node-id=0-1&mode=design&t=nK8iW4muqMOR0FkI-0" style="text-decoration: none;">
@@ -111,8 +107,7 @@
 
 <br>
 
-### - Screencast do Protótipo
-<br>
+### Screencast do Protótipo
 
 <p style="text-align: center; text-decoration: none;">
   <a href="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/01de6484-9e14-454a-8ee9-71cf50e0a56b" style="text-decoration: none;">
@@ -122,33 +117,25 @@
 
 <br>
 </details>
-<br>
+
 <details>
-
-<summary> # 📧 Entrega 2 </summary>
+<summary>📧 Entrega 2 </summary>
 
 <br>
-<i>Resumo da Entrega 2: Começamos a desenvolver o site do iTech iniciando pela página de suporte, responsável pelo contato para reclamações e assistência aos usuários em suas interações com a equipe de administração. Essa decisão foi tomada considerando a simplicidade da história na sprint. No entanto, enfrentamos alguns contratempos. O principal deles foi que a página inicial acabou sendo a de suporte. Tentamos corrigir esse problema e avançar com o cadastro de usuários, mas as URLs e os modelos de dados permaneceram vinculados ao arquivo "contact_us".
-Diante dessa situação, optamos por revisar, separar e realocar os componentes em um novo projeto, incorporando também as histórias relacionadas ao cadastro de produtos (incluindo imagens), carrinho de compras e filtro por categorias. Decidimos deixar a implementação da página de suporte para a terceira entrega. Como todas as etapas já estão devidamente mapeadas, a compilação dessa história já implementada será mais simplificada.
-O deploy foi realizado sem problemas na região US East, visto que a opção BR South implicaria custos adicionais. Além disso, o nosso issue tracker está atualizado e corrigido em sua totalidade. Também concluímos o screencast das histórias na aplicação web.</i>
-<br><br>
 
-
-### - Sprint no Jira
-<br>
+### Sprint no Jira
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/142420912/e33bfc6b-3c64-4238-ba67-d255634879f0">
 
 <br>
 
-### - Bug Tracker
-<br>
+### Bug Tracker
 
   <img width="1326" alt="Captura de Tela 2024-03-18 às 10 38 46" src="https://github.com/Fcc2187/Projeto-FDS/assets/149081961/b58612d3-a52f-40cd-a4ad-ab66919f4ab0">
 
 <br>
 
-#### Screencast do site na Azure
+### Screencast do site na Azure
  <p style="text-align: center; text-decoration: none;">
   <a href="https://drive.google.com/file/d/1OeHCIMXWWTiZKo8qsMu5sF3z1B28_z8t/view?usp=share_link" style="text-decoration: none;">
     <span>🔗 Screencast do site</span>
@@ -156,17 +143,14 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </p>
 
 <br>
-
 </details>
-<br>
+
 <details>
-<summary># 📧 Entrega 3 </summary>
+<summary>📧 Entrega 3 </summary>
 
 <br>
 
-### - Sprint 2 Refletindo a Entrega 3 
-
-<br> 
+### Sprint 2 Refletindo a Entrega 3 
 
  ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/e7e5e74b-c852-4996-b6b4-84c06b694970)
 
@@ -174,12 +158,12 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-### - Backlog 
+### Backlog 
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/056c9640-4835-4a05-9c35-702b2af2e55b)
 
 <br>
 
-### - Deploy das Histórias 
+### Deploy das Histórias 
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/r0Wov5bPIJw?si=TVDEuYRg3f2prAfk" style="text-decoration: none;">
     <span>🔗 Screencast das Histórias no deploy</span>
@@ -187,13 +171,12 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </p>
 <br>
 
-### - Bug Tracker
+### Bug Tracker
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/b75323dc-38e8-4ccc-95ef-9df9f8ef7a3e)
 
 <br>
 
-### - CI/CD com Build de Deploy Atualizado
-<br>
+### CI/CD com Build de Deploy Atualizado
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/AD2lcN06BO0?si=bCOJb3v2Wyvjljp8" style="text-decoration: none;">
     <span>🔗 Screencast CI/CD</span>
@@ -202,8 +185,7 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 
 <br>
 
-### - Testes do Sistema
-<br>
+### Testes do Sistema
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/eH3Rpc6XIRw?si=31JltYk3SrhnrGP9" style="text-decoration: none;">
     <span>🔗 Screencast Testes automatizados</span>
@@ -211,16 +193,15 @@ O deploy foi realizado sem problemas na região US East, visto que a opção BR 
 </p>
 <br>
 
-### - Screencast do Protótipo
+### Screencast do Protótipo
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/r1VHVAW8MtQ?feature=shared" style="text-decoration: none;">
     <span>🔗 Screencast Prototipo </span>
   </a>
 </p>
 <br>
-
 </details>
-<br>
+
 <details>
-<summary># 📧 Entrega 4</summary>
+<summary>📧 Entrega 4</summary>
 </details>
