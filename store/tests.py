@@ -779,7 +779,7 @@ class AdicionarComentarios(LiveServerTestCase):
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--headless")
         cls.driver = webdriver.Chrome(options=chrome_options)
-
+        
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
