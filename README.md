@@ -1,8 +1,4 @@
 
-<p align="center">
-  <img src="https://files.fm/u/d3qemsgjmv"
- />
-</p>
 <hr>
 <p align="center">
   <img
