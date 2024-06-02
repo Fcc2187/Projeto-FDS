@@ -66,10 +66,10 @@
 </p>
 </details>
 
-<details>
-<summary>Diagrama de Atividades</summary>
+
+Diagrama de Atividades
 ![Diagrama de Atividades FDS Itech](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3be67e37-7852-42d7-ba02-a0ec2e177334)
-</details>
+
 
 <details>
 <summary>Instruções de Uso</summary>
