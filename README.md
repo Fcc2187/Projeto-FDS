@@ -1,6 +1,8 @@
-
-
 <hr>
+<p align="center">
+  <img src="![Imagem do WhatsApp de 2024-03-13 à(s) 09 44 28_a3e6dea9](https://github.com/Fcc2187/Projeto-FDS/assets/142419397/478fc5eb-72da-4c79-b866-0947944ec600)
+" />
+</p>
 <p align="center">
   <img
     src="https://img.shields.io/github/repo-size/Fcc2187/Projeto-FDS?style=flat"
