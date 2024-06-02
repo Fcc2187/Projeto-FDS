@@ -1,4 +1,5 @@
 
+<p align="center"><img align="center" width="280" src="media/uploads/product/WhatsApp Image 2024-06-02 at 11.30.11.jpeg"/></p>
 <hr>
 <p align="center">
   <img
