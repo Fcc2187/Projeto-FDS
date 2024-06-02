@@ -1,4 +1,4 @@
-<center>![Imagem do WhatsApp de 2024-03-13 à(s) 09 44 28_a3e6dea9](https://github.com/Fcc2187/Projeto-FDS/assets/142419397/0ee5eee1-9f9f-4a97-8f7c-84f8cbdda244)</center>
+
 
 <hr>
 <p align="center">
