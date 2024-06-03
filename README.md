@@ -221,9 +221,9 @@ Prints Issues
   <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
     <span>Contributing MD</span>
 
-### 📹 Screencast Testes E2E
+### 📹 Screencast Testes automatizados
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
+  <a href="https://youtu.be/SIze5SLUm8Q?si=Ltbe5mAsC0yr24_x" style="text-decoration: none;">
     <span>Screencast Testes automatizados entrega 4</span>
     
 ### 📹 Screencast do deploy
