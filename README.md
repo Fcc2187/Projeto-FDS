@@ -216,16 +216,24 @@ Diagrama de Atividades
 <br>
 ###Sprint
 <br>
-![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/0dadb79d-4b78-4569-8fe3-dcf746619b45)
+![sprint4](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/8ebce39f-598a-4ba1-9c3a-46e1d14886d5)
+
 
 <br>
 ### 📄Backlog
-![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/2c759549-1f85-4844-a87c-08eee800544a)
+![backlog](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/820f556c-1188-4000-8877-56cd95af866b)
 
+<br>
+### List
+<br>
+![list](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/1f8ea6a8-ec26-4cc1-8bb6-26195484abfa)
+
+<br>
 ### 🚫Issues
 <br>
-![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d61008eb-3edf-4573-97f6-a1ff27491029)
+![issues](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/b95a5116-49c1-4339-ae07-bbd9ce9db916)
 
+<br>
 
 ### 📄 Contributing MD
 <p style="text-align: center; text-decoration: none;">
