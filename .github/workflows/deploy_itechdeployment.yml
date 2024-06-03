@@ -1,9 +1,9 @@
-name: Build and deploy Python app to Azure Web App - iTechDeployment
+name: CI - iTechDeployment
 
 on:
   push:
     branches:
-      - deploy
+      - master
   workflow_dispatch:
 
 jobs:
