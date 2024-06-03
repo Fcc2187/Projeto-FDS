@@ -79,6 +79,7 @@ Entrando na aba de settings.py localizado no app Itech e configure de acordo com
 
 #### - Criação das tabelas no banco de dados:
 python manage.py makemigrations
+
 python manage.py migrate
 
 Com as tabelas do banco de dados criados, execute a seguinte linha de comando para rodar o ambiente virtual:
