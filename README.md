@@ -228,12 +228,12 @@ Prints Issues
     
 ### 📹 Screencast do deploy
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://youtu.be/BQYlDrACMgU?si=CeotIrNJBGl6wqy8" style="text-decoration: none;">
+  <a href="https://youtu.be/Qgtt5slRjvs?si=go_Okw3xwaWUIf1f" style="text-decoration: none;">
     <span>Screencast na azure</span>
     
 ### 📹 Screencast CI/CD
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://youtu.be/BQYlDrACMgU?si=Q4tYXLA1QajvVJRg" style="text-decoration: none;">
+  <a href="https://youtu.be/BQYlDrACMgU?si=HYepYzxm8pH9qOnH" style="text-decoration: none;">
     <span>Screencast CI/CD </span>
 
 ### 📹 Screencast Figma
