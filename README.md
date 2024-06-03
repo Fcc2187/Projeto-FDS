@@ -253,6 +253,11 @@ Diagrama de Atividades
 <p style="text-align: center; text-decoration: none;">
   <a href="https://youtu.be/BQYlDrACMgU?si=HYepYzxm8pH9qOnH" style="text-decoration: none;">
     <span>Screencast CI/CD </span>
+    
+### 📹 Screencast dos testes na branch de desenvolvimento
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/RXkIwOAqZuk?si=x6mw7QRe19n7AlDt" style="text-decoration: none;">
+    <span>Screencast pipeline dos testes na branch de desenvolvimento</span>
 
 ### 📹 Screencast Figma
 <p style="text-align: center; text-decoration: none;">
