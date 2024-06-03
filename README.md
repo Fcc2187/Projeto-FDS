@@ -217,25 +217,32 @@ Diagrama de Atividades
 ### 📄 Sprint 3 Refletindo a Entrega 4 
 
 <br>
-###Board da sprint 3
+
+### Board da sprint 3
+
 <br>
 ![sprint4](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/64ab79c6-d297-4e8e-b253-6d18d0cc6020)
 
 
 <br>
+
 ### 📄Backlog
 
 ![backlog](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/50879ee2-62b0-4a8a-b775-0468f91baf12)
 
 <br>
+
 ### List
+
 <br>
 
 <img width="1258" alt="Captura de Tela 2024-06-03 às 17 08 13" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/afb68356-b894-48fc-8ec1-14970c27c843">
 
 
 <br>
+
 ### 🚫Issues
+
 <br>
 
 ![issues](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/11cf013c-fe14-46db-8d70-15afe9fe8146)
