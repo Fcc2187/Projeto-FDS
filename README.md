@@ -216,7 +216,8 @@ Diagrama de Atividades
 <br>
 ###Sprint
 <br>
-![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/e7de00d0-2252-4eae-bae4-2fbc67d37343)
+![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/0dadb79d-4b78-4569-8fe3-dcf746619b45)
+
 <br>
 ### 📄Backlog
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/2c759549-1f85-4844-a87c-08eee800544a)
