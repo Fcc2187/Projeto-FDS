@@ -231,7 +231,8 @@ Diagrama de Atividades
 <br>
 ### 🚫Issues
 <br>
-![issues](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/b95a5116-49c1-4339-ae07-bbd9ce9db916)
+
+![issues](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/11cf013c-fe14-46db-8d70-15afe9fe8146)
 
 <br>
 
