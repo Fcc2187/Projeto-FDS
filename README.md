@@ -221,12 +221,13 @@ Diagrama de Atividades
 
 <br>
 ### 📄Backlog
-![backlog](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/820f556c-1188-4000-8877-56cd95af866b)
+
+![backlog](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/50879ee2-62b0-4a8a-b775-0468f91baf12)
 
 <br>
 ### List
 <br>
-![list](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/1f8ea6a8-ec26-4cc1-8bb6-26195484abfa)
+![list](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/94b03514-b8b5-430d-9f45-f01c654ea817)
 
 <br>
 ### 🚫Issues
