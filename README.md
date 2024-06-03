@@ -226,13 +226,18 @@ Prints Issues
   <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
     <span>Screencast Testes automatizados entrega 4</span>
     
+### 📹 Screencast do deploy
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/BQYlDrACMgU?si=CeotIrNJBGl6wqy8" style="text-decoration: none;">
+    <span>Screencast na azure</span>
+    
 ### 📹 Screencast CI/CD
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
+  <a href="https://youtu.be/BQYlDrACMgU?si=Q4tYXLA1QajvVJRg" style="text-decoration: none;">
     <span>Screencast CI/CD </span>
 
 ### 📹 Screencast Figma
 <p style="text-align: center; text-decoration: none;">
-  <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
+  <a href="https://youtu.be/XSbH_uc_sIM?si=vlA1KmlziZ46ezwj" style="text-decoration: none;">
     <span>Screencast Figma</span>
 </details>
