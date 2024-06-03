@@ -59,7 +59,11 @@
     <span>🔗 Figma</span>
   </a>
 </p>
-
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://www.canva.com/design/DAGGySGw8sA/mhBeebsWYXXT3SOHKbpTbw/edit?utm_content=DAGGySGw8sA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" style="text-decoration: none;">
+    <span>🔗 Slides apresentação final</span>
+  </a>
+</p>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://docs.google.com/document/d/1rZFu_fQTW7q7PWi0CVUGxjzFjZWSsbrrWYx7XUuSl2Q/edit?usp=sharing" style="text-decoration: none;">
     <span>🔗 Documento do Pair Programming</span>
