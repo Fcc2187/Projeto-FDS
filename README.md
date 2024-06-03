@@ -212,8 +212,27 @@ Diagrama de Atividades
 
 <br>
 
+Prints Jira
+
+Prints Issues
+
 ### 📄 Contributing MD
 <p style="text-align: center; text-decoration: none;">
   <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
     <span>Contributing MD</span>
+
+### 📹 Screencast Testes E2E
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
+    <span>Screencast Testes automatizados entrega 4</span>
+    
+### 📹 Screencast CI/CD
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
+    <span>Screencast CI/CD </span>
+
+### 📹 Screencast Figma
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
+    <span>Screencast Figma</span>
 </details>
