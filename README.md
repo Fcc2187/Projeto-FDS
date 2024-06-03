@@ -212,12 +212,13 @@ Diagrama de Atividades
 
 <br>
 
-Prints Jira
+### 📄 Sprint 2 Refletindo a Entrega 3 
 <br>
+
+### 📄Backlog
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/2c759549-1f85-4844-a87c-08eee800544a)
 
-
-Prints Issues
+### 🚫Issues
 <br>
 ![image](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/d61008eb-3edf-4573-97f6-a1ff27491029)
 
