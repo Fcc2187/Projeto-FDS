@@ -1,4 +1,5 @@
 
+<p align="center"><img align="center" width="280" src="media/uploads/product/WhatsApp Image 2024-06-02 at 11.30.11.jpeg"/></p>
 <hr>
 <p align="center">
   <img
@@ -15,7 +16,7 @@
       alt="License"
   /></a>
 </p>
-<br>
+
 
 # 🔎 iTech - Visão Geral
 
@@ -58,7 +59,11 @@
     <span>🔗 Figma</span>
   </a>
 </p>
-
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://www.canva.com/design/DAGGySGw8sA/mhBeebsWYXXT3SOHKbpTbw/edit?utm_content=DAGGySGw8sA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" style="text-decoration: none;">
+    <span>🔗 Slides apresentação final</span>
+  </a>
+</p>
 <p style="text-align: center; text-decoration: none;">
   <a href="https://docs.google.com/document/d/1rZFu_fQTW7q7PWi0CVUGxjzFjZWSsbrrWYx7XUuSl2Q/edit?usp=sharing" style="text-decoration: none;">
     <span>🔗 Documento do Pair Programming</span>
@@ -66,10 +71,10 @@
 </p>
 </details>
 
-<details>
-<summary>Diagrama de Atividades</summary>
+
+Diagrama de Atividades
 ![Diagrama de Atividades FDS Itech](https://github.com/Fcc2187/Projeto-FDS/assets/142417785/3be67e37-7852-42d7-ba02-a0ec2e177334)
-</details>
+
 
 <details>
 <summary>Instruções de Uso</summary>
@@ -205,10 +210,73 @@
 <details>
 <summary>📧 Entrega 4</summary>
 
+
+<br>
+
+
+### 📄 Sprint 3 Refletindo a Entrega 4 
+
+<br>
+
+### Board da sprint 3
+
+<br>
+
+![sprint4](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/64ab79c6-d297-4e8e-b253-6d18d0cc6020)
+
+
+<br>
+
+### 📄Backlog
+
+![backlog](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/50879ee2-62b0-4a8a-b775-0468f91baf12)
+
+<br>
+
+### List
+
+<br>
+
+<img width="1258" alt="Captura de Tela 2024-06-03 às 17 08 13" src="https://github.com/Fcc2187/Projeto-FDS/assets/151794134/afb68356-b894-48fc-8ec1-14970c27c843">
+
+
+<br>
+
+### 🚫Issues
+
+<br>
+
+![issues](https://github.com/Fcc2187/Projeto-FDS/assets/151794134/11cf013c-fe14-46db-8d70-15afe9fe8146)
+
 <br>
 
 ### 📄 Contributing MD
 <p style="text-align: center; text-decoration: none;">
   <a href="https://docs.google.com/document/d/1jsFEuSbsBK8QjpxbNOu4drKoWjG0kwnTwN2qh89ScvA/edit" style="text-decoration: none;">
     <span>Contributing MD</span>
+
+### 📹 Screencast Testes automatizados
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/SIze5SLUm8Q?si=Ltbe5mAsC0yr24_x" style="text-decoration: none;">
+    <span>Screencast Testes automatizados entrega 4</span>
+    
+### 📹 Screencast do deploy
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/Qgtt5slRjvs?si=go_Okw3xwaWUIf1f" style="text-decoration: none;">
+    <span>Screencast na azure</span>
+    
+### 📹 Screencast CI/CD
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/BQYlDrACMgU?si=HYepYzxm8pH9qOnH" style="text-decoration: none;">
+    <span>Screencast CI/CD </span>
+    
+### 📹 Screencast dos testes na branch de desenvolvimento
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/RXkIwOAqZuk?si=x6mw7QRe19n7AlDt" style="text-decoration: none;">
+    <span>Screencast pipeline dos testes na branch de desenvolvimento</span>
+
+### 📹 Screencast Figma
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/XSbH_uc_sIM?si=vlA1KmlziZ46ezwj" style="text-decoration: none;">
+    <span>Screencast Figma</span>
 </details>
