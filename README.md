@@ -280,3 +280,10 @@ Diagrama de Atividades
   <a href="https://youtu.be/XSbH_uc_sIM?si=vlA1KmlziZ46ezwj" style="text-decoration: none;">
     <span>Screencast Figma</span>
 </details>
+
+<details>
+<summary>📹Screencast história de Miguel Chaves Becker</summary>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/XSbH_uc_sIM?si=vlA1KmlziZ46ezwj" style="text-decoration: none;">
+    <span>Screencast Miguel Becker</span>
+</details>
