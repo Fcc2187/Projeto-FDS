@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Finalizar Compra</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Complete seu pedido</p>
+        </div>
+    </div>
+</header>
+
+<div class="container mt-5">
+    {% if user.is_authenticated %}
+        {% if cart_products %}
+            <form action="{% url 'process_payment' %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <!-- Customer Information -->
+                    <div class="col-md-6">
+                        <h3>Informações do Cliente</h3>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Endereço</label>
+                            <input type="text" class="form-control" id="address" name="address" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputState" class="form-label">Estado</label>
+                            <select id="inputState" class="form-select">
+                              <option selected>--</option>
+                              <option>Acre</option>
+                              <option>Alagoas</option>
+                              <option>Amapá</option>
+                              <option>Amazonas</option>
+                              <option>Bahia</option>
+                              <option>Ceará</option>
+                              <option>Distrito Federal</option>
+                              <option>Espirito Santo</option>
+                              <option>Goiás</option>
+                              <option>Maranhão</option>
+                              <option>Mato Grosso</option>
+                              <option>Mato Grosso do SUl</option>
+                              <option>Minas Gerais</option>
+                              <option>Pará</option>
+                              <option>Paraíba</option>
+                              <option>Paraná</option>
+                              <option>Pernambuco</option>
+                              <option>Piauí</option>
+                              <option>Rio de Janeiro</option>
+                              <option>Rio Grande do Norte</option>
+                              <option>Rio Grande do Sul</option>
+                              <option>Rondônia</option>
+                              <option>Roraima</option>
+                              <option>Santa Catarina</option>
+                              <option>São Paulo</option>
+                              <option>Sergipe</option>
+                              <option>Tocantins</option>
+
+                            </select>
+                          </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="city" name="city" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="zip" class="form-label">CEP</label>
+                            <input type="text" class="form-control" id="zip" name="zip" required>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="col-md-6">
+                        <h3>Informações de Pagamento</h3>
+                        <div class="mb-3">
+                            <label for="card_name" class="form-label">Nome no Cartão</label>
+                            <input type="text" class="form-control" id="card_name" name="card_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="card_number" class="form-label">Número do Cartão</label>
+                            <input type="text" class="form-control" id="card_number" name="card_number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expiry_date" class="form-label">Data de Validade</label>
+                            <input type="text" class="form-control" id="expiry_date" name="expiry_date" placeholder="MM/AA" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv" name="cvv" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Resumo do Pedido</h3>
+                        <ul class="list-group mb-3">
+                            {% for product in cart_products %}
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h6 class="my-0">{{ product.name }}</h6>
+                                        <small class="text-muted">{{ product.description }}</small>
+                                    </div>
+                                    <span class="text-muted">R${{ product.price }}</span>
+                                </li>
+                            {% endfor %}
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (BRL)</span>
+                                <strong>R${{ totals }}</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+            </br>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-success btn-lg">Finalizar Pagamento</button>
+                    </div>
+                </div>
+            </br>
+            </br>
+            </form>
+        {% else %}
+            <div class="alert alert-warning text-center" role="alert">
+                Seu carrinho está vazio. Adicione produtos ao carrinho antes de finalizar a compra.
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="alert alert-warning text-center" role="alert">
+            Você precisa estar logado para finalizar a compra.
+        </div>
+        <div class="text-center">
+            <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-secondary">Registrar</a>
+        </div>
+
+
+    {% endif %}
+</div>
+{% endblock %}
