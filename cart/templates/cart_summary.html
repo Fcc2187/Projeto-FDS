@@ -27,7 +27,7 @@
                                     <h5 class="card-title">{{ product.name }}</h5>
                                     <p class="card-text">{{ product.description }}</p>
 
-                                    {% if product_is.sale %}
+                                    {% if product.is_sale %}
                                         <div class="d-flex justify-content-center small text-warning mb-2">
                                             <div class="bi-star-fill"></div>
                                             &nbsp;&nbsp;Sale!&nbsp;&nbsp;
@@ -74,6 +74,9 @@
             <br>
             <h3 id="total">Total: R${{ totals }} </h3>
             <br>
+            <center>
+                <a href="{% url 'checkout' %}" class="btn btn-success btn-lg btn-block" id="finalizar-compra">Finalizar Compra</a>
+            </center>
             <br/><br/><br/>
         {% else %}
             <center>
