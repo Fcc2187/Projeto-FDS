@@ -287,3 +287,15 @@ Diagrama de Atividades
   <a href="https://youtu.be/XSbH_uc_sIM?si=vlA1KmlziZ46ezwj" style="text-decoration: none;">
     <span>Screencast Miguel Becker</span>
 </details>
+<details>
+<summary>📹Screencast história de Luiz Felipe Arruda</summary>
+<p style="text-align: center; text-decoration: none;">
+  <a href="https://youtu.be/Mczk3osjnjo?si=va7b3CRzSCbKQkLR" style="text-decoration: none;">
+    <span>Screencast Luiz Arruda</span>
+</details>
+<details>
+<summary>📹Screencast história de  Bernardo Heuer</summary>
+<p style="text-align: center; text-decoration: none;">
+  <a href="" style="text-decoration: none;">
+    <span>Screencast Bernardo Heuer</span>
+</details>
