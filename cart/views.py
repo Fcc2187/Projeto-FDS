@@ -5,6 +5,7 @@ from django.http import JsonResponse, HttpResponse
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from django.urls import reverse
+from .models import Order, OrderItem
 
 def cart_summary(request):
     cart = Cart(request)
@@ -70,22 +71,25 @@ def checkout(request):
 @csrf_exempt
 def process_payment(request):
     if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        address = request.POST.get('address')
-        city = request.POST.get('city')
-        zip_code = request.POST.get('zip')
-        card_name = request.POST.get('card_name')
-        card_number = request.POST.get('card_number')
-        expiry_date = request.POST.get('expiry_date')
-        cvv = request.POST.get('cvv')
+        # Processar os dados do pagamento
 
-        # Assume the payment is successful
+        # Salvar o pedido no banco de dados
         cart = Cart(request)
-        for product_id in cart.get_ids():
-            cart.delete(product=product_id)
+        order = Order.objects.create(user=request.user, total_amount=cart.cart_total())
+
+        for product_id, quantity in cart.get_quants().items():
+            product = Product.objects.get(id=product_id)
+            price = product.price  # Obtém o preço atual do produto
+            OrderItem.objects.create(order=order, product=product, quantity=quantity, price=price)
+
+        # Limpar o carrinho após o pagamento
+        cart.clear()
 
         messages.success(request, "Pagamento realizado com sucesso!")
         return redirect(reverse('buy_done'))
 
     return redirect('checkout')
+
+def meus_pedidos(request):
+    orders = Order.objects.filter(user=request.user)  # Recupere todos os pedidos do usuário
+    return render(request, 'meus_pedidos.html', {'orders': orders})

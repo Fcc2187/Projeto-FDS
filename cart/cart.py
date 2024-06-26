@@ -98,3 +98,7 @@ class Cart():
             carty = str(self.cart)
             carty = carty.replace("'", "\"")
             current_user.update(antigo_carrinho=str(carty))
+    
+    def clear(self):
+        self.session['session_key'] = {}
+        self.session.modified = True

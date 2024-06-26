@@ -203,3 +203,4 @@ def delete_comentario(request, comentario_id):
         comentario.delete()
         return JsonResponse({'success': True})
     return JsonResponse({'success': False})
+

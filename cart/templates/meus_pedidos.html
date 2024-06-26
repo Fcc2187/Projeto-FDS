@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder" name="title">Meus pedidos</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Página de pedidos</p>
+        </div>
+    </div>
+</header>
+
+<br><br>
+<div class="container">
+    <div class="row">
+        {% for order in orders %}
+        <div class="col-12 mb-4">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="card-title"></h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {% for item in order.orderitem_set.all %}
+                        <li class="list-group-item">
+                            <span class="fw-bold">{{ item.product.name }}</span> ({{ item.quantity }}) - R$ {{ item.price }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <p class="text-muted">Total: R$ {{ order.total_amount }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+
+{% endblock %}
