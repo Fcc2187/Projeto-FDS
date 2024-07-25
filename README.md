@@ -300,6 +300,3 @@ Diagrama de Atividades
     <span>Screencast Bernardo Heuer</span>
 </details>
 
-
-
-tmnc caminha braz e becker 
