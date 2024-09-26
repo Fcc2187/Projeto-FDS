@@ -23,7 +23,7 @@
 <br>
 <p> A iTech é uma aplicação e-commerce que tem como foco a venda de produtos relacionados ao mercado de tecnologia. Aqui, apresentamos aos visitantes deste respositório, o processo de desenvolvimento da aplicação e informações a respeito da nossa trajetória. Somos uma equipe de alunos da CESAR School, desempenhando essa tarefa para a disciplina de Fundamentos de Desenvolvimento de Software. </p>
 
-<br><br>
+<br>
 
 # ⭐ Nossa Equipe
 
